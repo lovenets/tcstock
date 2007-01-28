@@ -1,0 +1,6 @@
+<TCStock>
+    <Markets Count="2" >
+        <Market_0 Name="上海股市" />
+        <Market_1 Name="深圳股市" />
+    </Markets>
+</TCStock>

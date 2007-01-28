@@ -1,0 +1,14 @@
+uic ui_stocklistwgt.ui -o ui_stocklistwgt.h
+uic ui_stocklistallwgt.ui -o ui_stocklistallwgt.h
+uic ui_marketinfodlg.ui -o ui_marketinfodlg.h
+uic ui_stockdatainfodlg.ui -o ui_stockdatainfodlg.h
+uic ui_marketselectdlg.ui -o ui_marketselectdlg.h
+uic ui_stockinfodlg.ui -o ui_stockinfodlg.h
+uic ui_marketlistdlg.ui -o ui_marketlistdlg.h
+uic ui_aboutdlg.ui -o ui_aboutdlg.h
+uic ui_stocklistfavtwgt.ui -o ui_stocklistfavtwgt.h
+uic ui_favouriteinfodlg.ui -o ui_favouriteinfodlg.h
+uic ui_favouritegroupinfodlg.ui -o ui_favouritegroupinfodlg.h
+uic ui_stockselectdlg.ui -o ui_stockselectdlg.h
+
+pause
