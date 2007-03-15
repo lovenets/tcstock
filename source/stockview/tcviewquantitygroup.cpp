@@ -17,7 +17,7 @@ tcViewQuantityGroup::tcViewQuantityGroup(QObject *pParent, tcViewModelStockData 
 	//create the quantity text
 	mQuantityText = new QGraphicsTextItem(this);
 	mQuantityText->setFont(font);
-	if (pStockData->Quantity != 0.0) {
+	if (pStockData->Quantity != 0) {
 		QString quantitystr;
 		quantitystr.setNum(pStockData->Quantity);
 		mQuantityText->setPlainText(quantitystr);

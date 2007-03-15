@@ -59,13 +59,13 @@ void tcStockDataItemModel::LoadStockData(const QDate &pDate)
 		}
 		tcStockDailyData *data = stock->ReadData(pDate);
 		QString floatstr;
-		floatstr.setNum(data->OpenPrice, 'F', 2);
+		floatstr.setNum(qreal(data->OpenPrice) / 100, 'F', 2);
 		setItem(i, 2, new QStandardItem(floatstr));
-		floatstr.setNum(data->ClosePrice, 'F', 2);
+		floatstr.setNum(qreal(data->ClosePrice) / 100, 'F', 2);
 		setItem(i, 3, new QStandardItem(floatstr));
-		floatstr.setNum(data->MaxPrice, 'F', 2);
+		floatstr.setNum(qreal(data->MaxPrice) / 100, 'F', 2);
 		setItem(i, 4, new QStandardItem(floatstr));
-		floatstr.setNum(data->MinPrice, 'F', 2);
+		floatstr.setNum(qreal(data->MinPrice) / 100, 'F', 2);
 		setItem(i, 5, new QStandardItem(floatstr));
 		floatstr.setNum(data->TotalPrice);
 		setItem(i, 6, new QStandardItem(floatstr));
@@ -107,13 +107,13 @@ bool tcStockDataItemModel::WriteData(int pRow, tcStockDailyData* pStockDailyData
 		return false;
 	}
 	QString floatstr;
-	floatstr.setNum(pStockDailyData->OpenPrice, 'F', 2);
+	floatstr.setNum(qreal(pStockDailyData->OpenPrice) / 100, 'F', 2);
 	setItem(pRow, 2, new QStandardItem(floatstr));
-	floatstr.setNum(pStockDailyData->ClosePrice, 'F', 2);
+	floatstr.setNum(qreal(pStockDailyData->ClosePrice) / 100, 'F', 2);
 	setItem(pRow, 3, new QStandardItem(floatstr));
-	floatstr.setNum(pStockDailyData->MaxPrice, 'F', 2);
+	floatstr.setNum(qreal(pStockDailyData->MaxPrice) / 100, 'F', 2);
 	setItem(pRow, 4, new QStandardItem(floatstr));
-	floatstr.setNum(pStockDailyData->MinPrice, 'F', 2);
+	floatstr.setNum(qreal(pStockDailyData->MinPrice) / 100, 'F', 2);
 	setItem(pRow, 5, new QStandardItem(floatstr));
 	floatstr.setNum(pStockDailyData->TotalPrice);
 	setItem(pRow, 6, new QStandardItem(floatstr));

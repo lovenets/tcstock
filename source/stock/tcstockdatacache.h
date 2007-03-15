@@ -117,12 +117,12 @@ inline tcStockDailyData* tcStockDataCache::ReadData(const QString &pStockCode, c
 
 inline bool tcStockDataCache::ReadData(const QString &pStockCode, const QDate &pStartDate, int pDayCount, tcStockDailyData *pData)
 {
-	pData->OpenPrice = 0.0;
-	pData->ClosePrice = 0.0;
-	pData->MaxPrice = 0.0;
-	pData->MinPrice = 0.0;
-	pData->TotalPrice = 0.0;
-	pData->Quantity = 0.0;
+	pData->OpenPrice = 0;
+	pData->ClosePrice = 0;
+	pData->MaxPrice = 0;
+	pData->MinPrice = 0;
+	pData->TotalPrice = 0;
+	pData->Quantity = 0;
 
 	QDate date = pStartDate;
 	int i, year = 0;
@@ -146,16 +146,16 @@ inline bool tcStockDataCache::ReadData(const QString &pStockCode, const QDate &p
 		}
 		tcStockDailyData *data = dataitem->ReadData(date);
 
-		if (pData->OpenPrice == 0.0 && data->OpenPrice != 0.0) {
+		if (pData->OpenPrice == 0 && data->OpenPrice != 0) {
 			pData->OpenPrice = data->OpenPrice;
 		}
-		if (data->ClosePrice != 0.0) {
+		if (data->ClosePrice != 0) {
 			pData->ClosePrice = data->ClosePrice;
 		}
 		if (pData->MaxPrice < data->MaxPrice) {
 			pData->MaxPrice = data->MaxPrice;
 		}
-		if (data->MinPrice != 0.0 && (data->MinPrice < pData->MinPrice || pData->MinPrice == 0.0)) {
+		if (data->MinPrice != 0 && (data->MinPrice < pData->MinPrice || pData->MinPrice == 0)) {
 			pData->MinPrice = data->MinPrice;
 		}
 		pData->TotalPrice += data->TotalPrice;

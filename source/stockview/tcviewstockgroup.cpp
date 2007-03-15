@@ -14,17 +14,17 @@ tcViewStockGroup::tcViewStockGroup(QObject *pParent, tcStock *pStock, tcViewMode
 	//create the entity group, and the quantity group
 	QList<tcViewEntityGroup*> entitylist;
 	QList<tcViewQuantityGroup*> quantitylist;
-	qreal minentityval = 0.0, maxentityval = 0.0;
-	qreal maxquantityval = 0.0;
+	long minentityval = 0, maxentityval = 0;
+	long maxquantityval = 0;
 	for (i=0; i<pViewModel->GetViewItemCount(); i++) {
 		tcViewModelStockData *data = pViewModel->GetViewItemData(i, mStock);
 		Q_ASSERT(data);
 		tcViewEntityGroup *entitygroup = new tcViewEntityGroup(this, data);
 		entitylist.append(entitygroup);
-		if (data->MinPrice != 0.0 && (data->MinPrice < minentityval || minentityval == 0.0)) {
+		if (data->MinPrice != 0 && (data->MinPrice < minentityval || minentityval == 0)) {
 			minentityval = data->MinPrice;
 		}
-		if (data->MaxPrice != 0.0 && data->MaxPrice > maxentityval) {
+		if (data->MaxPrice != 0 && data->MaxPrice > maxentityval) {
 			maxentityval = data->MaxPrice;
 		}
 		tcViewQuantityGroup *quantitygroup = new tcViewQuantityGroup(this, data);
@@ -34,7 +34,7 @@ tcViewStockGroup::tcViewStockGroup(QObject *pParent, tcStock *pStock, tcViewMode
 		}
 	}
 	//reposition and insert entity into this
-	if (maxentityval != 0.0) {
+	if (maxentityval != 0) {
 		i = 0;
 		foreach(tcViewEntityGroup* entitygroup, entitylist) {
 			qreal scale = (pViewModel->GetViewEntityHeight()) / (maxentityval-minentityval);
@@ -44,7 +44,7 @@ tcViewStockGroup::tcViewStockGroup(QObject *pParent, tcStock *pStock, tcViewMode
 		}
 	}
 	//reposition and insert quantity into this
-	if (maxquantityval != 0.0) {
+	if (maxquantityval != 0) {
 		i = 0;
 		foreach(tcViewQuantityGroup* quantitygroup, quantitylist) {
 			quantitygroup->SetPosAndScale(i * pViewModel->GetViewItemWidth(), (pViewModel->GetViewQuantityHeight()) / maxquantityval);

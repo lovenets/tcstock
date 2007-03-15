@@ -71,10 +71,10 @@ qreal tcViewModel::GetViewQuantityHeight()
 
 void tcViewModel::ResetData()
 {
-	mStockData.OpenPrice = 0.0;
-	mStockData.ClosePrice = 0.0;
-	mStockData.MaxPrice = 0.0;
-	mStockData.MinPrice = 0.0;
+	mStockData.OpenPrice = 0;
+	mStockData.ClosePrice = 0;
+	mStockData.MaxPrice = 0;
+	mStockData.MinPrice = 0;
 	mStockData.TotalPrice = 0;
 	mStockData.Quantity = 0;
 	mStockData.Tooltip = "";

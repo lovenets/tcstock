@@ -29,7 +29,7 @@ tcViewEntityGroup::tcViewEntityGroup(QObject *pParent, tcViewModelStockData *pSt
 	mOpenPriceText = new QGraphicsTextItem(this);
 	mOpenPriceText->setFont(font);
 	if (pStockData->OpenPrice != 0) {
-		floatstr.setNum(pStockData->OpenPrice, 'F', 2);
+		floatstr.setNum(qreal(pStockData->OpenPrice) / 100, 'F', 2);
 		mOpenPriceText->setPlainText(floatstr);
 	}
 	this->addToGroup(mOpenPriceText);
@@ -37,8 +37,8 @@ tcViewEntityGroup::tcViewEntityGroup(QObject *pParent, tcViewModelStockData *pSt
 	//create close price text
 	mClosePriceText = new QGraphicsTextItem(this);
 	mClosePriceText->setFont(font);
-	if (pStockData->ClosePrice != 0.0) {
-		floatstr.setNum(pStockData->ClosePrice, 'F', 2);
+	if (pStockData->ClosePrice != 0) {
+		floatstr.setNum(qreal(pStockData->ClosePrice) / 100, 'F', 2);
 		mClosePriceText->setPlainText(floatstr);
 	}
 	this->addToGroup(mClosePriceText);
@@ -46,8 +46,8 @@ tcViewEntityGroup::tcViewEntityGroup(QObject *pParent, tcViewModelStockData *pSt
 	//create the max price text
 	mMaxPriceText = new QGraphicsTextItem(this);
 	mMaxPriceText->setFont(font);
-	if (pStockData->MaxPrice != 0.0 && pStockData->MaxPrice != pStockData->OpenPrice && pStockData->MaxPrice != pStockData->ClosePrice) {
-		floatstr.setNum(pStockData->MaxPrice, 'F', 2);
+	if (pStockData->MaxPrice != 0 && pStockData->MaxPrice != pStockData->OpenPrice && pStockData->MaxPrice != pStockData->ClosePrice) {
+		floatstr.setNum(qreal(pStockData->MaxPrice) / 100, 'F', 2);
 		mMaxPriceText->setPlainText(floatstr);
 	}
 	this->addToGroup(mMaxPriceText);
@@ -55,8 +55,8 @@ tcViewEntityGroup::tcViewEntityGroup(QObject *pParent, tcViewModelStockData *pSt
 	//create the min price text
 	mMinPriceText = new QGraphicsTextItem(this);
 	mMinPriceText->setFont(font);
-	if (pStockData->MinPrice != 0.0 && pStockData->MinPrice != pStockData->OpenPrice && pStockData->MinPrice != pStockData->ClosePrice) {
-		floatstr.setNum(pStockData->MinPrice, 'F', 2);
+	if (pStockData->MinPrice != 0 && pStockData->MinPrice != pStockData->OpenPrice && pStockData->MinPrice != pStockData->ClosePrice) {
+		floatstr.setNum(qreal(pStockData->MinPrice) / 100, 'F', 2);
 		mMinPriceText->setPlainText(floatstr);
 	}
 	this->addToGroup(mMinPriceText);

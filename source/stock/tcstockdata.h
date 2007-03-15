@@ -10,10 +10,10 @@
 #define DAYS_OF_YEAR 366
 
 typedef struct {
-	qreal OpenPrice;
-	qreal ClosePrice;
-	qreal MaxPrice;
-	qreal MinPrice;
+	long OpenPrice;
+	long ClosePrice;
+	long MaxPrice;
+	long MinPrice;
 	long TotalPrice;
 	long Quantity;
 	long _Reserved1;	//not used in current version

@@ -41,13 +41,13 @@ tcViewModelStockData* tcMonthlyViewModel::GetViewItemData(int pIndex, tcStock *p
 
 	QString floatstr;
 	mStockData.Tooltip = "****\n";
-	floatstr.setNum(mStockData.OpenPrice, 'F', 2);
+	floatstr.setNum(qreal(mStockData.OpenPrice) / 100, 'F', 2);
 	mStockData.Tooltip += tr("OpenPrice : %1\n").arg(floatstr);
-	floatstr.setNum(mStockData.ClosePrice, 'F', 2);
+	floatstr.setNum(qreal(mStockData.ClosePrice) / 100, 'F', 2);
 	mStockData.Tooltip += tr("ClosePrice : %1\n").arg(floatstr);
-	floatstr.setNum(mStockData.MaxPrice, 'F', 2);
+	floatstr.setNum(qreal(mStockData.MaxPrice) / 100, 'F', 2);
 	mStockData.Tooltip += tr("MaxPrice : %1\n").arg(floatstr);
-	floatstr.setNum(mStockData.MinPrice, 'F', 2);
+	floatstr.setNum(qreal(mStockData.MinPrice) / 100, 'F', 2);
 	mStockData.Tooltip += tr("MinPrice : %1\n").arg(floatstr);
 	floatstr.setNum(mStockData.TotalPrice);
 	mStockData.Tooltip += tr("TotalPrice : %1\n").arg(floatstr);

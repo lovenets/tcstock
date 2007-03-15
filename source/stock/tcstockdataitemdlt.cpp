@@ -51,16 +51,16 @@ void tcStockDataItemDelegate::setEditorData(QWidget *pEditor, const QModelIndex 
 	}
 	QString floatstr;
 	if (pIndex.column() == 2) {
-		floatstr.setNum(data->OpenPrice, 'F', 2);
+		floatstr.setNum(qreal(data->OpenPrice) / 100, 'F', 2);
 	}
 	else if (pIndex.column() == 3) {
-		floatstr.setNum(data->ClosePrice, 'F', 2);
+		floatstr.setNum(qreal(data->ClosePrice) / 100, 'F', 2);
 	}
 	else if (pIndex.column() == 4) {
-		floatstr.setNum(data->MaxPrice, 'F', 2);
+		floatstr.setNum(qreal(data->MaxPrice) / 100, 'F', 2);
 	}
 	else if (pIndex.column() == 5) {
-		floatstr.setNum(data->MinPrice, 'F', 2);
+		floatstr.setNum(qreal(data->MinPrice) / 100, 'F', 2);
 	}
 	else if (pIndex.column() == 6) {
 		floatstr.setNum(data->TotalPrice);
@@ -90,16 +90,16 @@ void tcStockDataItemDelegate::setModelData(QWidget *pEditor, QAbstractItemModel 
 	}
 	tcStockDailyData newdata = *data;
 	if (pIndex.column() == 2) {
-		newdata.OpenPrice = editor->text().toDouble();
+		newdata.OpenPrice = long(editor->text().toDouble() * 100);
 	}
 	else if (pIndex.column() == 3) {
-		newdata.ClosePrice = editor->text().toDouble();
+		newdata.ClosePrice = long(editor->text().toDouble() * 100);
 	}
 	else if (pIndex.column() == 4) {
-		newdata.MaxPrice = editor->text().toDouble();
+		newdata.MaxPrice = long(editor->text().toDouble() * 100);
 	}
 	else if (pIndex.column() == 5) {
-		newdata.MinPrice = editor->text().toDouble();
+		newdata.MinPrice = long(editor->text().toDouble() * 100);
 	}
 	else if (pIndex.column() == 6) {
 		newdata.TotalPrice = editor->text().toInt();

@@ -8,10 +8,10 @@
 class tcStock;
 
 typedef struct {
-	qreal OpenPrice;
-	qreal ClosePrice;
-	qreal MaxPrice;
-	qreal MinPrice;
+	long OpenPrice;
+	long ClosePrice;
+	long MaxPrice;
+	long MinPrice;
 	long TotalPrice;
 	long Quantity;
 	QString Tooltip;
