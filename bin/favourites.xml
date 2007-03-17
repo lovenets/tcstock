@@ -1,14 +1,11 @@
 <TCStock>
-    <Favourites Count="1" >
-        <Favourite_0 GroupName="最近关注的股票" >
-            <Stock Count="6" >
-                <Stock_0 MarketIndex="0" StockCode="600203" />
-                <Stock_1 MarketIndex="0" StockCode="600205" />
-                <Stock_2 MarketIndex="0" StockCode="600336" />
-                <Stock_3 MarketIndex="0" StockCode="600638" />
-                <Stock_4 MarketIndex="0" StockCode="600652" />
-                <Stock_5 MarketIndex="0" StockCode="600890" />
-            </Stock>
-        </Favourite_0>
-    </Favourites>
+    <favourites>
+        <favourite Description="" Name="最近关注的股票" >
+            <stocks>
+                <info StockCode="600000" />
+                <info StockCode="600001" />
+                <info StockCode="600002" />
+            </stocks>
+        </favourite>
+    </favourites>
 </TCStock>
