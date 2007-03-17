@@ -1,14 +1,14 @@
 /********************************************************************************
-** Form generated from reading ui file 'ui_stocklistwgt.ui'
+** Form generated from reading ui file 'ui_toolpadwgt.ui'
 **
-** Created: Tue Jan 9 09:52:44 2007
+** Created: Sat Mar 17 20:49:30 2007
 **      by: Qt User Interface Compiler version 4.2.1
 **
 ** WARNING! All changes made in this file will be lost when recompiling ui file!
 ********************************************************************************/
 
-#ifndef UI_STOCKLISTWGT_H
-#define UI_STOCKLISTWGT_H
+#ifndef UI_TOOLPADWGT_H
+#define UI_TOOLPADWGT_H
 
 #include <QtCore/QVariant>
 #include <QtGui/QAction>
@@ -19,7 +19,7 @@
 #include <QtGui/QVBoxLayout>
 #include <QtGui/QWidget>
 
-class Ui_tcStockListWidget
+class Ui_tcToolPadWidget
 {
 public:
     QVBoxLayout *vboxLayout;
@@ -34,14 +34,14 @@ public:
     QVBoxLayout *vboxLayout3;
     QPushButton *pushButton_3;
 
-    void setupUi(QWidget *tcStockListWidget)
+    void setupUi(QWidget *tcToolPadWidget)
     {
-    tcStockListWidget->setObjectName(QString::fromUtf8("tcStockListWidget"));
-    vboxLayout = new QVBoxLayout(tcStockListWidget);
+    tcToolPadWidget->setObjectName(QString::fromUtf8("tcToolPadWidget"));
+    vboxLayout = new QVBoxLayout(tcToolPadWidget);
     vboxLayout->setSpacing(6);
     vboxLayout->setMargin(9);
     vboxLayout->setObjectName(QString::fromUtf8("vboxLayout"));
-    tab1 = new QTabWidget(tcStockListWidget);
+    tab1 = new QTabWidget(tcToolPadWidget);
     tab1->setObjectName(QString::fromUtf8("tab1"));
     tab = new QWidget();
     tab->setObjectName(QString::fromUtf8("tab"));
@@ -54,7 +54,7 @@ public:
 
     vboxLayout1->addWidget(pushButton);
 
-    tab1->addTab(tab, QApplication::translate("tcStockListWidget", "Favourite", 0, QApplication::UnicodeUTF8));
+    tab1->addTab(tab, QApplication::translate("tcToolPadWidget", "Stock List", 0, QApplication::UnicodeUTF8));
     tab_2 = new QWidget();
     tab_2->setObjectName(QString::fromUtf8("tab_2"));
     vboxLayout2 = new QVBoxLayout(tab_2);
@@ -66,7 +66,7 @@ public:
 
     vboxLayout2->addWidget(pushButton_2);
 
-    tab1->addTab(tab_2, QApplication::translate("tcStockListWidget", "All", 0, QApplication::UnicodeUTF8));
+    tab1->addTab(tab_2, QApplication::translate("tcToolPadWidget", "Function1", 0, QApplication::UnicodeUTF8));
     tab_3 = new QWidget();
     tab_3->setObjectName(QString::fromUtf8("tab_3"));
     vboxLayout3 = new QVBoxLayout(tab_3);
@@ -78,40 +78,40 @@ public:
 
     vboxLayout3->addWidget(pushButton_3);
 
-    tab1->addTab(tab_3, QApplication::translate("tcStockListWidget", "Search", 0, QApplication::UnicodeUTF8));
+    tab1->addTab(tab_3, QApplication::translate("tcToolPadWidget", "Function2", 0, QApplication::UnicodeUTF8));
 
     vboxLayout->addWidget(tab1);
 
 
-    retranslateUi(tcStockListWidget);
+    retranslateUi(tcToolPadWidget);
 
     QSize size(283, 300);
-    size = size.expandedTo(tcStockListWidget->minimumSizeHint());
-    tcStockListWidget->resize(size);
+    size = size.expandedTo(tcToolPadWidget->minimumSizeHint());
+    tcToolPadWidget->resize(size);
 
 
     tab1->setCurrentIndex(0);
 
 
-    QMetaObject::connectSlotsByName(tcStockListWidget);
+    QMetaObject::connectSlotsByName(tcToolPadWidget);
     } // setupUi
 
-    void retranslateUi(QWidget *tcStockListWidget)
+    void retranslateUi(QWidget *tcToolPadWidget)
     {
-    tcStockListWidget->setWindowTitle(QApplication::translate("tcStockListWidget", "Stock List", 0, QApplication::UnicodeUTF8));
-    pushButton->setText(QApplication::translate("tcStockListWidget", "PushButton", 0, QApplication::UnicodeUTF8));
-    tab1->setTabText(tab1->indexOf(tab), QApplication::translate("tcStockListWidget", "Favourite", 0, QApplication::UnicodeUTF8));
-    pushButton_2->setText(QApplication::translate("tcStockListWidget", "PushButton", 0, QApplication::UnicodeUTF8));
-    tab1->setTabText(tab1->indexOf(tab_2), QApplication::translate("tcStockListWidget", "All", 0, QApplication::UnicodeUTF8));
-    pushButton_3->setText(QApplication::translate("tcStockListWidget", "PushButton", 0, QApplication::UnicodeUTF8));
-    tab1->setTabText(tab1->indexOf(tab_3), QApplication::translate("tcStockListWidget", "Search", 0, QApplication::UnicodeUTF8));
-    Q_UNUSED(tcStockListWidget);
+    tcToolPadWidget->setWindowTitle(QApplication::translate("tcToolPadWidget", "Tools", 0, QApplication::UnicodeUTF8));
+    pushButton->setText(QApplication::translate("tcToolPadWidget", "PushButton", 0, QApplication::UnicodeUTF8));
+    tab1->setTabText(tab1->indexOf(tab), QApplication::translate("tcToolPadWidget", "Stock List", 0, QApplication::UnicodeUTF8));
+    pushButton_2->setText(QApplication::translate("tcToolPadWidget", "PushButton", 0, QApplication::UnicodeUTF8));
+    tab1->setTabText(tab1->indexOf(tab_2), QApplication::translate("tcToolPadWidget", "Function1", 0, QApplication::UnicodeUTF8));
+    pushButton_3->setText(QApplication::translate("tcToolPadWidget", "PushButton", 0, QApplication::UnicodeUTF8));
+    tab1->setTabText(tab1->indexOf(tab_3), QApplication::translate("tcToolPadWidget", "Function2", 0, QApplication::UnicodeUTF8));
+    Q_UNUSED(tcToolPadWidget);
     } // retranslateUi
 
 };
 
 namespace Ui {
-    class tcStockListWidget: public Ui_tcStockListWidget {};
+    class tcToolPadWidget: public Ui_tcToolPadWidget {};
 } // namespace Ui
 
-#endif // UI_STOCKLISTWGT_H
+#endif // UI_TOOLPADWGT_H

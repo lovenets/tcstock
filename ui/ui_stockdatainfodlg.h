@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading ui file 'ui_stockdatainfodlg.ui'
 **
-** Created: Tue Jan 9 09:52:44 2007
+** Created: Sat Mar 17 20:49:30 2007
 **      by: Qt User Interface Compiler version 4.2.1
 **
 ** WARNING! All changes made in this file will be lost when recompiling ui file!
@@ -22,7 +22,6 @@
 #include <QtGui/QHBoxLayout>
 #include <QtGui/QLabel>
 #include <QtGui/QLineEdit>
-#include <QtGui/QPushButton>
 #include <QtGui/QSpacerItem>
 #include <QtGui/QTableView>
 #include <QtGui/QVBoxLayout>
@@ -45,11 +44,6 @@ public:
     QLineEdit *edt2;
     QSpacerItem *spacerItem;
     QTableView *tbl1;
-    QHBoxLayout *hboxLayout3;
-    QPushButton *btn1;
-    QPushButton *btn2;
-    QPushButton *btn3;
-    QSpacerItem *spacerItem1;
     QDialogButtonBox *buttonBox;
 
     void setupUi(QDialog *tcStockDataInfoDialog)
@@ -129,32 +123,6 @@ public:
 
     vboxLayout->addWidget(tbl1);
 
-    hboxLayout3 = new QHBoxLayout();
-    hboxLayout3->setSpacing(6);
-    hboxLayout3->setMargin(0);
-    hboxLayout3->setObjectName(QString::fromUtf8("hboxLayout3"));
-    btn1 = new QPushButton(tcStockDataInfoDialog);
-    btn1->setObjectName(QString::fromUtf8("btn1"));
-
-    hboxLayout3->addWidget(btn1);
-
-    btn2 = new QPushButton(tcStockDataInfoDialog);
-    btn2->setObjectName(QString::fromUtf8("btn2"));
-
-    hboxLayout3->addWidget(btn2);
-
-    btn3 = new QPushButton(tcStockDataInfoDialog);
-    btn3->setObjectName(QString::fromUtf8("btn3"));
-
-    hboxLayout3->addWidget(btn3);
-
-    spacerItem1 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
-
-    hboxLayout3->addItem(spacerItem1);
-
-
-    vboxLayout->addLayout(hboxLayout3);
-
     buttonBox = new QDialogButtonBox(tcStockDataInfoDialog);
     buttonBox->setObjectName(QString::fromUtf8("buttonBox"));
     buttonBox->setOrientation(Qt::Horizontal);
@@ -183,9 +151,6 @@ public:
     lbl1->setText(QApplication::translate("tcStockDataInfoDialog", "Group:", 0, QApplication::UnicodeUTF8));
     lbl2->setText(QApplication::translate("tcStockDataInfoDialog", "Stock Code:", 0, QApplication::UnicodeUTF8));
     lbl3->setText(QApplication::translate("tcStockDataInfoDialog", "Name:", 0, QApplication::UnicodeUTF8));
-    btn1->setText(QApplication::translate("tcStockDataInfoDialog", "Add Stock", 0, QApplication::UnicodeUTF8));
-    btn2->setText(QApplication::translate("tcStockDataInfoDialog", "Modify Stock", 0, QApplication::UnicodeUTF8));
-    btn3->setText(QApplication::translate("tcStockDataInfoDialog", "Remove Stock", 0, QApplication::UnicodeUTF8));
     Q_UNUSED(tcStockDataInfoDialog);
     } // retranslateUi
 

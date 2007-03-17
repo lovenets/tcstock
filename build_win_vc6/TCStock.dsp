@@ -203,23 +203,143 @@ InputPath=..\source\tcweeklyviewwgt.h
 
 # End Source File
 # End Group
-# Begin Group "stock"
+# Begin Group "stockinfo"
 
 # PROP Default_Filter ""
-# Begin Group "stock_h"
+# Begin Group "stockinfo_h"
 
 # PROP Default_Filter ""
 # Begin Source File
 
-SOURCE=..\source\stock\tcmarket.h
+SOURCE=..\source\stockinfo\tcfavtgrp.h
 
 !IF  "$(CFG)" == "TCStock - Win32 Release"
 
 !ELSEIF  "$(CFG)" == "TCStock - Win32 Debug"
 
 # Begin Custom Build
-InputDir=\source\TCStock\001\source\stock
-InputPath=..\source\stock\tcmarket.h
+InputDir=\source\TCStock\001\source\stockinfo
+InputPath=..\source\stockinfo\tcfavtgrp.h
+
+"$(InputDir)/moc_tcfavtgrp.cpp" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
+	moc -i $(InputDir)/tcfavtgrp.h -o $(InputDir)/moc_tcfavtgrp.cpp
+
+# End Custom Build
+
+!ENDIF 
+
+# End Source File
+# Begin Source File
+
+SOURCE=..\source\stockinfo\tcfavtgrpinfodlg.h
+
+!IF  "$(CFG)" == "TCStock - Win32 Release"
+
+!ELSEIF  "$(CFG)" == "TCStock - Win32 Debug"
+
+# Begin Custom Build
+InputDir=\source\TCStock\001\source\stockinfo
+InputPath=..\source\stockinfo\tcfavtgrpinfodlg.h
+
+"$(InputDir)/moc_tcfavtgrpinfodlg.cpp" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
+	moc -i $(InputDir)/tcfavtgrpinfodlg.h -o $(InputDir)/moc_tcfavtgrpinfodlg.cpp
+
+# End Custom Build
+
+!ENDIF 
+
+# End Source File
+# Begin Source File
+
+SOURCE=..\source\stockinfo\tcfavtinfodlg.h
+
+!IF  "$(CFG)" == "TCStock - Win32 Release"
+
+!ELSEIF  "$(CFG)" == "TCStock - Win32 Debug"
+
+# Begin Custom Build
+InputDir=\source\TCStock\001\source\stockinfo
+InputPath=..\source\stockinfo\tcfavtinfodlg.h
+
+"$(InputDir)/moc_tcfavtinfodlg.cpp" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
+	moc -i $(InputDir)/tcfavtinfodlg.h -o $(InputDir)/moc_tcfavtinfodlg.cpp
+
+# End Custom Build
+
+!ENDIF 
+
+# End Source File
+# Begin Source File
+
+SOURCE=..\source\stockinfo\tcfavtinfodlt.h
+
+!IF  "$(CFG)" == "TCStock - Win32 Release"
+
+!ELSEIF  "$(CFG)" == "TCStock - Win32 Debug"
+
+# Begin Custom Build
+InputDir=\source\TCStock\001\source\stockinfo
+InputPath=..\source\stockinfo\tcfavtinfodlt.h
+
+"$(InputDir)/moc_tcfavtinfodlt.cpp" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
+	moc -i $(InputDir)/tcfavtinfodlt.h -o $(InputDir)/moc_tcfavtinfodlt.cpp
+
+# End Custom Build
+
+!ENDIF 
+
+# End Source File
+# Begin Source File
+
+SOURCE=..\source\stockinfo\tcfavtinfomdl.h
+
+!IF  "$(CFG)" == "TCStock - Win32 Release"
+
+!ELSEIF  "$(CFG)" == "TCStock - Win32 Debug"
+
+# Begin Custom Build
+InputDir=\source\TCStock\001\source\stockinfo
+InputPath=..\source\stockinfo\tcfavtinfomdl.h
+
+"$(InputDir)/moc_tcfavtinfomdl.cpp" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
+	moc -i $(InputDir)/tcfavtinfomdl.h -o $(InputDir)/moc_tcfavtinfomdl.cpp
+
+# End Custom Build
+
+!ENDIF 
+
+# End Source File
+# Begin Source File
+
+SOURCE=..\source\stockinfo\tcfavtmgr.h
+
+!IF  "$(CFG)" == "TCStock - Win32 Release"
+
+!ELSEIF  "$(CFG)" == "TCStock - Win32 Debug"
+
+# Begin Custom Build
+InputDir=\source\TCStock\001\source\stockinfo
+InputPath=..\source\stockinfo\tcfavtmgr.h
+
+"$(InputDir)/moc_tcfavtmgr.cpp" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
+	moc -i $(InputDir)/tcfavtmgr.h -o $(InputDir)/moc_tcfavtmgr.cpp
+
+# End Custom Build
+
+!ENDIF 
+
+# End Source File
+# Begin Source File
+
+SOURCE=..\source\stockinfo\tcmarket.h
+
+!IF  "$(CFG)" == "TCStock - Win32 Release"
+
+!ELSEIF  "$(CFG)" == "TCStock - Win32 Debug"
+
+# Begin Custom Build
+InputDir=\source\TCStock\001\source\stockinfo
+InputPath=..\source\stockinfo\tcmarket.h
 
 "$(InputDir)/moc_tcmarket.cpp" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
 	moc -i $(InputDir)/tcmarket.h -o $(InputDir)/moc_tcmarket.cpp
@@ -231,15 +351,15 @@ InputPath=..\source\stock\tcmarket.h
 # End Source File
 # Begin Source File
 
-SOURCE=..\source\stock\tcmarketinfodlg.h
+SOURCE=..\source\stockinfo\tcmarketinfodlg.h
 
 !IF  "$(CFG)" == "TCStock - Win32 Release"
 
 !ELSEIF  "$(CFG)" == "TCStock - Win32 Debug"
 
 # Begin Custom Build
-InputDir=\source\TCStock\001\source\stock
-InputPath=..\source\stock\tcmarketinfodlg.h
+InputDir=\source\TCStock\001\source\stockinfo
+InputPath=..\source\stockinfo\tcmarketinfodlg.h
 
 "$(InputDir)/moc_tcmarketinfodlg.cpp" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
 	moc -i $(InputDir)/tcmarketinfodlg.h -o $(InputDir)/moc_tcmarketinfodlg.cpp
@@ -251,15 +371,15 @@ InputPath=..\source\stock\tcmarketinfodlg.h
 # End Source File
 # Begin Source File
 
-SOURCE=..\source\stock\tcmarketlistdlg.h
+SOURCE=..\source\stockinfo\tcmarketlistdlg.h
 
 !IF  "$(CFG)" == "TCStock - Win32 Release"
 
 !ELSEIF  "$(CFG)" == "TCStock - Win32 Debug"
 
 # Begin Custom Build
-InputDir=\source\TCStock\001\source\stock
-InputPath=..\source\stock\tcmarketlistdlg.h
+InputDir=\source\TCStock\001\source\stockinfo
+InputPath=..\source\stockinfo\tcmarketlistdlg.h
 
 "$(InputDir)/moc_tcmarketlistdlg.cpp" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
 	moc -i $(InputDir)/tcmarketlistdlg.h -o $(InputDir)/moc_tcmarketlistdlg.cpp
@@ -271,15 +391,15 @@ InputPath=..\source\stock\tcmarketlistdlg.h
 # End Source File
 # Begin Source File
 
-SOURCE=..\source\stock\tcmarketmgr.h
+SOURCE=..\source\stockinfo\tcmarketmgr.h
 
 !IF  "$(CFG)" == "TCStock - Win32 Release"
 
 !ELSEIF  "$(CFG)" == "TCStock - Win32 Debug"
 
 # Begin Custom Build
-InputDir=\source\TCStock\001\source\stock
-InputPath=..\source\stock\tcmarketmgr.h
+InputDir=\source\TCStock\001\source\stockinfo
+InputPath=..\source\stockinfo\tcmarketmgr.h
 
 "$(InputDir)/moc_tcmarketmgr.cpp" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
 	moc -i $(InputDir)/tcmarketmgr.h -o $(InputDir)/moc_tcmarketmgr.cpp
@@ -291,15 +411,15 @@ InputPath=..\source\stock\tcmarketmgr.h
 # End Source File
 # Begin Source File
 
-SOURCE=..\source\stock\tcmarketselectdlg.h
+SOURCE=..\source\stockinfo\tcmarketselectdlg.h
 
 !IF  "$(CFG)" == "TCStock - Win32 Release"
 
 !ELSEIF  "$(CFG)" == "TCStock - Win32 Debug"
 
 # Begin Custom Build
-InputDir=\source\TCStock\001\source\stock
-InputPath=..\source\stock\tcmarketselectdlg.h
+InputDir=\source\TCStock\001\source\stockinfo
+InputPath=..\source\stockinfo\tcmarketselectdlg.h
 
 "$(InputDir)/moc_tcmarketselectdlg.cpp" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
 	moc -i $(InputDir)/tcmarketselectdlg.h -o $(InputDir)/moc_tcmarketselectdlg.cpp
@@ -311,15 +431,15 @@ InputPath=..\source\stock\tcmarketselectdlg.h
 # End Source File
 # Begin Source File
 
-SOURCE=..\source\stock\tcstock.h
+SOURCE=..\source\stockinfo\tcstock.h
 
 !IF  "$(CFG)" == "TCStock - Win32 Release"
 
 !ELSEIF  "$(CFG)" == "TCStock - Win32 Debug"
 
 # Begin Custom Build
-InputDir=\source\TCStock\001\source\stock
-InputPath=..\source\stock\tcstock.h
+InputDir=\source\TCStock\001\source\stockinfo
+InputPath=..\source\stockinfo\tcstock.h
 
 "$(InputDir)/moc_tcstock.cpp" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
 	moc -i $(InputDir)/tcstock.h -o $(InputDir)/moc_tcstock.cpp
@@ -331,15 +451,15 @@ InputPath=..\source\stock\tcstock.h
 # End Source File
 # Begin Source File
 
-SOURCE=..\source\stock\tcstockdata.h
+SOURCE=..\source\stockinfo\tcstockdata.h
 
 !IF  "$(CFG)" == "TCStock - Win32 Release"
 
 !ELSEIF  "$(CFG)" == "TCStock - Win32 Debug"
 
 # Begin Custom Build
-InputDir=\source\TCStock\001\source\stock
-InputPath=..\source\stock\tcstockdata.h
+InputDir=\source\TCStock\001\source\stockinfo
+InputPath=..\source\stockinfo\tcstockdata.h
 
 "$(InputDir)/moc_tcstockdata.cpp" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
 	moc -i $(InputDir)/tcstockdata.h -o $(InputDir)/moc_tcstockdata.cpp
@@ -351,15 +471,15 @@ InputPath=..\source\stock\tcstockdata.h
 # End Source File
 # Begin Source File
 
-SOURCE=..\source\stock\tcstockdatacache.h
+SOURCE=..\source\stockinfo\tcstockdatacache.h
 
 !IF  "$(CFG)" == "TCStock - Win32 Release"
 
 !ELSEIF  "$(CFG)" == "TCStock - Win32 Debug"
 
 # Begin Custom Build
-InputDir=\source\TCStock\001\source\stock
-InputPath=..\source\stock\tcstockdatacache.h
+InputDir=\source\TCStock\001\source\stockinfo
+InputPath=..\source\stockinfo\tcstockdatacache.h
 
 "$(InputDir)/moc_tcstockdatacache.cpp" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
 	moc -i $(InputDir)/tcstockdatacache.h -o $(InputDir)/moc_tcstockdatacache.cpp
@@ -371,15 +491,15 @@ InputPath=..\source\stock\tcstockdatacache.h
 # End Source File
 # Begin Source File
 
-SOURCE=..\source\stock\tcstockdatainfodlg.h
+SOURCE=..\source\stockinfo\tcstockdatainfodlg.h
 
 !IF  "$(CFG)" == "TCStock - Win32 Release"
 
 !ELSEIF  "$(CFG)" == "TCStock - Win32 Debug"
 
 # Begin Custom Build
-InputDir=\source\TCStock\001\source\stock
-InputPath=..\source\stock\tcstockdatainfodlg.h
+InputDir=\source\TCStock\001\source\stockinfo
+InputPath=..\source\stockinfo\tcstockdatainfodlg.h
 
 "$(InputDir)/moc_tcstockdatainfodlg.cpp" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
 	moc -i $(InputDir)/tcstockdatainfodlg.h -o $(InputDir)/moc_tcstockdatainfodlg.cpp
@@ -391,15 +511,15 @@ InputPath=..\source\stock\tcstockdatainfodlg.h
 # End Source File
 # Begin Source File
 
-SOURCE=..\source\stock\tcstockdataitemdlt.h
+SOURCE=..\source\stockinfo\tcstockdataitemdlt.h
 
 !IF  "$(CFG)" == "TCStock - Win32 Release"
 
 !ELSEIF  "$(CFG)" == "TCStock - Win32 Debug"
 
 # Begin Custom Build
-InputDir=\source\TCStock\001\source\stock
-InputPath=..\source\stock\tcstockdataitemdlt.h
+InputDir=\source\TCStock\001\source\stockinfo
+InputPath=..\source\stockinfo\tcstockdataitemdlt.h
 
 "$(InputDir)/moc_tcstockdataitemdlt.cpp" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
 	moc -i $(InputDir)/tcstockdataitemdlt.h -o $(InputDir)/moc_tcstockdataitemdlt.cpp
@@ -411,15 +531,15 @@ InputPath=..\source\stock\tcstockdataitemdlt.h
 # End Source File
 # Begin Source File
 
-SOURCE=..\source\stock\tcstockdataitemmdl.h
+SOURCE=..\source\stockinfo\tcstockdataitemmdl.h
 
 !IF  "$(CFG)" == "TCStock - Win32 Release"
 
 !ELSEIF  "$(CFG)" == "TCStock - Win32 Debug"
 
 # Begin Custom Build
-InputDir=\source\TCStock\001\source\stock
-InputPath=..\source\stock\tcstockdataitemmdl.h
+InputDir=\source\TCStock\001\source\stockinfo
+InputPath=..\source\stockinfo\tcstockdataitemmdl.h
 
 "$(InputDir)/moc_tcstockdataitemmdl.cpp" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
 	moc -i $(InputDir)/tcstockdataitemmdl.h -o $(InputDir)/moc_tcstockdataitemmdl.cpp
@@ -431,15 +551,15 @@ InputPath=..\source\stock\tcstockdataitemmdl.h
 # End Source File
 # Begin Source File
 
-SOURCE=..\source\stock\tcstockinfo.h
+SOURCE=..\source\stockinfo\tcstockinfo.h
 
 !IF  "$(CFG)" == "TCStock - Win32 Release"
 
 !ELSEIF  "$(CFG)" == "TCStock - Win32 Debug"
 
 # Begin Custom Build
-InputDir=\source\TCStock\001\source\stock
-InputPath=..\source\stock\tcstockinfo.h
+InputDir=\source\TCStock\001\source\stockinfo
+InputPath=..\source\stockinfo\tcstockinfo.h
 
 "$(InputDir)/moc_tcstockinfo.cpp" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
 	moc -i $(InputDir)/tcstockinfo.h -o $(InputDir)/moc_tcstockinfo.cpp
@@ -451,15 +571,15 @@ InputPath=..\source\stock\tcstockinfo.h
 # End Source File
 # Begin Source File
 
-SOURCE=..\source\stock\tcstockinfodlg.h
+SOURCE=..\source\stockinfo\tcstockinfodlg.h
 
 !IF  "$(CFG)" == "TCStock - Win32 Release"
 
 !ELSEIF  "$(CFG)" == "TCStock - Win32 Debug"
 
 # Begin Custom Build
-InputDir=\source\TCStock\001\source\stock
-InputPath=..\source\stock\tcstockinfodlg.h
+InputDir=\source\TCStock\001\source\stockinfo
+InputPath=..\source\stockinfo\tcstockinfodlg.h
 
 "$(InputDir)/moc_tcstockinfodlg.cpp" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
 	moc -i $(InputDir)/tcstockinfodlg.h -o $(InputDir)/moc_tcstockinfodlg.cpp
@@ -471,19 +591,59 @@ InputPath=..\source\stock\tcstockinfodlg.h
 # End Source File
 # Begin Source File
 
-SOURCE=..\source\stock\tcstockpack.h
-# End Source File
-# Begin Source File
-
-SOURCE=..\source\stock\tcstockselectdlg.h
+SOURCE=..\source\stockinfo\tcstockinfolst.h
 
 !IF  "$(CFG)" == "TCStock - Win32 Release"
 
 !ELSEIF  "$(CFG)" == "TCStock - Win32 Debug"
 
 # Begin Custom Build
-InputDir=\source\TCStock\001\source\stock
-InputPath=..\source\stock\tcstockselectdlg.h
+InputDir=\source\TCStock\001\source\stockinfo
+InputPath=..\source\stockinfo\tcstockinfolst.h
+
+"$(InputDir)/moc_tcstockinfolst.cpp" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
+	moc -i $(InputDir)/tcstockinfolst.h -o $(InputDir)/moc_tcstockinfolst.cpp
+
+# End Custom Build
+
+!ENDIF 
+
+# End Source File
+# Begin Source File
+
+SOURCE=..\source\stockinfo\tcstockinfopack.h
+# End Source File
+# Begin Source File
+
+SOURCE=..\source\stockinfo\tcstockmgr.h
+
+!IF  "$(CFG)" == "TCStock - Win32 Release"
+
+!ELSEIF  "$(CFG)" == "TCStock - Win32 Debug"
+
+# Begin Custom Build
+InputDir=\source\TCStock\001\source\stockinfo
+InputPath=..\source\stockinfo\tcstockmgr.h
+
+"$(InputDir)/moc_tcstockmgr.cpp" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
+	moc -i $(InputDir)/tcstockmgr.h -o $(InputDir)/moc_tcstockmgr.cpp
+
+# End Custom Build
+
+!ENDIF 
+
+# End Source File
+# Begin Source File
+
+SOURCE=..\source\stockinfo\tcstockselectdlg.h
+
+!IF  "$(CFG)" == "TCStock - Win32 Release"
+
+!ELSEIF  "$(CFG)" == "TCStock - Win32 Debug"
+
+# Begin Custom Build
+InputDir=\source\TCStock\001\source\stockinfo
+InputPath=..\source\stockinfo\tcstockselectdlg.h
 
 "$(InputDir)/moc_tcstockselectdlg.cpp" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
 	moc -i $(InputDir)/tcstockselectdlg.h -o $(InputDir)/moc_tcstockselectdlg.cpp
@@ -494,64 +654,96 @@ InputPath=..\source\stock\tcstockselectdlg.h
 
 # End Source File
 # End Group
-# Begin Group "stock_cpp"
+# Begin Group "stockinfo_cpp"
 
 # PROP Default_Filter ""
 # Begin Source File
 
-SOURCE=..\source\stock\tcmarket.cpp
+SOURCE=..\source\stockinfo\tcfavtgrp.cpp
 # End Source File
 # Begin Source File
 
-SOURCE=..\source\stock\tcmarketinfodlg.cpp
+SOURCE=..\source\stockinfo\tcfavtgrpinfodlg.cpp
 # End Source File
 # Begin Source File
 
-SOURCE=..\source\stock\tcmarketlistdlg.cpp
+SOURCE=..\source\stockinfo\tcfavtinfodlg.cpp
 # End Source File
 # Begin Source File
 
-SOURCE=..\source\stock\tcmarketmgr.cpp
+SOURCE=..\source\stockinfo\tcfavtinfodlt.cpp
 # End Source File
 # Begin Source File
 
-SOURCE=..\source\stock\tcmarketselectdlg.cpp
+SOURCE=..\source\stockinfo\tcfavtinfomdl.cpp
 # End Source File
 # Begin Source File
 
-SOURCE=..\source\stock\tcstock.cpp
+SOURCE=..\source\stockinfo\tcfavtmgr.cpp
 # End Source File
 # Begin Source File
 
-SOURCE=..\source\stock\tcstockdata.cpp
+SOURCE=..\source\stockinfo\tcmarket.cpp
 # End Source File
 # Begin Source File
 
-SOURCE=..\source\stock\tcstockdatacache.cpp
+SOURCE=..\source\stockinfo\tcmarketinfodlg.cpp
 # End Source File
 # Begin Source File
 
-SOURCE=..\source\stock\tcstockdatainfodlg.cpp
+SOURCE=..\source\stockinfo\tcmarketlistdlg.cpp
 # End Source File
 # Begin Source File
 
-SOURCE=..\source\stock\tcstockdataitemdlt.cpp
+SOURCE=..\source\stockinfo\tcmarketmgr.cpp
 # End Source File
 # Begin Source File
 
-SOURCE=..\source\stock\tcstockdataitemmdl.cpp
+SOURCE=..\source\stockinfo\tcmarketselectdlg.cpp
 # End Source File
 # Begin Source File
 
-SOURCE=..\source\stock\tcstockinfo.cpp
+SOURCE=..\source\stockinfo\tcstock.cpp
 # End Source File
 # Begin Source File
 
-SOURCE=..\source\stock\tcstockinfodlg.cpp
+SOURCE=..\source\stockinfo\tcstockdata.cpp
 # End Source File
 # Begin Source File
 
-SOURCE=..\source\stock\tcstockselectdlg.cpp
+SOURCE=..\source\stockinfo\tcstockdatacache.cpp
+# End Source File
+# Begin Source File
+
+SOURCE=..\source\stockinfo\tcstockdatainfodlg.cpp
+# End Source File
+# Begin Source File
+
+SOURCE=..\source\stockinfo\tcstockdataitemdlt.cpp
+# End Source File
+# Begin Source File
+
+SOURCE=..\source\stockinfo\tcstockdataitemmdl.cpp
+# End Source File
+# Begin Source File
+
+SOURCE=..\source\stockinfo\tcstockinfo.cpp
+# End Source File
+# Begin Source File
+
+SOURCE=..\source\stockinfo\tcstockinfodlg.cpp
+# End Source File
+# Begin Source File
+
+SOURCE=..\source\stockinfo\tcstockinfolst.cpp
+# End Source File
+# Begin Source File
+
+SOURCE=..\source\stockinfo\tcstockmgr.cpp
+# End Source File
+# Begin Source File
+
+SOURCE=..\source\stockinfo\tcstockselectdlg.cpp
 # End Source File
 # End Group
 # End Group
@@ -1105,26 +1297,6 @@ InputPath=..\source\importer\tcsinastockdataimpt.h
 !ENDIF 
 
 # End Source File
-# Begin Source File
-
-SOURCE=..\source\importer\tcstockinfoimpt.h
-
-!IF  "$(CFG)" == "TCStock - Win32 Release"
-
-!ELSEIF  "$(CFG)" == "TCStock - Win32 Debug"
-
-# Begin Custom Build
-InputDir=\source\TCStock\001\source\importer
-InputPath=..\source\importer\tcstockinfoimpt.h
-
-"$(InputDir)/moc_tcstockinfoimpt.cpp" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
-	moc -i $(InputDir)/tcstockinfoimpt.h -o $(InputDir)/moc_tcstockinfoimpt.cpp
-
-# End Custom Build
-
-!ENDIF 
-
-# End Source File
 # End Group
 # Begin Group "importer_cpp"
 
@@ -1137,193 +1309,29 @@ SOURCE=..\source\importer\tcqianlongimpt.cpp
 
 SOURCE=..\source\importer\tcsinastockdataimpt.cpp
 # End Source File
-# Begin Source File
-
-SOURCE=..\source\importer\tcstockinfoimpt.cpp
-# End Source File
 # End Group
 # End Group
-# Begin Group "favourite"
+# Begin Group "toolpad"
 
 # PROP Default_Filter ""
-# Begin Group "favourite_h"
+# Begin Group "toolpad_h"
 
 # PROP Default_Filter ""
 # Begin Source File
 
-SOURCE=..\source\favourite\tcfavouritegroupinfodlg.h
-
-!IF  "$(CFG)" == "TCStock - Win32 Release"
-
-!ELSEIF  "$(CFG)" == "TCStock - Win32 Debug"
-
-# Begin Custom Build
-InputDir=\source\TCStock\001\source\favourite
-InputPath=..\source\favourite\tcfavouritegroupinfodlg.h
-
-"$(InputDir)/moc_tcfavouritegroupinfodlg.cpp" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
-	moc -i $(InputDir)/tcfavouritegroupinfodlg.h -o $(InputDir)/moc_tcfavouritegroupinfodlg.cpp
-
-# End Custom Build
-
-!ENDIF 
-
+SOURCE=..\source\toolpad\tctoolpadpack.h
 # End Source File
 # Begin Source File
 
-SOURCE=..\source\favourite\tcfavouritegrp.h
-
-!IF  "$(CFG)" == "TCStock - Win32 Release"
-
-!ELSEIF  "$(CFG)" == "TCStock - Win32 Debug"
-
-# Begin Custom Build
-InputDir=\source\TCStock\001\source\favourite
-InputPath=..\source\favourite\tcfavouritegrp.h
-
-"$(InputDir)/moc_tcfavouritegrp.cpp" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
-	moc -i $(InputDir)/tcfavouritegrp.h -o $(InputDir)/moc_tcfavouritegrp.cpp
-
-# End Custom Build
-
-!ENDIF 
-
-# End Source File
-# Begin Source File
-
-SOURCE=..\source\favourite\tcfavouriteinfodlg.h
-
-!IF  "$(CFG)" == "TCStock - Win32 Release"
-
-!ELSEIF  "$(CFG)" == "TCStock - Win32 Debug"
-
-# Begin Custom Build
-InputDir=\source\TCStock\001\source\favourite
-InputPath=..\source\favourite\tcfavouriteinfodlg.h
-
-"$(InputDir)/moc_tcfavouriteinfodlg.cpp" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
-	moc -i $(InputDir)/tcfavouriteinfodlg.h -o $(InputDir)/moc_tcfavouriteinfodlg.cpp
-
-# End Custom Build
-
-!ENDIF 
-
-# End Source File
-# Begin Source File
-
-SOURCE=..\source\favourite\tcfavouritemgr.h
-
-!IF  "$(CFG)" == "TCStock - Win32 Release"
-
-!ELSEIF  "$(CFG)" == "TCStock - Win32 Debug"
-
-# Begin Custom Build
-InputDir=\source\TCStock\001\source\favourite
-InputPath=..\source\favourite\tcfavouritemgr.h
-
-"$(InputDir)/moc_tcfavouritemgr.cpp" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
-	moc -i $(InputDir)/tcfavouritemgr.h -o $(InputDir)/moc_tcfavouritemgr.cpp
-
-# End Custom Build
-
-!ENDIF 
-
-# End Source File
-# Begin Source File
-
-SOURCE=..\source\favourite\tcfavouritepack.h
-# End Source File
-# Begin Source File
-
-SOURCE=..\source\favourite\tcfavouritestockdlt.h
-
-!IF  "$(CFG)" == "TCStock - Win32 Release"
-
-!ELSEIF  "$(CFG)" == "TCStock - Win32 Debug"
-
-# Begin Custom Build
-InputDir=\source\TCStock\001\source\favourite
-InputPath=..\source\favourite\tcfavouritestockdlt.h
-
-"$(InputDir)/moc_tcfavouritestockdlt.cpp" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
-	moc -i $(InputDir)/tcfavouritestockdlt.h -o $(InputDir)/moc_tcfavouritestockdlt.cpp
-
-# End Custom Build
-
-!ENDIF 
-
-# End Source File
-# Begin Source File
-
-SOURCE=..\source\favourite\tcfavouritestockinfo.h
-
-!IF  "$(CFG)" == "TCStock - Win32 Release"
-
-!ELSEIF  "$(CFG)" == "TCStock - Win32 Debug"
-
-# Begin Custom Build
-InputDir=\source\TCStock\001\source\favourite
-InputPath=..\source\favourite\tcfavouritestockinfo.h
-
-"$(InputDir)/moc_tcfavouritestockinfo.cpp" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
-	moc -i $(InputDir)/tcfavouritestockinfo.h -o $(InputDir)/moc_tcfavouritestockinfo.cpp
-
-# End Custom Build
-
-!ENDIF 
-
-# End Source File
-# Begin Source File
-
-SOURCE=..\source\favourite\tcfavouritestockmdl.h
-
-!IF  "$(CFG)" == "TCStock - Win32 Release"
-
-!ELSEIF  "$(CFG)" == "TCStock - Win32 Debug"
-
-# Begin Custom Build
-InputDir=\source\TCStock\001\source\favourite
-InputPath=..\source\favourite\tcfavouritestockmdl.h
-
-"$(InputDir)/moc_tcfavouritestockmdl.cpp" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
-	moc -i $(InputDir)/tcfavouritestockmdl.h -o $(InputDir)/moc_tcfavouritestockmdl.cpp
-
-# End Custom Build
-
-!ENDIF 
-
+SOURCE=..\source\toolpad\tctoolpadwgt.h
 # End Source File
 # End Group
-# Begin Group "favourite_cpp"
+# Begin Group "toolpad_cpp"
 
 # PROP Default_Filter ""
 # Begin Source File
 
-SOURCE=..\source\favourite\tcfavouritegroupinfodlg.cpp
-# End Source File
-# Begin Source File
-
-SOURCE=..\source\favourite\tcfavouritegrp.cpp
-# End Source File
-# Begin Source File
-
-SOURCE=..\source\favourite\tcfavouriteinfodlg.cpp
-# End Source File
-# Begin Source File
-
-SOURCE=..\source\favourite\tcfavouritemgr.cpp
-# End Source File
-# Begin Source File
-
-SOURCE=..\source\favourite\tcfavouritestockdlt.cpp
-# End Source File
-# Begin Source File
-
-SOURCE=..\source\favourite\tcfavouritestockinfo.cpp
-# End Source File
-# Begin Source File
-
-SOURCE=..\source\favourite\tcfavouritestockmdl.cpp
+SOURCE=..\source\toolpad\tctoolpadwgt.cpp
 # End Source File
 # End Group
 # End Group

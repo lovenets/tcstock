@@ -1,6 +1,6 @@
 <ui version="4.0" >
- <class>tcStockListWidget</class>
- <widget class="QWidget" name="tcStockListWidget" >
+ <class>tcToolPadWidget</class>
+ <widget class="QWidget" name="tcToolPadWidget" >
   <property name="geometry" >
    <rect>
     <x>0</x>
@@ -10,7 +10,7 @@
    </rect>
   </property>
   <property name="windowTitle" >
-   <string>Stock List</string>
+   <string>Tools</string>
   </property>
   <layout class="QVBoxLayout" >
    <property name="margin" >
@@ -26,7 +26,7 @@
      </property>
      <widget class="QWidget" name="tab" >
       <attribute name="title" >
-       <string>Favourite</string>
+       <string>Stock List</string>
       </attribute>
       <layout class="QVBoxLayout" >
        <property name="margin" >
@@ -46,7 +46,7 @@
      </widget>
      <widget class="QWidget" name="tab_2" >
       <attribute name="title" >
-       <string>All</string>
+       <string>Function1</string>
       </attribute>
       <layout class="QVBoxLayout" >
        <property name="margin" >
@@ -66,7 +66,7 @@
      </widget>
      <widget class="QWidget" name="tab_3" >
       <attribute name="title" >
-       <string>Search</string>
+       <string>Function2</string>
       </attribute>
       <layout class="QVBoxLayout" >
        <property name="margin" >
