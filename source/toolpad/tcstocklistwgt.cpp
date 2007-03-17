@@ -1,4 +1,4 @@
-#include "tcstocklistallwgt.h"
+#include "tcstocklistwgt.h"
 
 #include <QtCore/QList>
 #include <QtGui/QHeaderView>
@@ -6,24 +6,25 @@
 #include "../service/tcsvcpack.h"
 #include "../stockinfo/tcstockinfopack.h"
 
-tcStockListAllWidget::tcStockListAllWidget(QWidget *pParent)
+tcStockListWidget::tcStockListWidget(QWidget *pParent)
 	: QWidget(pParent)
 {
 	setupUi(this);
-    QStringList titles;
-    titles<<tr("StockCode")<<tr("Name");
-    tbl1->setColumnCount(2);
-    tbl1->setHorizontalHeaderLabels(titles);
-    tbl1->horizontalHeader()->setResizeMode(1, QHeaderView::Stretch);
-    tbl1->verticalHeader()->hide();
-    //tbl1->setSelectionMode(QAbstractItemView::SingleSelection);
-    tbl1->setSelectionBehavior(QAbstractItemView::SelectRows);
+	QStringList titles;
+	titles<<tr("Stock Code")<<tr("Stock Name");
+	tbl1->setColumnCount(2);
+	tbl1->setHorizontalHeaderLabels(titles);
+	tbl1->horizontalHeader()->setResizeMode(1, QHeaderView::Stretch);
+	tbl1->verticalHeader()->hide();
+	//tbl1->setSelectionMode(QAbstractItemView::SingleSelection);
+	tbl1->setSelectionBehavior(QAbstractItemView::SelectRows);
 	tbl1->setEditTriggers(QAbstractItemView::NoEditTriggers);
 
 	tcMarketManager *marketmanager = tcObjService::GetMarketManager();
 	connect(marketmanager, SIGNAL(OnMarketModified()), this, SLOT(DoMarketModified()));
 	connect(marketmanager, SIGNAL(OnStockModified(tcMarket *)), this, SLOT(DoStockModified(tcMarket *)));
 	connect(cbo1, SIGNAL(currentIndexChanged(int)), this, SLOT(DoMarketIndexChanged(int)));
+	connect(btn1, SIGNAL(clicked()), this, SLOT(DoEditFavourite()));
 	connect(edt1, SIGNAL(textChanged(const QString &)), this, SLOT(DoFilterTextChanged(const QString &)));
 	connect(edt2, SIGNAL(textChanged(const QString &)), this, SLOT(DoFilterTextChanged(const QString &)));
 	connect(tbl1, SIGNAL(itemSelectionChanged()), this, SLOT(DoStockSelectionChanged()));
@@ -31,21 +32,19 @@ tcStockListAllWidget::tcStockListAllWidget(QWidget *pParent)
 	DoMarketModified();
 }
 
-tcStockListAllWidget::~tcStockListAllWidget()
+tcStockListWidget::~tcStockListWidget()
 {
 }
 
-void tcStockListAllWidget::DoMarketModified()
+void tcStockListWidget::DoMarketModified()
 {
 	QString marketname = cbo1->currentText();
 	cbo1->clear();
-	cbo1->addItem(tr("All Markets"));
-	tcMarketManager *marketmanager = tcObjService::GetMarketManager();
-	int i;
-	for (i=0; i<marketmanager->GetMarketCount(); i++) {
-		tcMarket *market = marketmanager->GetMarket(i);
-		Q_ASSERT(market);
-		cbo1->addItem(market->GetName());
+
+	QStringList grouplist;
+	mViewStockInfoList.GetGroupList(grouplist);
+	foreach (QString groupname, grouplist) {
+		cbo1->addItem(groupname);
 	}
 	//restore the last selected market in the combo
 	int index = cbo1->findText(marketname);
@@ -54,7 +53,7 @@ void tcStockListAllWidget::DoMarketModified()
 	}
 }
 
-void tcStockListAllWidget::DoStockModified(tcMarket *pMarket)
+void tcStockListWidget::DoStockModified(tcMarket *pMarket)
 {
 	int index = cbo1->currentIndex();
 	tcMarketManager *marketmanager = tcObjService::GetMarketManager();
@@ -63,32 +62,31 @@ void tcStockListAllWidget::DoStockModified(tcMarket *pMarket)
 	}
 }
 
-void tcStockListAllWidget::DoMarketIndexChanged(int pIndex)
+void tcStockListWidget::DoEditFavourite()
 {
-	mViewStockInfoList.clear();
-	tbl1->setRowCount(0);
+	tcFavouriteManager *favouritemanager = tcObjService::GetFavouriteManager();
+	favouritemanager->EditFavouriteList(this, cbo1->currentIndex());
+}
 
-	tcMarketManager *marketmanager = tcObjService::GetMarketManager();
-	marketmanager->GetStockInfoListFilter(pIndex-1, mViewStockInfoList, edt1->text(), edt2->text());
+void tcStockListWidget::DoMarketIndexChanged(int pIndex)
+{
+	mViewStockInfoList.ReloadFromGroupFilter(pIndex, edt1->text(), edt2->text());
+	//show stock in the tableview
+	tbl1->setRowCount(0);
 	foreach (tcStockInfo info, mViewStockInfoList) {
-		tcStock *stock = info.GetStock();
-		if (stock == NULL) {
-			tcLogService::CreateLog(this, "Error when get stock from stock code.");
-			continue;
-		}
 		int row = tbl1->rowCount();
 		tbl1->insertRow(row);
-		tbl1->setItem(row, 0, new QTableWidgetItem(stock->GetStockCode()));
-		tbl1->setItem(row, 1, new QTableWidgetItem(stock->GetStockName()));
+		tbl1->setItem(row, 0, new QTableWidgetItem(info.GetStockCode()));
+		tbl1->setItem(row, 1, new QTableWidgetItem(info.GetStockName()));
 	}
 }
 
-void tcStockListAllWidget::DoFilterTextChanged(const QString &pText)
+void tcStockListWidget::DoFilterTextChanged(const QString &pText)
 {
-	DoMarketIndexChanged(-1);
+	DoMarketIndexChanged(cbo1->currentIndex());
 }
 
-void tcStockListAllWidget::DoStockSelectionChanged()
+void tcStockListWidget::DoStockSelectionChanged()
 {
 	tcStockInfoList list;
 	QList<QTableWidgetItem*> sellist = tbl1->selectedItems();
@@ -100,4 +98,4 @@ void tcStockListAllWidget::DoStockSelectionChanged()
 	emit OnStockSelected(&list);
 }
 
-#include "moc_tcstocklistallwgt.cpp"
+#include "moc_tcstocklistwgt.cpp"

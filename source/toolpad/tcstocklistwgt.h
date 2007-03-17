@@ -7,16 +7,13 @@
 #include "ui_stocklistwgt.h"
 
 #include "../stockinfo/tcstockinfopack.h"
-#include "tcstocklistfavtwgt.h"
-#include "tcstocklistallwgt.h"
-class tcMarketManager;
 
 /*! \brief tcStockListWidget
  	\author tony (http://www.tonixsoft.com)
  	\version 0.01
  	\date 2006.12.03
  	
-	股票列表组面板。
+	所有股票列表面板。
 */
 class tcStockListWidget : public QWidget, private Ui_tcStockListWidget
 {
@@ -27,13 +24,28 @@ public:
 
 	~tcStockListWidget();
 
+protected:
+
 protected slots:
-	void DoTabStockSelected(tcStockInfoList *pStockInfoList);
+	/*!
+		notified by tcMarketManager
+	*/
+	void DoMarketModified();
+
+	/*!
+		notified by tcMarketManager
+	*/
+	void DoStockModified(tcMarket *pMarket);
+
+	void DoEditFavourite();
+	void DoMarketIndexChanged(int pIndex);
+
+	void DoFilterTextChanged(const QString &pText);
+
+	void DoStockSelectionChanged();
 
 private:
-	tcStockListFavouriteWidget *mFavouriteWidget;
-
-	tcStockListAllWidget *mAllWidget;
+	tcStockInfoList mViewStockInfoList;
 
 signals:
 	void OnStockSelected(tcStockInfoList *pStockInfoList);
@@ -41,3 +53,4 @@ signals:
 };
 
 #endif //tcstocklistwgt_h
+

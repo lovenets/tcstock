@@ -8,15 +8,10 @@ tcToolPadWidget::tcToolPadWidget(QWidget *pParent)
 {
 	setupUi(this);
 
-	mFavouriteWidget = new tcStockListFavouriteWidget(this);
-	connect(mFavouriteWidget, SIGNAL(OnStockSelected(tcStockInfoList *)), this, SLOT(DoTabStockSelected(tcStockInfoList *)));
+	mStockListWidget = new tcStockListWidget(this);
+	connect(mStockListWidget, SIGNAL(OnStockSelected(tcStockInfoList *)), this, SLOT(DoTabStockSelected(tcStockInfoList *)));
 	vboxLayout1->setMargin(0);
-	vboxLayout1->addWidget(mFavouriteWidget);
-
-	mAllWidget = new tcStockListAllWidget(this);
-	connect(mAllWidget, SIGNAL(OnStockSelected(tcStockInfoList *)), this, SLOT(DoTabStockSelected(tcStockInfoList *)));
-	vboxLayout2->setMargin(0);
-	vboxLayout2->addWidget(mAllWidget);
+	vboxLayout1->addWidget(mStockListWidget);
 }
 
 tcToolPadWidget::~tcToolPadWidget()

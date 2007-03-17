@@ -7,8 +7,7 @@
 #include "ui_toolpadwgt.h"
 
 #include "../stockinfo/tcstockinfopack.h"
-#include "tcstocklistfavtwgt.h"
-#include "tcstocklistallwgt.h"
+#include "tcstocklistwgt.h"
 class tcMarketManager;
 
 /*! \brief tcToolPadWidget
@@ -16,7 +15,7 @@ class tcMarketManager;
  	\version 0.01
  	\date 2006.12.03
  	
-	股票列表组面板。
+	工具组组面板。
 */
 class tcToolPadWidget : public QWidget, private Ui_tcToolPadWidget
 {
@@ -31,9 +30,7 @@ protected slots:
 	void DoTabStockSelected(tcStockInfoList *pStockInfoList);
 
 private:
-	tcStockListFavouriteWidget *mFavouriteWidget;
-
-	tcStockListAllWidget *mAllWidget;
+	tcStockListWidget *mStockListWidget;
 
 signals:
 	void OnStockSelected(tcStockInfoList *pStockInfoList);

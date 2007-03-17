@@ -1,14 +1,14 @@
 /********************************************************************************
-** Form generated from reading ui file 'ui_stocklistallwgt.ui'
+** Form generated from reading ui file 'ui_stocklistwgt_1.ui'
 **
-** Created: Sat Mar 17 21:11:56 2007
+** Created: Sat Mar 17 20:49:30 2007
 **      by: Qt User Interface Compiler version 4.2.1
 **
 ** WARNING! All changes made in this file will be lost when recompiling ui file!
 ********************************************************************************/
 
-#ifndef UI_STOCKLISTALLWGT_H
-#define UI_STOCKLISTALLWGT_H
+#ifndef UI_STOCKLISTWGT_1_H
+#define UI_STOCKLISTWGT_1_H
 
 #include <QtCore/QVariant>
 #include <QtGui/QAction>
@@ -23,7 +23,7 @@
 #include <QtGui/QVBoxLayout>
 #include <QtGui/QWidget>
 
-class Ui_tcStockListAllWidget
+class Ui_tcStockListWidget
 {
 public:
     QVBoxLayout *vboxLayout;
@@ -39,10 +39,10 @@ public:
     QLineEdit *edt2;
     QTableWidget *tbl1;
 
-    void setupUi(QWidget *tcStockListAllWidget)
+    void setupUi(QWidget *tcStockListWidget)
     {
-    tcStockListAllWidget->setObjectName(QString::fromUtf8("tcStockListAllWidget"));
-    vboxLayout = new QVBoxLayout(tcStockListAllWidget);
+    tcStockListWidget->setObjectName(QString::fromUtf8("tcStockListWidget"));
+    vboxLayout = new QVBoxLayout(tcStockListWidget);
     vboxLayout->setSpacing(6);
     vboxLayout->setMargin(9);
     vboxLayout->setObjectName(QString::fromUtf8("vboxLayout"));
@@ -50,12 +50,12 @@ public:
     hboxLayout->setSpacing(6);
     hboxLayout->setMargin(0);
     hboxLayout->setObjectName(QString::fromUtf8("hboxLayout"));
-    cbo1 = new QComboBox(tcStockListAllWidget);
+    cbo1 = new QComboBox(tcStockListWidget);
     cbo1->setObjectName(QString::fromUtf8("cbo1"));
 
     hboxLayout->addWidget(cbo1);
 
-    btn1 = new QPushButton(tcStockListAllWidget);
+    btn1 = new QPushButton(tcStockListWidget);
     btn1->setObjectName(QString::fromUtf8("btn1"));
     QSizePolicy sizePolicy(static_cast<QSizePolicy::Policy>(4), static_cast<QSizePolicy::Policy>(0));
     sizePolicy.setHorizontalStretch(0);
@@ -76,12 +76,12 @@ public:
     vboxLayout1->setSpacing(6);
     vboxLayout1->setMargin(0);
     vboxLayout1->setObjectName(QString::fromUtf8("vboxLayout1"));
-    lbl1 = new QLabel(tcStockListAllWidget);
+    lbl1 = new QLabel(tcStockListWidget);
     lbl1->setObjectName(QString::fromUtf8("lbl1"));
 
     vboxLayout1->addWidget(lbl1);
 
-    lbl2 = new QLabel(tcStockListAllWidget);
+    lbl2 = new QLabel(tcStockListWidget);
     lbl2->setObjectName(QString::fromUtf8("lbl2"));
 
     vboxLayout1->addWidget(lbl2);
@@ -93,12 +93,12 @@ public:
     vboxLayout2->setSpacing(6);
     vboxLayout2->setMargin(0);
     vboxLayout2->setObjectName(QString::fromUtf8("vboxLayout2"));
-    edt1 = new QLineEdit(tcStockListAllWidget);
+    edt1 = new QLineEdit(tcStockListWidget);
     edt1->setObjectName(QString::fromUtf8("edt1"));
 
     vboxLayout2->addWidget(edt1);
 
-    edt2 = new QLineEdit(tcStockListAllWidget);
+    edt2 = new QLineEdit(tcStockListWidget);
     edt2->setObjectName(QString::fromUtf8("edt2"));
 
     vboxLayout2->addWidget(edt2);
@@ -109,35 +109,35 @@ public:
 
     vboxLayout->addLayout(hboxLayout1);
 
-    tbl1 = new QTableWidget(tcStockListAllWidget);
+    tbl1 = new QTableWidget(tcStockListWidget);
     tbl1->setObjectName(QString::fromUtf8("tbl1"));
 
     vboxLayout->addWidget(tbl1);
 
 
-    retranslateUi(tcStockListAllWidget);
+    retranslateUi(tcStockListWidget);
 
-    QSize size(163, 300);
-    size = size.expandedTo(tcStockListAllWidget->minimumSizeHint());
-    tcStockListAllWidget->resize(size);
+    QSize size(269, 300);
+    size = size.expandedTo(tcStockListWidget->minimumSizeHint());
+    tcStockListWidget->resize(size);
 
 
-    QMetaObject::connectSlotsByName(tcStockListAllWidget);
+    QMetaObject::connectSlotsByName(tcStockListWidget);
     } // setupUi
 
-    void retranslateUi(QWidget *tcStockListAllWidget)
+    void retranslateUi(QWidget *tcStockListWidget)
     {
-    tcStockListAllWidget->setWindowTitle(QApplication::translate("tcStockListAllWidget", "All Stocks", 0, QApplication::UnicodeUTF8));
-    btn1->setText(QApplication::translate("tcStockListAllWidget", "Favourite", 0, QApplication::UnicodeUTF8));
-    lbl1->setText(QApplication::translate("tcStockListAllWidget", "Stock Code:", 0, QApplication::UnicodeUTF8));
-    lbl2->setText(QApplication::translate("tcStockListAllWidget", "Stock Name:", 0, QApplication::UnicodeUTF8));
-    Q_UNUSED(tcStockListAllWidget);
+    tcStockListWidget->setWindowTitle(QApplication::translate("tcStockListWidget", "Stock List...", 0, QApplication::UnicodeUTF8));
+    btn1->setText(QApplication::translate("tcStockListWidget", "Favourite", 0, QApplication::UnicodeUTF8));
+    lbl1->setText(QApplication::translate("tcStockListWidget", "Stock Code:", 0, QApplication::UnicodeUTF8));
+    lbl2->setText(QApplication::translate("tcStockListWidget", "Stock Name:", 0, QApplication::UnicodeUTF8));
+    Q_UNUSED(tcStockListWidget);
     } // retranslateUi
 
 };
 
 namespace Ui {
-    class tcStockListAllWidget: public Ui_tcStockListAllWidget {};
+    class tcStockListWidget: public Ui_tcStockListWidget {};
 } // namespace Ui
 
-#endif // UI_STOCKLISTALLWGT_H
+#endif // UI_STOCKLISTWGT_1_H

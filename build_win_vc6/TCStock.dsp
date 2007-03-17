@@ -1023,94 +1023,6 @@ SOURCE=..\source\stockview\tcviewstockgroup.cpp
 # End Source File
 # End Group
 # End Group
-# Begin Group "stocklistwgt"
-
-# PROP Default_Filter ""
-# Begin Group "stocklistwgt_h"
-
-# PROP Default_Filter ""
-# Begin Source File
-
-SOURCE=..\source\stocklistwgt\tcstocklistallwgt.h
-
-!IF  "$(CFG)" == "TCStock - Win32 Release"
-
-!ELSEIF  "$(CFG)" == "TCStock - Win32 Debug"
-
-# Begin Custom Build
-InputDir=\source\TCStock\001\source\stocklistwgt
-InputPath=..\source\stocklistwgt\tcstocklistallwgt.h
-
-"$(InputDir)/moc_tcstocklistallwgt.cpp" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
-	moc -i $(InputDir)/tcstocklistallwgt.h -o $(InputDir)/moc_tcstocklistallwgt.cpp
-
-# End Custom Build
-
-!ENDIF 
-
-# End Source File
-# Begin Source File
-
-SOURCE=..\source\stocklistwgt\tcstocklistfavtwgt.h
-
-!IF  "$(CFG)" == "TCStock - Win32 Release"
-
-!ELSEIF  "$(CFG)" == "TCStock - Win32 Debug"
-
-# Begin Custom Build
-InputDir=\source\TCStock\001\source\stocklistwgt
-InputPath=..\source\stocklistwgt\tcstocklistfavtwgt.h
-
-"$(InputDir)/moc_tcstocklistfavtwgt.cpp" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
-	moc -i $(InputDir)/tcstocklistfavtwgt.h -o $(InputDir)/moc_tcstocklistfavtwgt.cpp
-
-# End Custom Build
-
-!ENDIF 
-
-# End Source File
-# Begin Source File
-
-SOURCE=..\source\stocklistwgt\tcstocklistwgt.h
-
-!IF  "$(CFG)" == "TCStock - Win32 Release"
-
-!ELSEIF  "$(CFG)" == "TCStock - Win32 Debug"
-
-# Begin Custom Build
-InputDir=\source\TCStock\001\source\stocklistwgt
-InputPath=..\source\stocklistwgt\tcstocklistwgt.h
-
-"$(InputDir)/moc_tcstocklistwgt.cpp" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
-	moc -i $(InputDir)/tcstocklistwgt.h -o $(InputDir)/moc_tcstocklistwgt.cpp
-
-# End Custom Build
-
-!ENDIF 
-
-# End Source File
-# Begin Source File
-
-SOURCE=..\source\stocklistwgt\tcstocklistwgtpack.h
-# End Source File
-# End Group
-# Begin Group "stocklistwgt_cpp"
-
-# PROP Default_Filter ""
-# Begin Source File
-
-SOURCE=..\source\stocklistwgt\tcstocklistallwgt.cpp
-# End Source File
-# Begin Source File
-
-SOURCE=..\source\stocklistwgt\tcstocklistfavtwgt.cpp
-# End Source File
-# Begin Source File
-
-SOURCE=..\source\stocklistwgt\tcstocklistwgt.cpp
-# End Source File
-# End Group
-# End Group
 # Begin Group "viewmodel"
 
 # PROP Default_Filter ""
@@ -1319,16 +1231,56 @@ SOURCE=..\source\importer\tcsinastockdataimpt.cpp
 # PROP Default_Filter ""
 # Begin Source File
 
+SOURCE=..\source\toolpad\tcstocklistwgt.h
+
+!IF  "$(CFG)" == "TCStock - Win32 Release"
+
+!ELSEIF  "$(CFG)" == "TCStock - Win32 Debug"
+
+# Begin Custom Build
+InputDir=\source\TCStock\001\source\toolpad
+InputPath=..\source\toolpad\tcstocklistwgt.h
+
+"$(InputDir)/moc_tcstocklistwgt.cpp" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
+	moc -i $(InputDir)/tcstocklistwgt.h -o $(InputDir)/moc_tcstocklistwgt.cpp
+
+# End Custom Build
+
+!ENDIF 
+
+# End Source File
+# Begin Source File
+
 SOURCE=..\source\toolpad\tctoolpadpack.h
 # End Source File
 # Begin Source File
 
 SOURCE=..\source\toolpad\tctoolpadwgt.h
+
+!IF  "$(CFG)" == "TCStock - Win32 Release"
+
+!ELSEIF  "$(CFG)" == "TCStock - Win32 Debug"
+
+# Begin Custom Build
+InputDir=\source\TCStock\001\source\toolpad
+InputPath=..\source\toolpad\tctoolpadwgt.h
+
+"$(InputDir)/moc_tctoolpadwgt.cpp" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
+	moc -i $(InputDir)/tctoolpadwgt.h -o $(InputDir)/moc_tctoolpadwgt.cpp
+
+# End Custom Build
+
+!ENDIF 
+
 # End Source File
 # End Group
 # Begin Group "toolpad_cpp"
 
 # PROP Default_Filter ""
+# Begin Source File
+
+SOURCE=..\source\toolpad\tcstocklistwgt.cpp
+# End Source File
 # Begin Source File
 
 SOURCE=..\source\toolpad\tctoolpadwgt.cpp

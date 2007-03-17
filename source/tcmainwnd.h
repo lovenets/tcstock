@@ -10,7 +10,7 @@
 #include "stockinfo/tcstockinfopack.h"
 #include "viewmodel/tcviewmodelpack.h"
 #include "stockview/tcstockviewpack.h"
-#include "stocklistwgt/tcstocklistwgtpack.h"
+#include "toolpad/tctoolpadpack.h"
 #include "tcdailyviewwgt.h"
 #include "tcweeklyviewwgt.h"
 
@@ -59,7 +59,7 @@ private:
 
 	QDockWidget *mWeeklyDock;
 
-	tcStockListWidget *mStockListWidget;
+	tcToolPadWidget *mToolPadWidget;
 
 	QDockWidget *mStockListDock;
 

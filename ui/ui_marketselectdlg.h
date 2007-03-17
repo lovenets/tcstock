@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading ui file 'ui_marketselectdlg.ui'
 **
-** Created: Sat Mar 17 20:49:30 2007
+** Created: Sat Mar 17 21:11:56 2007
 **      by: Qt User Interface Compiler version 4.2.1
 **
 ** WARNING! All changes made in this file will be lost when recompiling ui file!

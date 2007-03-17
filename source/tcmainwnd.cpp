@@ -30,13 +30,13 @@ tcMainWindow::tcMainWindow(QWidget *pParent)
 	mWeeklyDock->setWidget(mWeeklyViewWidget);
 	addDockWidget(Qt::BottomDockWidgetArea, mWeeklyDock);
 
-	//create the stock list widget
+	//create the tool pad widget
 	mStockListDock = new QDockWidget(tr("Stock List"), this);
 	mStockListDock->setAllowedAreas(Qt::LeftDockWidgetArea | Qt::RightDockWidgetArea);
 	mStockListDock->setMinimumSize(250, 0);
-	mStockListWidget = new tcStockListWidget(mStockListDock);
-	connect(mStockListWidget, SIGNAL(OnStockSelected(tcStockInfoList *)), this, SLOT(DoStockSelected(tcStockInfoList *)));
-	mStockListDock->setWidget(mStockListWidget);
+	mToolPadWidget = new tcToolPadWidget(mStockListDock);
+	connect(mToolPadWidget, SIGNAL(OnStockSelected(tcStockInfoList *)), this, SLOT(DoStockSelected(tcStockInfoList *)));
+	mStockListDock->setWidget(mToolPadWidget);
 	addDockWidget(Qt::RightDockWidgetArea, mStockListDock);
 }
 
