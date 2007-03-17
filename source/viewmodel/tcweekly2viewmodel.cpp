@@ -2,7 +2,7 @@
 
 #include <QtCore/QDate>
 
-#include "../stock/tcstockpack.h"
+#include "../stockinfo/tcstockinfopack.h"
 #include "../service/tcsvcpack.h"
 
 tcWeekly2ViewModel::tcWeekly2ViewModel(QObject *pParent, tcViewMode pViewMode)
@@ -41,13 +41,13 @@ tcViewModelStockData* tcWeekly2ViewModel::GetViewItemData(int pIndex, tcStock *p
 
 	QString floatstr;
 	mStockData.Tooltip = date.addDays(-14).toString("MM/dd dddd") + " - " + date.addDays(-3).toString("MM/dd dddd") + "\n";
-	floatstr.setNum(qreal(mStockData.OpenPrice) / 100, 'F', 2);
+	floatstr.setNum(qreal(mStockData.OpenPrice) / 100.0, 'F', 2);
 	mStockData.Tooltip += tr("OpenPrice : %1\n").arg(floatstr);
-	floatstr.setNum(qreal(mStockData.ClosePrice) / 100, 'F', 2);
+	floatstr.setNum(qreal(mStockData.ClosePrice) / 100.0, 'F', 2);
 	mStockData.Tooltip += tr("ClosePrice : %1\n").arg(floatstr);
-	floatstr.setNum(qreal(mStockData.MaxPrice) / 100, 'F', 2);
+	floatstr.setNum(qreal(mStockData.MaxPrice) / 100.0, 'F', 2);
 	mStockData.Tooltip += tr("MaxPrice : %1\n").arg(floatstr);
-	floatstr.setNum(qreal(mStockData.MinPrice) / 100, 'F', 2);
+	floatstr.setNum(qreal(mStockData.MinPrice) / 100.0, 'F', 2);
 	mStockData.Tooltip += tr("MinPrice : %1\n").arg(floatstr);
 	floatstr.setNum(mStockData.TotalPrice);
 	mStockData.Tooltip += tr("TotalPrice : %1\n").arg(floatstr);
@@ -72,6 +72,5 @@ QDate tcWeekly2ViewModel::GetViewItemStartDate(int pIndex)
 	return date;
 }
 
-#ifdef WIN32
-	#include "moc_tcweekly2viewmodel.cpp"
-#endif
+#include "moc_tcweekly2viewmodel.cpp"
+

@@ -2,7 +2,7 @@
 
 #include <QtCore/QDate>
 
-#include "../stock/tcstockpack.h"
+#include "../stockinfo/tcstockinfopack.h"
 
 tcDailyViewModel::tcDailyViewModel(QObject *pParent, tcViewMode pViewMode)
 	: tcViewModel(pParent, pViewMode)
@@ -34,13 +34,13 @@ tcViewModelStockData* tcDailyViewModel::GetViewItemData(int pIndex, tcStock *pSt
 	mStockData.Quantity = data->Quantity;
 	QString floatstr;
 	mStockData.Tooltip = date.toString("MM/dd dddd") + "\n";
-	floatstr.setNum(qreal(mStockData.OpenPrice) / 100, 'F', 2);
+	floatstr.setNum(qreal(mStockData.OpenPrice) / 100.0, 'F', 2);
 	mStockData.Tooltip += tr("OpenPrice : %1\n").arg(floatstr);
-	floatstr.setNum(qreal(mStockData.ClosePrice) / 100, 'F', 2);
+	floatstr.setNum(qreal(mStockData.ClosePrice) / 100.0, 'F', 2);
 	mStockData.Tooltip += tr("ClosePrice : %1\n").arg(floatstr);
-	floatstr.setNum(qreal(mStockData.MaxPrice) / 100, 'F', 2);
+	floatstr.setNum(qreal(mStockData.MaxPrice) / 100.0, 'F', 2);
 	mStockData.Tooltip += tr("MaxPrice : %1\n").arg(floatstr);
-	floatstr.setNum(qreal(mStockData.MinPrice) / 100, 'F', 2);
+	floatstr.setNum(qreal(mStockData.MinPrice) / 100.0, 'F', 2);
 	mStockData.Tooltip += tr("MinPrice : %1\n").arg(floatstr);
 	floatstr.setNum(mStockData.TotalPrice);
 	mStockData.Tooltip += tr("TotalPrice : %1\n").arg(floatstr);
@@ -63,6 +63,5 @@ QDate tcDailyViewModel::GetViewItemDate(int pIndex)
 	return date.addDays(-1 * GetViewItemCount() + pIndex + 1);
 }
 
-#ifdef WIN32
-	#include "moc_tcdailyviewmodel.cpp"
-#endif
+#include "moc_tcdailyviewmodel.cpp"
+

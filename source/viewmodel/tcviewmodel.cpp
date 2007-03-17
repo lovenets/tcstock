@@ -1,6 +1,6 @@
 #include "tcviewmodel.h"
 
-#include "../stock/tcstockpack.h"
+#include "../stockinfo/tcstockinfopack.h"
 
 #define VIEW_COORDINATE_SPACE 50
 
@@ -80,6 +80,5 @@ void tcViewModel::ResetData()
 	mStockData.Tooltip = "";
 }
 
-#ifdef WIN32
-	#include "moc_tcviewmodel.cpp"
-#endif
+#include "moc_tcviewmodel.cpp"
+
