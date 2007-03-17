@@ -6,7 +6,7 @@
 #include <QtGui/QGraphicsScene>
 #include <QtGui/QPainter>
 
-#include "../stock/tcstockpack.h"
+#include "../stockinfo/tcstockinfopack.h"
 #include "../viewmodel/tcviewmodelpack.h"
 class tcViewStockGroup;
 

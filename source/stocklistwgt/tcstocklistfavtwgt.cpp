@@ -37,7 +37,7 @@ tcStockListFavouriteWidget::~tcStockListFavouriteWidget()
 void tcStockListFavouriteWidget::DoEditFavourite()
 {
 	tcFavouriteManager *favouritemanager = tcObjService::GetFavouriteManager();
-	favouritemanager->EditFavouriteStock(this, cbo1->currentIndex());
+	favouritemanager->EditFavouriteList(this, cbo1->currentIndex());
 }
 
 void tcStockListFavouriteWidget::DoFavouriteGroupModified()
@@ -49,7 +49,7 @@ void tcStockListFavouriteWidget::DoFavouriteGroupModified()
 	for (i=0; i<favouritemanager->GetFavouriteGroupCount(); i++) {
 		tcFavouriteGroup *group = favouritemanager->GetFavouriteGroup(i);
 		Q_ASSERT(group);
-		cbo1->addItem(group->GetGroupName());
+		cbo1->addItem(group->GetName());
 	}
 	//restore the last selected group in the combo
 	int index = cbo1->findText(groupname);
@@ -69,7 +69,7 @@ void tcStockListFavouriteWidget::DoFavouriteStockModified(tcFavouriteGroup *pFav
 
 void tcStockListFavouriteWidget::DoFavouriteGroupIndexChanged(int pIndex)
 {
-	mViewFavouriteInfoList.clear();
+	mViewStockInfoList.clear();
 	tbl1->setRowCount(0);
 
 	tcFavouriteManager *favouritemanager = tcObjService::GetFavouriteManager();
@@ -78,15 +78,15 @@ void tcStockListFavouriteWidget::DoFavouriteGroupIndexChanged(int pIndex)
 		tcLogService::CreateLog(this, "Error when get favourite group.");
 		return;
 	}
-	int i;
-	for (i=0; i<group->GetFavouriteStockCount(); i++) {
-		mViewFavouriteInfoList.append(*(group->GetFavouriteStock(i)));
+	if (! group->GetStockInfoList(mViewStockInfoList)) {
+		tcLogService::CreateLog(this, "Error when get stock info list.");
+		return;
 	}
-	foreach (tcFavouriteStockInfo favourite, mViewFavouriteInfoList) {
+	foreach (tcStockInfo stockinfo, mViewStockInfoList) {
 		int row = tbl1->rowCount();
 		tbl1->insertRow(row);
-		tbl1->setItem(row, 0, new QTableWidgetItem(favourite.GetStockCode()));
-		tbl1->setItem(row, 1, new QTableWidgetItem(favourite.GetStockName()));
+		tbl1->setItem(row, 0, new QTableWidgetItem(stockinfo.GetStockCode()));
+		tbl1->setItem(row, 1, new QTableWidgetItem(stockinfo.GetStockName()));
 	}
 }
 
@@ -95,13 +95,11 @@ void tcStockListFavouriteWidget::DoStockSelectionChanged()
 	tcStockInfoList list;
 	QList<QTableWidgetItem*> sellist = tbl1->selectedItems();
 	foreach(QTableWidgetItem *item, sellist) {
-		tcFavouriteStockInfo info = mViewFavouriteInfoList[item->row()];
+		tcStockInfo info = mViewStockInfoList[item->row()];
 		list.append(info);
 		break;
 	}
 	emit OnStockSelected(&list);
 }
 
-#ifdef WIN32
-	#include "moc_tcstocklistfavtwgt.cpp"
-#endif
+#include "moc_tcstocklistfavtwgt.cpp"

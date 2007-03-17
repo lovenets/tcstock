@@ -5,7 +5,7 @@
 #include <QtCore/QVariant>
 #include <QtGui/QWidget>
 
-#include "stock/tcstockpack.h"
+#include "stockinfo/tcstockinfopack.h"
 #include "viewmodel/tcviewmodelpack.h"
 #include "stockview/tcstockviewpack.h"
 

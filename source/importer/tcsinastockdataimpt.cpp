@@ -45,6 +45,4 @@ void tcSinaStockDataImporter::DoDone(bool pError)
 	}
 }
 
-#ifdef WIN32
-	#include "moc_tcsinastockdataimpt.cpp"
-#endif
+#include "moc_tcsinastockdataimpt.cpp"

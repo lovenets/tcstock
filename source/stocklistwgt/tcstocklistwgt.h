@@ -6,7 +6,7 @@
 #include <QtGui/QWidget>
 #include "ui_stocklistwgt.h"
 
-#include "../stock/tcstockpack.h"
+#include "../stockinfo/tcstockinfopack.h"
 #include "tcstocklistfavtwgt.h"
 #include "tcstocklistallwgt.h"
 class tcMarketManager;

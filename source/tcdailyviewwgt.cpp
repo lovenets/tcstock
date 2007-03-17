@@ -21,6 +21,5 @@ void tcDailyViewWidget::LoadStockInfoList(tcStockInfoList *pStockInfoList)
 	mDailyViewScene->LoadStockInfoList(pStockInfoList);
 }
 
-#ifdef WIN32
-	#include "moc_tcdailyviewwgt.cpp"
-#endif
+#include "moc_tcdailyviewwgt.cpp"
+

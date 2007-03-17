@@ -2,7 +2,6 @@
 
 #define tcimporterpack_h
 
-#include "tcstockinfoimpt.h"
 #include "tcsinastockdataimpt.h"
 #include "tcqianlongimpt.h"
 

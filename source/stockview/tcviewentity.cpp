@@ -47,6 +47,5 @@ void tcViewEntity::paint(QPainter *pPainter, const QStyleOptionGraphicsItem *pOp
 	pPainter->drawRect(rect);
 }
 
-#ifdef WIN32
-	#include "moc_tcviewentity.cpp"
-#endif
+#include "moc_tcviewentity.cpp"
+

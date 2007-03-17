@@ -98,13 +98,13 @@ void tcMainWindow::DoModifyMarket()
 
 void tcMainWindow::DoInputStockData()
 {
-	tcObjService::GetMarketManager()->EditStockData(this);
+	tcObjService::GetStockManager()->EditStockData(this);
 }
 
 void tcMainWindow::DoEditFavouriteStock()
 {
 	tcFavouriteManager *favouritemanager = tcObjService::GetFavouriteManager();
-	favouritemanager->EditFavouriteStock(this, -1);
+	favouritemanager->EditFavouriteList(this, -1);
 }
 
 void tcMainWindow::DoExit()
@@ -150,6 +150,4 @@ void tcMainWindow::DoStockSelected(tcStockInfoList *pStockInfoList)
 	mWeeklyViewWidget->LoadStockInfoList(pStockInfoList);
 }
 
-#ifdef WIN32
-	#include "moc_tcmainwnd.cpp"
-#endif
+#include "moc_tcmainwnd.cpp"

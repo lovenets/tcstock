@@ -77,7 +77,6 @@ bool tcCfgService::SaveToFile()
 	return false;
 }
 
-#ifdef WIN32
-	#include "moc_tccfgsvc.cpp"
-#endif
+#include "moc_tccfgsvc.cpp"
+
 

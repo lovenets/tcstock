@@ -6,7 +6,7 @@
 #include <QtGui/QWidget>
 #include "ui_stocklistallwgt.h"
 
-#include "../stock/tcstockpack.h"
+#include "../stockinfo/tcstockinfopack.h"
 
 /*! \brief tcStockListAllWidget
  	\author tony (http://www.tonixsoft.com)

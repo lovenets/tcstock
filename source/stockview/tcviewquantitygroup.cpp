@@ -32,6 +32,4 @@ void tcViewQuantityGroup::SetPosAndScale(qreal pXPos, qreal pYScale)
 	this->setPos(pXPos, 0);
 }
 
-#ifdef WIN32
-	#include "moc_tcviewquantitygroup.cpp"
-#endif
+#include "moc_tcviewquantitygroup.cpp"

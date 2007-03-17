@@ -1,7 +1,7 @@
 #include "tcstocklistwgt.h"
 
 #include "../service/tcsvcpack.h"
-#include "../stock/tcstockpack.h"
+#include "../stockinfo/tcstockinfopack.h"
 
 tcStockListWidget::tcStockListWidget(QWidget *pParent)
 	: QWidget(pParent)
@@ -29,6 +29,4 @@ void tcStockListWidget::DoTabStockSelected(tcStockInfoList *pStockInfoList)
 	emit OnStockSelected(pStockInfoList);
 }
 
-#ifdef WIN32
-	#include "moc_tcstocklistwgt.cpp"
-#endif
+#include "moc_tcstocklistwgt.cpp"

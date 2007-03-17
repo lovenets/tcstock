@@ -4,7 +4,7 @@
 #include <QtGui/QHeaderView>
 
 #include "../service/tcsvcpack.h"
-#include "../stock/tcstockpack.h"
+#include "../stockinfo/tcstockinfopack.h"
 
 tcStockListAllWidget::tcStockListAllWidget(QWidget *pParent)
 	: QWidget(pParent)
@@ -69,7 +69,7 @@ void tcStockListAllWidget::DoMarketIndexChanged(int pIndex)
 	tbl1->setRowCount(0);
 
 	tcMarketManager *marketmanager = tcObjService::GetMarketManager();
-	marketmanager->GetStockInfoListFilter(pIndex-1, &mViewStockInfoList, edt1->text(), edt2->text());
+	marketmanager->GetStockInfoListFilter(pIndex-1, mViewStockInfoList, edt1->text(), edt2->text());
 	foreach (tcStockInfo info, mViewStockInfoList) {
 		tcStock *stock = info.GetStock();
 		if (stock == NULL) {
@@ -100,6 +100,4 @@ void tcStockListAllWidget::DoStockSelectionChanged()
 	emit OnStockSelected(&list);
 }
 
-#ifdef WIN32
-	#include "moc_tcstocklistallwgt.cpp"
-#endif
+#include "moc_tcstocklistallwgt.cpp"

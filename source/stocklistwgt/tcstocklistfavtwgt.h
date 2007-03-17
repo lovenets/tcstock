@@ -1,12 +1,12 @@
 #ifndef tcstocklistfavtwgt_h
 
-#define tcstocklsitfavtwgt_h
+#define tcstocklistfavtwgt_h
 
 #include <QtCore/QVariant>
 #include <QtGui/QWidget>
 #include "ui_stocklistfavtwgt.h"
 
-#include "../favourite/tcfavouritepack.h"
+#include "../stockinfo/tcstockinfopack.h"
 
 /*! \brief tcStockListFavouriteWidget
  	\author tony (http://www.tonixsoft.com)
@@ -42,7 +42,7 @@ protected slots:
 	void DoStockSelectionChanged();
 
 private:
-	tcFavouriteInfoList mViewFavouriteInfoList;
+	tcStockInfoList mViewStockInfoList;
 
 signals:
 	void OnStockSelected(tcStockInfoList *pStockInfoList);

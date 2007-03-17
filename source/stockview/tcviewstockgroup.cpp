@@ -54,6 +54,5 @@ tcViewStockGroup::tcViewStockGroup(QObject *pParent, tcStock *pStock, tcViewMode
 	}
 }
 
-#ifdef WIN32
-	#include "moc_tcviewstockgroup.cpp"
-#endif
+#include "moc_tcviewstockgroup.cpp"
+

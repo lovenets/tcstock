@@ -7,8 +7,7 @@
 #include <QtGui/QMainWindow>
 #include <QtGui/QDockWidget>
 
-#include "stock/tcstockpack.h"
-#include "favourite/tcfavouritepack.h"
+#include "stockinfo/tcstockinfopack.h"
 #include "viewmodel/tcviewmodelpack.h"
 #include "stockview/tcstockviewpack.h"
 #include "stocklistwgt/tcstocklistwgtpack.h"

@@ -23,6 +23,5 @@ void tcStockView::ResetViewport()
 	this->centerOn(scenerect.right(), scenerect.bottom());
 }
 
-#ifdef WIN32
-	#include "moc_tcstockview.cpp"
-#endif
+#include "moc_tcstockview.cpp"
+

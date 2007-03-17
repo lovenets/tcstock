@@ -27,6 +27,5 @@ void tcAboutDialog::SetAboutText()
 	txt1_1->setHtml(slist.join("<br>"));
 }
 
-#ifdef WIN32
-	#include "moc_tcaboutdlg.cpp"
-#endif
+#include "moc_tcaboutdlg.cpp"
+

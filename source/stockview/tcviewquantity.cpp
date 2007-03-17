@@ -39,6 +39,5 @@ void tcViewQuantity::paint(QPainter *pPainter, const QStyleOptionGraphicsItem *p
 	pPainter->drawRect(rect);
 }
 
-#ifdef WIN32
-	#include "moc_tcviewquantity.cpp"
-#endif
+#include "moc_tcviewquantity.cpp"
+

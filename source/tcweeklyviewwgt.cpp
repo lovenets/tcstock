@@ -58,6 +58,4 @@ void tcWeeklyViewWidget::DoViewModeChanged(int pIndex)
 	SetViewMode(pIndex);
 }
 
-#ifdef WIN32
-	#include "moc_tcweeklyviewwgt.cpp"
-#endif
+#include "moc_tcweeklyviewwgt.cpp"

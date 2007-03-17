@@ -122,6 +122,5 @@ void tcStockScene::drawBackground(QPainter *pPainter, const QRectF &pRect)
 	}
 }
 
-#ifdef WIN32
-	#include "moc_tcstockscene.cpp"
-#endif
+#include "moc_tcstockscene.cpp"
+

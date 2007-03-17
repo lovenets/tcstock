@@ -6,7 +6,7 @@
 #include <QtCore/QObject>
 #include <QtGui/QGraphicsItemGroup>
 
-#include "../stock/tcstockpack.h"
+#include "../stockinfo/tcstockinfopack.h"
 #include "../viewmodel/tcviewmodelpack.h"
 
 /*! \brief tcViewStockGroup

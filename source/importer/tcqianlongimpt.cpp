@@ -66,6 +66,4 @@ bool tcQianlongImporter::ReadFile(const QDir &pPath)
 	return true;
 }
 
-#ifdef WIN32
-	#include "moc_tcqianlongimpt.cpp"
-#endif
+#include "moc_tcqianlongimpt.cpp"

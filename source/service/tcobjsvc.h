@@ -5,6 +5,7 @@
 #include <QtCore/QVariant>
 #include <QtCore/QObject>
 
+class tcStockManager;
 class tcMarketManager;
 class tcFavouriteManager;
 
@@ -25,6 +26,8 @@ public:
 
 	static bool Finalize();
 
+	static tcStockManager* GetStockManager();
+
 	static tcMarketManager* GetMarketManager();
 
 	static tcFavouriteManager* GetFavouriteManager();
@@ -40,11 +43,17 @@ protected:
 
 private:
 	static tcObjService *mThis;
-	
+
+	tcStockManager *mStockManager;	
 	tcMarketManager *mMarketManager;
 	tcFavouriteManager *mFavouriteManager;
 
 };
+
+inline tcStockManager* tcObjService::GetStockManager()
+{
+	return mThis->mStockManager;
+}
 
 inline tcMarketManager* tcObjService::GetMarketManager()
 {

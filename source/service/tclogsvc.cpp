@@ -48,6 +48,4 @@ void tcLogService::_CreateLog(QObject *pObject, const QString &pLogText)
 	stream<<pObject->metaObject()->className()<<"::"<<pLogText<<endl;
 }
 
-#ifdef WIN32
-	#include "moc_tclogsvc.cpp"
-#endif
+#include "moc_tclogsvc.cpp"
