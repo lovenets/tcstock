@@ -45,7 +45,7 @@ tcLogService::~tcLogService()
 void tcLogService::_CreateLog(QObject *pObject, const QString &pLogText)
 {
 	QTextStream stream(&mFile);
-	stream<<pObject->metaObject()->className()<<"::"<<pLogText<<endl;
+	stream<<pObject->metaObject()->className()<<" :: "<<pLogText<<endl;
 }
 
 #include "moc_tclogsvc.cpp"

@@ -1,0 +1,13 @@
+<TCStock>
+    <tcCfgService>
+        <item key="UseProxy" value="false" />
+    </tcCfgService>
+    <tcDataImporter>
+        <item key="ImportSourceIndex" value="0" />
+    </tcDataImporter>
+    <tcSinaWebImportSource>
+        <item key="UrlTemplate" value="http://stock.sina.com.cn/stock/quote/sha%1.html" />
+        <item key="StartPage" value="0" />
+        <item key="EndPage" value="16" />
+    </tcSinaWebImportSource>
+</TCStock>

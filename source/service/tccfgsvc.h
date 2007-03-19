@@ -8,6 +8,32 @@
 #include <QtXml/QDomDocument>
 #include <QtXml/QDomElement>
 
+class tcConfigItem : public QObject
+{
+	Q_OBJECT
+
+public:
+	tcConfigItem(const QString &pClassName);
+
+	bool LoadFromXml(const QDomElement &pElement);
+
+	bool SaveToXml(QDomDocument &pDoc, QDomElement &pElement);
+
+	QString GetAttribute(const QString &pKey, const QString &pDefaultValue);
+
+	void SetAttribute(const QString &pKey, const QString &pValue);
+
+	QString GetClassName();
+
+private:
+	QString mClassName;
+
+	QStringList mKeyList;
+
+	QStringList mValueList;
+
+};
+
 /*! \brief tcCfgService
  	\author tony (http://www.tonixsoft.com)
  	\version 0.01
@@ -24,27 +50,31 @@ public:
 
 	static bool Finalize();
 
-	static QDomElement GetElement(QObject *pObject);
+	static QString GetAttribute(QObject *pObject, const QString &pKey, const QString &pDefaultValue);
+
+	static void SetAttribute(QObject *pObject, const QString &pKey, const QString &pValue);
+
+	static QString GetGlobalAttribute(const QString &pKey, const QString &pDefaultValue);
 
 protected:
 	tcCfgService(int argc, char* argv[]);
 
 	~tcCfgService();
 
-	QDomElement _GetElement(QObject *pObject);
+	tcConfigItem* GetConfigItem(const QString &pClassName);
 
 	bool LoadFromFile();
 
 	bool SaveToFile();
+
+	void ClearAllConfigItems();
 
 private:
 	static tcCfgService *mThis;
 
 	QDir mPath;
 
-	QDomDocument mDocument;
-
-	QDomElement mRootElement;
+	QMap<QString, tcConfigItem*> mConfigMap;
 
 };
 

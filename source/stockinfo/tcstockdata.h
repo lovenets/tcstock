@@ -44,6 +44,8 @@ public:
 	*/
 	tcStockDailyData* ReadData(const QDate &pDate);
 
+	bool ReadData(const QDate &pDate, tcStockDailyData *pStockDailyData);
+
 	/*!
 		write data into data file.
 	*/
@@ -82,6 +84,12 @@ inline tcStockDailyData* tcStockData::ReadData(const QDate &pDate)
 {
 	tcStockDailyData *data = &mDailyData[pDate.dayOfYear()-1];
 	return data;
+}
+
+inline bool tcStockData::ReadData(const QDate &pDate, tcStockDailyData *pStockDailyData)
+{
+	memcpy(pStockDailyData, &mDailyData[pDate.dayOfYear()-1], sizeof(tcStockDailyData));
+	return true;
 }
 
 inline bool tcStockData::WriteData(const QDate &pDate, tcStockDailyData *pStockDailyData)

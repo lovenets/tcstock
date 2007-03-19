@@ -38,6 +38,7 @@ protected slots:
 	void DoStockModified(tcMarket *pMarket);
 
 	void DoEditFavourite();
+
 	void DoMarketIndexChanged(int pIndex);
 
 	void DoFilterTextChanged(const QString &pText);

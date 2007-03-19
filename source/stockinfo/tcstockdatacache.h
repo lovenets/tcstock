@@ -69,6 +69,8 @@ public:
 	*/
 	tcStockDailyData* ReadData(const QString &pStockCode, const QDate &pDate);
 
+	bool ReadData(const QString &pStockCode, const QDate &pDate, tcStockDailyData *pStockDailyData);
+
 	bool ReadData(const QString &pStockCode, const QDate &pStartDate, int pDayCount, tcStockDailyData *pData);
 
 	/*!
@@ -113,6 +115,25 @@ inline tcStockDailyData* tcStockDataCache::ReadData(const QString &pStockCode, c
 		mMaxRefCount = dataitem->GetRefCount();
 	}
 	return dataitem->ReadData(pDate);
+}
+
+inline bool tcStockDataCache::ReadData(const QString &pStockCode, const QDate &pDate, tcStockDailyData *pStockDailyData)
+{
+	QString keyname = "%1_%2";
+	keyname = keyname.arg(pStockCode).arg(pDate.year());
+	tcStockDataCacheItem *dataitem;
+	if (mStockDataMap.contains(keyname)) {
+		dataitem = mStockDataMap[keyname];
+	}
+	else {
+		CheckFreeCache();
+		dataitem = new tcStockDataCacheItem(mBasePath, pStockCode, pDate.year());
+		mStockDataMap.insert(keyname, dataitem);
+	}
+	if (dataitem->IncRefCount() > mMaxRefCount) {
+		mMaxRefCount = dataitem->GetRefCount();
+	}
+	return dataitem->ReadData(pDate, pStockDailyData);
 }
 
 inline bool tcStockDataCache::ReadData(const QString &pStockCode, const QDate &pStartDate, int pDayCount, tcStockDailyData *pData)

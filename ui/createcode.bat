@@ -10,5 +10,7 @@ uic ui_stocklistfavtwgt.ui -o ui_stocklistfavtwgt.h
 uic ui_favouriteinfodlg.ui -o ui_favouriteinfodlg.h
 uic ui_favouritegroupinfodlg.ui -o ui_favouritegroupinfodlg.h
 uic ui_stockselectdlg.ui -o ui_stockselectdlg.h
+uic ui_dataimptsetupdlg.ui -o ui_dataimptsetupdlg.h
+uic ui_imptprogressdlg.ui -o ui_imptprogressdlg.h
 
 pause

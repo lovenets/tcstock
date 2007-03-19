@@ -32,7 +32,7 @@ protected slots:
 	void DoDone(bool pError);
 
 private:
-	QHttp mHttp;
+	QHttp *mHttp;
 
 };
 

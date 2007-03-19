@@ -62,6 +62,49 @@
     </message>
 </context>
 <context>
+    <name>tcDataImporterSetupDialog</name>
+    <message>
+        <location filename="../source/dataimpt/ui_dataimptsetupdlg.h" line="173"/>
+        <source>Data Import Setup...</source>
+        <translation type="unfinished">导入股票数据设置...</translation>
+    </message>
+    <message>
+        <location filename="../source/dataimpt/ui_dataimptsetupdlg.h" line="174"/>
+        <source>Source List:</source>
+        <translation type="unfinished">导入源列表:</translation>
+    </message>
+    <message>
+        <location filename="../source/dataimpt/ui_dataimptsetupdlg.h" line="175"/>
+        <source>Setting...</source>
+        <translation type="unfinished">设置...</translation>
+    </message>
+    <message>
+        <location filename="../source/dataimpt/ui_dataimptsetupdlg.h" line="176"/>
+        <source>Import Now</source>
+        <translation type="unfinished">立即导入</translation>
+    </message>
+    <message>
+        <location filename="../source/dataimpt/ui_dataimptsetupdlg.h" line="177"/>
+        <source>Setup:</source>
+        <translation type="unfinished">设置:</translation>
+    </message>
+    <message>
+        <location filename="../source/dataimpt/ui_dataimptsetupdlg.h" line="178"/>
+        <source>Do not Auto Import.</source>
+        <translation type="unfinished">不使用自动导入.</translation>
+    </message>
+    <message>
+        <location filename="../source/dataimpt/ui_dataimptsetupdlg.h" line="179"/>
+        <source>Auto Import every day.</source>
+        <translation type="unfinished">每天自动导入.</translation>
+    </message>
+    <message>
+        <location filename="../source/dataimpt/ui_dataimptsetupdlg.h" line="180"/>
+        <source>At Time:</source>
+        <translation type="unfinished">导入时间:</translation>
+    </message>
+</context>
+<context>
     <name>tcFavouriteGroupInfoDialog</name>
     <message>
         <location filename="../source/stockinfo/ui_favtgrpinfodlg.h" line="111"/>
@@ -149,66 +192,84 @@
     </message>
 </context>
 <context>
+    <name>tcImportProgressDialog</name>
+    <message>
+        <location filename="../source/dataimpt/ui_imptprogressdlg.h" line="74"/>
+        <source>Import Progress...</source>
+        <translation type="unfinished">导入进度...</translation>
+    </message>
+</context>
+<context>
     <name>tcMainWindow</name>
     <message>
-        <location filename="../source/tcmainwnd.cpp" line="74"/>
+        <location filename="../source/tcmainwnd.cpp" line="79"/>
         <source>Stock List</source>
         <translation>股票列表</translation>
     </message>
     <message>
-        <location filename="../source/tcmainwnd.cpp" line="55"/>
+        <location filename="../source/tcmainwnd.cpp" line="56"/>
         <source>&amp;Data</source>
         <translation>数据(&amp;D)</translation>
     </message>
     <message>
-        <location filename="../source/tcmainwnd.cpp" line="73"/>
+        <location filename="../source/tcmainwnd.cpp" line="78"/>
         <source>&amp;View</source>
         <translation>视图(&amp;V)</translation>
     </message>
     <message>
-        <location filename="../source/tcmainwnd.cpp" line="56"/>
+        <location filename="../source/tcmainwnd.cpp" line="57"/>
         <source>Modify Market...</source>
         <translation>修改股市定义...</translation>
     </message>
     <message>
-        <location filename="../source/tcmainwnd.cpp" line="60"/>
+        <location filename="../source/tcmainwnd.cpp" line="61"/>
         <source>Input Stock Data...</source>
         <translation>输入股票数据...</translation>
     </message>
     <message>
-        <location filename="../source/tcmainwnd.cpp" line="81"/>
+        <location filename="../source/tcmainwnd.cpp" line="86"/>
         <source>&amp;Help</source>
         <translation>帮助(&amp;H)</translation>
     </message>
     <message>
-        <location filename="../source/tcmainwnd.cpp" line="82"/>
+        <location filename="../source/tcmainwnd.cpp" line="87"/>
         <source>About...</source>
         <translation> 关于...</translation>
     </message>
     <message>
-        <location filename="../source/tcmainwnd.cpp" line="77"/>
+        <location filename="../source/tcmainwnd.cpp" line="82"/>
         <source>Weekly View</source>
         <translation>周视图</translation>
     </message>
     <message>
-        <location filename="../source/tcmainwnd.cpp" line="69"/>
+        <location filename="../source/tcmainwnd.cpp" line="74"/>
         <source>Exit</source>
         <translation>退出</translation>
     </message>
     <message>
-        <location filename="../source/tcmainwnd.cpp" line="16"/>
+        <location filename="../source/tcmainwnd.cpp" line="17"/>
         <source>Teacher.Cheng Stock   [Version: %1]</source>
         <translation>小智慧   [Version: %1]</translation>
     </message>
     <message>
-        <location filename="../source/tcmainwnd.cpp" line="64"/>
+        <location filename="../source/tcmainwnd.cpp" line="65"/>
         <source>Edit Favourite Stock...</source>
         <translation>编辑自选股...</translation>
     </message>
     <message>
-        <location filename="../source/tcmainwnd.cpp" line="53"/>
+        <location filename="../source/tcmainwnd.cpp" line="54"/>
         <source>ToolBar</source>
         <translation>工具条</translation>
+    </message>
+    <message>
+        <location filename="../source/tcmainwnd.cpp" line="35"/>
+        <source>Tool Pad</source>
+        <translation>工具栏</translation>
+    </message>
+    <message>
+        <location filename="../source/tcmainwnd.cpp" line="69"/>
+        <source>Import Stock Data...</source>
+        <translation>导入股票数据...</translation>
     </message>
 </context>
 <context>
@@ -309,12 +370,12 @@
     <message>
         <location filename="../source/stockinfo/ui_marketlistdlg.h" line="167"/>
         <source>Import From CVS File</source>
-        <translation>导入CSV文件</translation>
+        <translation>从CSV文件导入</translation>
     </message>
     <message>
         <location filename="../source/stockinfo/ui_marketlistdlg.h" line="168"/>
         <source>Export To CSV File</source>
-        <translation>到处CSV文件</translation>
+        <translation>导出到CSV文件</translation>
     </message>
 </context>
 <context>
@@ -384,6 +445,54 @@
         <location filename="../source/viewmodel/tcmonthlyviewmodel.cpp" line="55"/>
         <source>Quantity : %1</source>
         <translation>成交量 : %1</translation>
+    </message>
+</context>
+<context>
+    <name>tcSinaWebImportSource</name>
+    <message>
+        <location filename="../source/dataimpt/tcsinawebimptsource.cpp" line="17"/>
+        <source>sina web</source>
+        <translation type="unfinished">新浪网站</translation>
+    </message>
+    <message>
+        <location filename="../source/dataimpt/tcsinawebimptsource.cpp" line="63"/>
+        <source>All done.</source>
+        <translation type="unfinished">完成.</translation>
+    </message>
+    <message>
+        <location filename="../source/dataimpt/tcsinawebimptsource.cpp" line="69"/>
+        <source>Begin import from page: %1.</source>
+        <translation type="unfinished">开始从页面 %1 导入.</translation>
+    </message>
+    <message>
+        <location filename="../source/dataimpt/tcsinawebimptsource.cpp" line="162"/>
+        <source>Processing stock %1 ...</source>
+        <translation type="unfinished">正在处理股票 %1 ...</translation>
+    </message>
+    <message>
+        <location filename="../source/dataimpt/tcsinawebimptsource.cpp" line="173"/>
+        <source>The stock not exists.</source>
+        <translation type="unfinished">股票不存在.</translation>
+    </message>
+    <message>
+        <location filename="../source/dataimpt/tcsinawebimptsource.cpp" line="194"/>
+        <source>Error when get daily data of stock.</source>
+        <translation type="unfinished">取得股票每日数据时发生错误.</translation>
+    </message>
+    <message>
+        <location filename="../source/dataimpt/tcsinawebimptsource.cpp" line="203"/>
+        <source>Error when set daily data of stock.</source>
+        <translation type="unfinished">设置股票每日数据时发生错误.</translation>
+    </message>
+    <message>
+        <location filename="../source/dataimpt/tcsinawebimptsource.cpp" line="216"/>
+        <source>Received successful.</source>
+        <translation type="unfinished">成功接收数据.</translation>
+    </message>
+    <message>
+        <location filename="../source/dataimpt/tcsinawebimptsource.cpp" line="165"/>
+        <source>Error when extract data of stock.</source>
+        <translation type="unfinished">解析股票数据时发生错误.</translation>
     </message>
 </context>
 <context>

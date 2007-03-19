@@ -47,15 +47,15 @@ bool tcObjService::InitializeAll()
 {
 	if (! mStockManager->LoadFromFile()) {
 		tcLogService::CreateLog(this, "Error when load stock manager.");
-		//return false;
+		return false;
 	}
 	if (! mMarketManager->LoadFromFile()) {
 		tcLogService::CreateLog(this, "Error when load market manager.");
-		//return false;
+		return false;
 	}
 	if (! mFavouriteManager->LoadFromFile()) {
 		tcLogService::CreateLog(this, "Error when load favourite manager.");
-		//return false;
+		return false;
 	}
 	return true;
 }

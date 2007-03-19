@@ -9,6 +9,7 @@
 #include "tcaboutdlg.h"
 #include "service/tcsvcpack.h"
 #include "importer/tcimporterpack.h"
+#include "dataimpt/tcdataimptpack.h"
 
 tcMainWindow::tcMainWindow(QWidget *pParent)
 	: QMainWindow(pParent)
@@ -31,7 +32,7 @@ tcMainWindow::tcMainWindow(QWidget *pParent)
 	addDockWidget(Qt::BottomDockWidgetArea, mWeeklyDock);
 
 	//create the tool pad widget
-	mStockListDock = new QDockWidget(tr("Stock List"), this);
+	mStockListDock = new QDockWidget(tr("Tool Pad"), this);
 	mStockListDock->setAllowedAreas(Qt::LeftDockWidgetArea | Qt::RightDockWidgetArea);
 	mStockListDock->setMinimumSize(250, 0);
 	mToolPadWidget = new tcToolPadWidget(mStockListDock);
@@ -63,6 +64,10 @@ void tcMainWindow::CreateMenusAndToolbar()
 	toolbar->addAction(action);
 	action = new QAction(QIcon(""), tr("Edit Favourite Stock..."), this);
 	connect(action, SIGNAL(triggered()), this, SLOT(DoEditFavouriteStock()));
+	menu->addAction(action);
+	toolbar->addAction(action);
+	action = new QAction(QIcon(""), tr("Import Stock Data..."), this);
+	connect(action, SIGNAL(triggered()), this, SLOT(DoImportStockData()));
 	menu->addAction(action);
 	toolbar->addAction(action);
 	menu->addSeparator();
@@ -107,6 +112,12 @@ void tcMainWindow::DoEditFavouriteStock()
 	favouritemanager->EditFavouriteList(this, -1);
 }
 
+void tcMainWindow::DoImportStockData()
+{
+	tcDataImporter imp;
+	imp.ShowSetupDialog(this);
+}
+
 void tcMainWindow::DoExit()
 {
 	close();
@@ -140,8 +151,12 @@ void tcMainWindow::mytest()
 	int count = imp.LoadFromFile("E:\\source\\TCStock\\001\\bin\\SZSE.COD", 1);
 	QMessageBox::information(this, SYSTEM_NAME, tr("%1 stocks info imported.").arg(count));
 	*/
-	tcSinaStockDataImporter imp;
-	imp.LoadStockData();
+	//tcSinaStockDataImporter *imp = new tcSinaStockDataImporter();
+	//imp->LoadStockData();
+
+	tcDataImporter imp;
+	imp.ShowSetupDialog(this);
+	//imp.Import(this);
 }
 
 void tcMainWindow::DoStockSelected(tcStockInfoList *pStockInfoList)

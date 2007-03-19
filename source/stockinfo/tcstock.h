@@ -34,6 +34,8 @@ public:
 
 	tcStockDailyData* ReadData(const QDate &pDate);
 
+	bool ReadData(const QDate &pDate, tcStockDailyData *pStockDailyData);
+
 	bool ReadData(const QDate &pStartDate, int pDayCount, tcStockDailyData *pData);
 
 	bool WriteData(const QDate &pDate, tcStockDailyData *pStockDailyData);
@@ -64,6 +66,11 @@ private:
 inline tcStockDailyData* tcStock::ReadData(const QDate &pDate)
 {
 	return mStockDataCache->ReadData(mStockCode, pDate);
+}
+
+inline bool tcStock::ReadData(const QDate &pDate, tcStockDailyData *pStockDailyData)
+{
+	return mStockDataCache->ReadData(mStockCode, pDate, pStockDailyData);
 }
 
 inline bool tcStock::ReadData(const QDate &pStartDate, int pDayCount, tcStockDailyData *pData)

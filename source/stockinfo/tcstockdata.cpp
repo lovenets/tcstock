@@ -22,7 +22,9 @@ tcStockData::tcStockData(const QDir &pBasePath, const QString &pStockCode, int p
 tcStockData::~tcStockData()
 {
 	if (mIsModified) {
-		tcLogService::CreateLog(this, "Data not saved!");
+		if (! SaveToFile()) {
+			tcLogService::CreateLog(this, "Error when auto save data.");
+		}
 	}
 }
 

@@ -40,6 +40,8 @@ protected slots:
 
 	void DoEditFavouriteStock();
 
+	void DoImportStockData();
+
 	void DoExit();
 
 	void DoViewStockList();
