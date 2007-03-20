@@ -77,7 +77,7 @@ void tcStockListWidget::DoMarketIndexChanged(int pIndex)
 		int row = tbl1->rowCount();
 		tbl1->insertRow(row);
 		tbl1->setItem(row, 0, new QTableWidgetItem(info.GetStockCode()));
-		tbl1->setItem(row, 1, new QTableWidgetItem(info.GetStockName()));
+		tbl1->setItem(row, 1, new QTableWidgetItem(info->GetStockName()));
 	}
 }
 

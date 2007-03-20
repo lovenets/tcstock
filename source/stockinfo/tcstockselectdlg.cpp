@@ -85,7 +85,7 @@ void tcStockSelectDialog::DoStockModified()
 		QTableWidgetItem *item = new QTableWidgetItem(info.GetStockCode());
 		item->setCheckState(Qt::Unchecked);
 		tbl1->setItem(row, 0, item);
-		tbl1->setItem(row, 1, new QTableWidgetItem(info.GetStockName()));
+		tbl1->setItem(row, 1, new QTableWidgetItem(info->GetStockName()));
 	}
 	setUpdatesEnabled(true);
 }

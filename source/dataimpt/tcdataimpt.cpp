@@ -63,7 +63,7 @@ int tcDataImporter::GetActiveSourceIndex()
 	return tcCfgService::GetAttribute(this, "ImportSourceIndex", "0").toInt();
 }
 
-void tcDataImporter::SetActiveSourceIndex(const pIndex)
+void tcDataImporter::SetActiveSourceIndex(const int pIndex)
 {
 	QString sourceindex;
 	sourceindex.setNum(pIndex);

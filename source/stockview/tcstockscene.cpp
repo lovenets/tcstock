@@ -50,12 +50,7 @@ bool tcStockScene::ReloadStockInfoList()
 	}
 
 	foreach (tcStockInfo info, mViewStockInfoList) {
-		tcStock *stock = info.GetStock();
-		if (stock == NULL) {
-			tcLogService::CreateLog(this, "Error when get stock from stock info.");
-			continue;
-		}
-		tcViewStockGroup *stockgroup = new tcViewStockGroup(NULL, stock, mViewModel);
+		tcViewStockGroup *stockgroup = new tcViewStockGroup(NULL, info, mViewModel);
 		this->addItem(stockgroup);
 		mViewStockGroupList.append(stockgroup);
 	}

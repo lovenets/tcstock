@@ -21,10 +21,10 @@ QString tcDailyViewModel::GetViewItemText(int pIndex)
 	return "";
 }
 
-tcViewModelStockData* tcDailyViewModel::GetViewItemData(int pIndex, tcStock *pStock)
+tcViewModelStockData* tcDailyViewModel::GetViewItemData(int pIndex, const tcStockInfo &pStockInfo)
 {
 	QDate date = GetViewItemDate(pIndex);
-	tcStockDailyData *data = pStock->ReadData(date);
+	const tcStockDailyData *data = pStockInfo->ReadData(date);
 	Q_ASSERT(data);
 	mStockData.OpenPrice = data->OpenPrice;
 	mStockData.ClosePrice = data->ClosePrice;

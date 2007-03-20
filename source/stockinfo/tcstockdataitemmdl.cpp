@@ -32,7 +32,7 @@ void tcStockDataItemModel::CreateStockList(int pGroupIndex, const QString &pStoc
 		int row = rowCount();
 		insertRow(row);
 		setItem(row, 0, new QStandardItem(info.GetStockCode()));
-		setItem(row, 1, new QStandardItem(info.GetStockName()));
+		setItem(row, 1, new QStandardItem(info->GetStockName()));
 	}
 }
 
@@ -42,12 +42,10 @@ void tcStockDataItemModel::LoadStockData(const QDate &pDate)
 	mEditDate = pDate;
 	int i=0;
 	foreach(tcStockInfo info, mViewStockInfoList) {
-		tcStock *stock = info.GetStock();
-		if (stock == NULL) {
-			tcLogService::CreateLog(this, "Error when get stock from stock info.");
+		const tcStockDailyData *data = info->ReadData(pDate);
+		if (! data) {
 			continue;
 		}
-		tcStockDailyData *data = stock->ReadData(pDate);
 		QString floatstr;
 		floatstr.setNum(qreal(data->OpenPrice) / 100.0, 'F', 2);
 		setItem(i, 2, new QStandardItem(floatstr));
@@ -65,19 +63,14 @@ void tcStockDataItemModel::LoadStockData(const QDate &pDate)
 	}
 }
 
-tcStockDailyData* tcStockDataItemModel::ReadData(int pRow)
+const tcStockDailyData* tcStockDataItemModel::ReadData(int pRow)
 {
 	if (pRow < 0 || pRow >= mViewStockInfoList.count()) {
 		tcLogService::CreateLog(this, "Wrong index for read data.");
 		return NULL;
 	}
 	tcStockInfo info = mViewStockInfoList[pRow];
-	tcStock *stock = info.GetStock();
-	if (stock == NULL) {
-		tcLogService::CreateLog(this, "Erro rwhen get stock from stock info.");
-		return NULL;
-	}
-	return stock->ReadData(mEditDate);
+	return info->ReadData(mEditDate);
 }
 
 bool tcStockDataItemModel::WriteData(int pRow, tcStockDailyData* pStockDailyData)
@@ -87,12 +80,7 @@ bool tcStockDataItemModel::WriteData(int pRow, tcStockDailyData* pStockDailyData
 		return false;
 	}
 	tcStockInfo info = mViewStockInfoList[pRow];
-	tcStock *stock = info.GetStock();
-	if (stock == NULL) {
-		tcLogService::CreateLog(this, "Error when get stock from stock info.");
-		return false;
-	}
-	if (! stock->WriteData(mEditDate, pStockDailyData)) {
+	if (! info->WriteData(mEditDate, pStockDailyData)) {
 		tcLogService::CreateLog(this, "Error when write data.");
 		return false;
 	}

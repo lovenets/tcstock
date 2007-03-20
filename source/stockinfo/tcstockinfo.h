@@ -5,7 +5,10 @@
 #include <QtCore/QVariant>
 #include <QtCore/QObject>
 
+#include "../service/tcsvcpack.h"
 #include "tcstock.h"
+#include "tcnullstock.h"
+#include "tcstockmgr.h"
 
 /*! \brief tcStockInfo
  	\author tony (http://www.tonixsoft.com)
@@ -27,17 +30,13 @@ public:
 
 	tcStockInfo(const tcStockInfo &pInfo);
 
-	tcStock* GetStock();
-
 	QString GetStockCode();
 
 	tcStockInfo& operator=(const tcStockInfo &pInfo);
 
 	bool operator==(const tcStockInfo &pInfo);
 
-	QString GetStockName();
-
-	QString GetDescription();
+	tcStock* operator->() const;
 
 protected slots:
 
@@ -45,5 +44,15 @@ protected:
 	QString mStockCode;
 
 };
+
+inline tcStock* tcStockInfo::operator->() const
+{
+	tcStockManager *stockmanager = tcObjService::GetStockManager();
+	tcStock *stock = stockmanager->GetStockByCode(mStockCode);
+	if (stock == NULL) {
+		stock = &tcNullStock::NullStock;
+	}
+	return stock;
+}
 
 #endif //tcstockinfo_h

@@ -4,7 +4,6 @@
 
 #include "tclogsvc.h"
 #include "../stockinfo/tcstockinfopack.h"
-#include "../favourite/tcfavouritepack.h"
 
 tcObjService* tcObjService::mThis = NULL;
 
@@ -48,18 +47,15 @@ bool tcObjService::InitializeAll()
 {
 	if (! mStockManager->LoadFromFile()) {
 		tcLogService::CreateLog(this, "Error when load stock manager.");
-		//return false;
+		return false;
 	}
 	if (! mMarketManager->LoadFromFile()) {
 		tcLogService::CreateLog(this, "Error when load market manager.");
-		//return false;
+		return false;
 	}
 	if (! mFavouriteManager->LoadFromFile()) {
 		tcLogService::CreateLog(this, "Error when load favourite manager.");
-		if (! mFavouriteManager->CreateDefaultFile()) {
-			tcLogService::CreateLog(this, "Error when create default favourite file.");
-			return false;
-		}
+		return false;
 	}
 	return true;
 }
@@ -69,4 +65,4 @@ bool tcObjService::FinalizeAll()
 	return true;
 }
 
-	#include "moc_tcobjsvc.cpp"
+#include "moc_tcobjsvc.cpp"

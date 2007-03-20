@@ -2,7 +2,7 @@
 
 #define tcfavtmgr_h
 
-#include <QTCore/QVariant>
+#include <QtCore/QVariant>
 #include <QtCore/QObject>
 #include <QtCore/QDir>
 

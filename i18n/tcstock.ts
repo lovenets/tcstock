@@ -194,7 +194,7 @@
 <context>
     <name>tcImportProgressDialog</name>
     <message>
-        <location filename="../source/dataimpt/ui_imptprogressdlg.h" line="74"/>
+        <location filename="../source/dataimpt/ui_imptprogressdlg.h" line="73"/>
         <source>Import Progress...</source>
         <translation type="unfinished">导入进度...</translation>
     </message>
@@ -450,11 +450,6 @@
 <context>
     <name>tcSinaWebImportSource</name>
     <message>
-        <location filename="../source/dataimpt/tcsinawebimptsource.cpp" line="17"/>
-        <source>sina web</source>
-        <translation type="unfinished">新浪网站</translation>
-    </message>
-    <message>
         <location filename="../source/dataimpt/tcsinawebimptsource.cpp" line="63"/>
         <source>All done.</source>
         <translation type="unfinished">完成.</translation>
@@ -475,17 +470,17 @@
         <translation type="unfinished">股票不存在.</translation>
     </message>
     <message>
-        <location filename="../source/dataimpt/tcsinawebimptsource.cpp" line="194"/>
+        <location filename="../source/dataimpt/tcsinawebimptsource.cpp" line="201"/>
         <source>Error when get daily data of stock.</source>
         <translation type="unfinished">取得股票每日数据时发生错误.</translation>
     </message>
     <message>
-        <location filename="../source/dataimpt/tcsinawebimptsource.cpp" line="203"/>
+        <location filename="../source/dataimpt/tcsinawebimptsource.cpp" line="211"/>
         <source>Error when set daily data of stock.</source>
         <translation type="unfinished">设置股票每日数据时发生错误.</translation>
     </message>
     <message>
-        <location filename="../source/dataimpt/tcsinawebimptsource.cpp" line="216"/>
+        <location filename="../source/dataimpt/tcsinawebimptsource.cpp" line="225"/>
         <source>Received successful.</source>
         <translation type="unfinished">成功接收数据.</translation>
     </message>
@@ -493,6 +488,11 @@
         <location filename="../source/dataimpt/tcsinawebimptsource.cpp" line="165"/>
         <source>Error when extract data of stock.</source>
         <translation type="unfinished">解析股票数据时发生错误.</translation>
+    </message>
+    <message>
+        <location filename="../source/dataimpt/tcsinawebimptsource.cpp" line="17"/>
+        <source>sina stock (http://stock.sina.com.cn)</source>
+        <translation type="unfinished">新浪股票 (http://stock.sina.com.cn)</translation>
     </message>
 </context>
 <context>

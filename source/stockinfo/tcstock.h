@@ -32,25 +32,28 @@ public:
 
 	bool SaveToXml(QDomDocument &pDoc, QDomElement &pElement);
 
-	tcStockDailyData* ReadData(const QDate &pDate);
+	virtual const tcStockDailyData* ReadData(const QDate &pDate);
 
-	bool ReadData(const QDate &pDate, tcStockDailyData *pStockDailyData);
+	virtual bool ReadData(const QDate &pDate, tcStockDailyData *pStockDailyData);
 
-	bool ReadData(const QDate &pStartDate, int pDayCount, tcStockDailyData *pData);
+	virtual bool ReadData(const QDate &pStartDate, int pDayCount, tcStockDailyData *pData);
 
-	bool WriteData(const QDate &pDate, tcStockDailyData *pStockDailyData);
+	virtual bool WriteData(const QDate &pDate, tcStockDailyData *pStockDailyData);
 
 	QString GetStockCode();
 
 	void SetStockCode(const QString &pStockCode);
 
-	QString GetStockName();
+	virtual QString GetStockName();
 
 	void SetStockName(const QString &pStockName);
 
-	QString GetDescription();
+	virtual QString GetDescription();
 
 	void SetDescription(const QString &pDescription);
+
+protected:
+	tcStock();
 
 private:
 	tcStockDataCache *mStockDataCache;
@@ -63,7 +66,7 @@ private:
 
 };
 
-inline tcStockDailyData* tcStock::ReadData(const QDate &pDate)
+inline const tcStockDailyData* tcStock::ReadData(const QDate &pDate)
 {
 	return mStockDataCache->ReadData(mStockCode, pDate);
 }

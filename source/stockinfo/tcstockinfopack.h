@@ -2,8 +2,6 @@
 
 #define tcstockinfopack_h
 
-#include "tcstockmgr.h"
-#include "tcstock.h"
 #include "tcstockdata.h"
 #include "tcstockinfo.h"
 #include "tcstockinfolst.h"

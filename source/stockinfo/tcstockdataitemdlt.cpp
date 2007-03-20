@@ -45,7 +45,7 @@ void tcStockDataItemDelegate::setEditorData(QWidget *pEditor, const QModelIndex 
 	if (! model) {
 		return;
 	}
-	tcStockDailyData *data = model->ReadData(pIndex.row());
+	const tcStockDailyData *data = model->ReadData(pIndex.row());
 	if (! data) {
 		return;
 	}
@@ -84,7 +84,7 @@ void tcStockDataItemDelegate::setModelData(QWidget *pEditor, QAbstractItemModel 
 	if (! model) {
 		return;
 	}
-	tcStockDailyData *data = model->ReadData(pIndex.row());
+	const tcStockDailyData *data = model->ReadData(pIndex.row());
 	if (! data) {
 		return;
 	}

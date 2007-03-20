@@ -33,16 +33,16 @@ bool tcSinaWebImportSource::Import()
 
 	QString useproxy = tcCfgService::GetGlobalAttribute("UseProxy", "false");
 	if (useproxy == "true") {
-		/*
 		QString proxyserver = tcCfgService::GetGlobalAttribute("ProxyServer", "");
 		QString proxyport = tcCfgService::GetGlobalAttribute("ProxyPort", "80");
 		QString proxyusername = tcCfgService::GetGlobalAttribute("ProxyUserName", "");
 		QString proxypassword = tcCfgService::GetGlobalAttribute("ProxyPassword", "");
-		*/
+		/*
 		QString proxyserver = "192.168.6.1";
 		QString proxyport = "6437";
 		QString proxyusername = "guxiaodong";
 		QString proxypassword = "omron99";
+		*/
 		mHttp->setProxy(proxyserver, proxyport.toInt(), proxyusername, proxypassword);
 	}
 
@@ -98,7 +98,7 @@ void tcSinaWebImportSource::ProcessForOneStock(const QString &pText)
 {
 	/* process the text like this:
 		<td class=td04 height=23>!!<a href="http://finance.sina.com.cn/realstock/sh600004.html" target=_blank>600004</a></td>
-		<td class=td06>!!ÅãÅ~OAÅ‚u3!</td>
+		<td class=td06>XXXXXX</td>
 		<td class=td06>12.26</td>
 		<td class=td06>12.110</td>
 		<td class=td06>11.780</td>
@@ -107,8 +107,8 @@ void tcSinaWebImportSource::ProcessForOneStock(const QString &pText)
 		<td class=td06><font color=#ff0020>0.15(1.24%)</font></td>
 		<td class=td06>5274438</td>
 		<td class=td06>63744700</td>
-		<td class=td06>!!2007-03-19</td>
-		<td class=td05>!!14:44:37</td>
+		<td class=td06> 2007-03-19</td>
+		<td class=td05> 14:44:37</td>
 	*/
 	QRegExp rx("<.+>([^<>]+)</.+>");
 	rx.setMinimal(true);

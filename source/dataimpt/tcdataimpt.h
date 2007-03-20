@@ -31,7 +31,7 @@ public:
 
 	int GetActiveSourceIndex();
 
-	void SetActiveSourceIndex(const pIndex);
+	void SetActiveSourceIndex(const int pIndex);
 
 protected:
 

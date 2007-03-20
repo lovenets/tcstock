@@ -5,7 +5,7 @@
 #include <QtCore/QVariant>
 #include <QtCore/QObject>
 
-class tcStock;
+class tcStockInfo;
 
 typedef struct {
 	long OpenPrice;
@@ -50,7 +50,7 @@ public:
 
 	virtual QString GetViewItemText(int pIndex) = 0;
 
-	virtual tcViewModelStockData* GetViewItemData(int pIndex, tcStock *pStock) = 0;
+	virtual tcViewModelStockData* GetViewItemData(int pIndex, const tcStockInfo &pStockInfo) = 0;
 
 	virtual bool IsCurrentItem(int pIndex) = 0;
 

@@ -25,7 +25,7 @@ public:
 
 	virtual QString GetViewItemText(int pIndex);
 
-	virtual tcViewModelStockData* GetViewItemData(int pIndex, tcStock *pStock);
+	virtual tcViewModelStockData* GetViewItemData(int pIndex, const tcStockInfo &pStockInfo);
 
 	virtual bool IsCurrentItem(int pIndex);
 

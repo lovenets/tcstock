@@ -5,11 +5,9 @@
 
 #define ENTITY_OFFSET 300
 
-tcViewStockGroup::tcViewStockGroup(QObject *pParent, tcStock *pStock, tcViewModel *pViewModel)
+tcViewStockGroup::tcViewStockGroup(QObject *pParent, const tcStockInfo pStockInfo, tcViewModel *pViewModel)
 	: QObject(pParent)
 {
-	mStock = pStock;
-
 	int i;
 	//create the entity group, and the quantity group
 	QList<tcViewEntityGroup*> entitylist;
@@ -17,7 +15,7 @@ tcViewStockGroup::tcViewStockGroup(QObject *pParent, tcStock *pStock, tcViewMode
 	long minentityval = 0, maxentityval = 0;
 	long maxquantityval = 0;
 	for (i=0; i<pViewModel->GetViewItemCount(); i++) {
-		tcViewModelStockData *data = pViewModel->GetViewItemData(i, mStock);
+		tcViewModelStockData *data = pViewModel->GetViewItemData(i, pStockInfo);
 		Q_ASSERT(data);
 		tcViewEntityGroup *entitygroup = new tcViewEntityGroup(this, data);
 		entitylist.append(entitygroup);

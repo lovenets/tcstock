@@ -22,13 +22,13 @@ QString tcWeeklyViewModel::GetViewItemText(int pIndex)
 	return "";
 }
 
-tcViewModelStockData* tcWeeklyViewModel::GetViewItemData(int pIndex, tcStock *pStock)
+tcViewModelStockData* tcWeeklyViewModel::GetViewItemData(int pIndex, const tcStockInfo &pStockInfo)
 {
 	QDate date = GetViewItemStartDate(pIndex);
 	ResetData();
 
 	tcStockDailyData data;
-	if (! pStock->ReadData(date, 7, &data)) {
+	if (! pStockInfo->ReadData(date, 7, &data)) {
 		tcLogService::CreateLog(this, "Error when read stock data.");
 		return &mStockData;
 	}

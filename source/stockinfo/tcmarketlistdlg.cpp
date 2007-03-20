@@ -63,8 +63,8 @@ void tcMarketListDialog::LoadStockList()
 		int row = tbl1->rowCount();
 		tbl1->insertRow(row);
 		tbl1->setItem(row, 0, new QTableWidgetItem(stockinfo.GetStockCode()));
-		tbl1->setItem(row, 1, new QTableWidgetItem(stockinfo.GetStockName()));
-		tbl1->setItem(row, 2, new QTableWidgetItem(stockinfo.GetDescription()));
+		tbl1->setItem(row, 1, new QTableWidgetItem(stockinfo->GetStockName()));
+		tbl1->setItem(row, 2, new QTableWidgetItem(stockinfo->GetDescription()));
 	}
 	setUpdatesEnabled(true);
 }
@@ -136,8 +136,8 @@ void tcMarketListDialog::DoAppendStock()
 	int row = tbl1->rowCount();
 	tbl1->insertRow(row);
 	tbl1->setItem(row, 0, new QTableWidgetItem(stockinfo.GetStockCode()));
-	tbl1->setItem(row, 1, new QTableWidgetItem(stockinfo.GetStockName()));
-	tbl1->setItem(row, 2, new QTableWidgetItem(stockinfo.GetDescription()));
+	tbl1->setItem(row, 1, new QTableWidgetItem(stockinfo->GetStockName()));
+	tbl1->setItem(row, 2, new QTableWidgetItem(stockinfo->GetDescription()));
 }
 
 void tcMarketListDialog::DoModifyStock()
@@ -152,8 +152,8 @@ void tcMarketListDialog::DoModifyStock()
 	if (! market->ModifyStock(this, stockindex, stockinfo)) {
 		return;
 	}
-	tbl1->setItem(stockindex, 1, new QTableWidgetItem(stockinfo.GetStockName()));
-	tbl1->setItem(stockindex, 2, new QTableWidgetItem(stockinfo.GetDescription()));
+	tbl1->setItem(stockindex, 1, new QTableWidgetItem(stockinfo->GetStockName()));
+	tbl1->setItem(stockindex, 2, new QTableWidgetItem(stockinfo->GetDescription()));
 }
 
 void tcMarketListDialog::DoRemoveStock()

@@ -1,24 +1,24 @@
 # Microsoft Developer Studio Project File - Name="TCStock" - Package Owner=<4>
 # Microsoft Developer Studio Generated Build File, Format Version 6.00
-# ** 編集しないでください **
+# ** DO NOT EDIT **
 
 # TARGTYPE "Win32 (x86) Console Application" 0x0103
 
 CFG=TCStock - Win32 Debug
-!MESSAGE これは有効なﾒｲｸﾌｧｲﾙではありません。 このﾌﾟﾛｼﾞｪｸﾄをﾋﾞﾙﾄﾞするためには NMAKE を使用してください。
-!MESSAGE [ﾒｲｸﾌｧｲﾙのｴｸｽﾎﾟｰﾄ] ｺﾏﾝﾄﾞを使用して実行してください
+!MESSAGE This is not a valid makefile. To build this project using NMAKE,
+!MESSAGE use the Export Makefile command and run
 !MESSAGE 
 !MESSAGE NMAKE /f "TCStock.mak".
 !MESSAGE 
-!MESSAGE NMAKE の実行時に構成を指定できます
-!MESSAGE ｺﾏﾝﾄﾞ ﾗｲﾝ上でﾏｸﾛの設定を定義します。例:
+!MESSAGE You can specify a configuration when running NMAKE
+!MESSAGE by defining the macro CFG on the command line. For example:
 !MESSAGE 
 !MESSAGE NMAKE /f "TCStock.mak" CFG="TCStock - Win32 Debug"
 !MESSAGE 
-!MESSAGE 選択可能なﾋﾞﾙﾄﾞ ﾓｰﾄﾞ:
+!MESSAGE Possible choices for configuration are:
 !MESSAGE 
-!MESSAGE "TCStock - Win32 Release" ("Win32 (x86) Console Application" 用)
-!MESSAGE "TCStock - Win32 Debug" ("Win32 (x86) Console Application" 用)
+!MESSAGE "TCStock - Win32 Release" (based on "Win32 (x86) Console Application")
+!MESSAGE "TCStock - Win32 Debug" (based on "Win32 (x86) Console Application")
 !MESSAGE 
 
 # Begin Project
@@ -123,7 +123,7 @@ SOURCE=..\source\tcaboutdlg.h
 !ELSEIF  "$(CFG)" == "TCStock - Win32 Debug"
 
 # Begin Custom Build
-InputDir=\source\tcstock\001\source
+InputDir=\source\TCStock\002\source
 InputPath=..\source\tcaboutdlg.h
 
 "$(InputDir)/moc_tcaboutdlg.cpp" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
@@ -143,7 +143,7 @@ SOURCE=..\source\tcdailyviewwgt.h
 !ELSEIF  "$(CFG)" == "TCStock - Win32 Debug"
 
 # Begin Custom Build
-InputDir=\source\tcstock\001\source
+InputDir=\source\TCStock\002\source
 InputPath=..\source\tcdailyviewwgt.h
 
 "$(InputDir)/moc_tcdailyviewwgt.cpp" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
@@ -167,7 +167,7 @@ SOURCE=..\source\tcmainwnd.h
 !ELSEIF  "$(CFG)" == "TCStock - Win32 Debug"
 
 # Begin Custom Build
-InputDir=\source\tcstock\001\source
+InputDir=\source\TCStock\002\source
 InputPath=..\source\tcmainwnd.h
 
 "$(InputDir)/moc_tcmainwnd.cpp" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
@@ -191,7 +191,7 @@ SOURCE=..\source\tcweeklyviewwgt.h
 !ELSEIF  "$(CFG)" == "TCStock - Win32 Debug"
 
 # Begin Custom Build
-InputDir=\source\tcstock\001\source
+InputDir=\source\TCStock\002\source
 InputPath=..\source\tcweeklyviewwgt.h
 
 "$(InputDir)/moc_tcweeklyviewwgt.cpp" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
@@ -218,7 +218,7 @@ SOURCE=..\source\stockinfo\tcfavtgrp.h
 !ELSEIF  "$(CFG)" == "TCStock - Win32 Debug"
 
 # Begin Custom Build
-InputDir=\source\tcstock\001\source\stockinfo
+InputDir=\source\TCStock\002\source\stockinfo
 InputPath=..\source\stockinfo\tcfavtgrp.h
 
 "$(InputDir)/moc_tcfavtgrp.cpp" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
@@ -238,7 +238,7 @@ SOURCE=..\source\stockinfo\tcfavtgrpinfodlg.h
 !ELSEIF  "$(CFG)" == "TCStock - Win32 Debug"
 
 # Begin Custom Build
-InputDir=\source\tcstock\001\source\stockinfo
+InputDir=\source\TCStock\002\source\stockinfo
 InputPath=..\source\stockinfo\tcfavtgrpinfodlg.h
 
 "$(InputDir)/moc_tcfavtgrpinfodlg.cpp" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
@@ -258,7 +258,7 @@ SOURCE=..\source\stockinfo\tcfavtinfodlg.h
 !ELSEIF  "$(CFG)" == "TCStock - Win32 Debug"
 
 # Begin Custom Build
-InputDir=\source\tcstock\001\source\stockinfo
+InputDir=\source\TCStock\002\source\stockinfo
 InputPath=..\source\stockinfo\tcfavtinfodlg.h
 
 "$(InputDir)/moc_tcfavtinfodlg.cpp" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
@@ -278,7 +278,7 @@ SOURCE=..\source\stockinfo\tcfavtinfodlt.h
 !ELSEIF  "$(CFG)" == "TCStock - Win32 Debug"
 
 # Begin Custom Build
-InputDir=\source\tcstock\001\source\stockinfo
+InputDir=\source\TCStock\002\source\stockinfo
 InputPath=..\source\stockinfo\tcfavtinfodlt.h
 
 "$(InputDir)/moc_tcfavtinfodlt.cpp" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
@@ -298,7 +298,7 @@ SOURCE=..\source\stockinfo\tcfavtinfomdl.h
 !ELSEIF  "$(CFG)" == "TCStock - Win32 Debug"
 
 # Begin Custom Build
-InputDir=\source\tcstock\001\source\stockinfo
+InputDir=\source\TCStock\002\source\stockinfo
 InputPath=..\source\stockinfo\tcfavtinfomdl.h
 
 "$(InputDir)/moc_tcfavtinfomdl.cpp" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
@@ -318,7 +318,7 @@ SOURCE=..\source\stockinfo\tcfavtmgr.h
 !ELSEIF  "$(CFG)" == "TCStock - Win32 Debug"
 
 # Begin Custom Build
-InputDir=\source\tcstock\001\source\stockinfo
+InputDir=\source\TCStock\002\source\stockinfo
 InputPath=..\source\stockinfo\tcfavtmgr.h
 
 "$(InputDir)/moc_tcfavtmgr.cpp" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
@@ -338,7 +338,7 @@ SOURCE=..\source\stockinfo\tcmarket.h
 !ELSEIF  "$(CFG)" == "TCStock - Win32 Debug"
 
 # Begin Custom Build
-InputDir=\source\tcstock\001\source\stockinfo
+InputDir=\source\TCStock\002\source\stockinfo
 InputPath=..\source\stockinfo\tcmarket.h
 
 "$(InputDir)/moc_tcmarket.cpp" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
@@ -358,7 +358,7 @@ SOURCE=..\source\stockinfo\tcmarketinfodlg.h
 !ELSEIF  "$(CFG)" == "TCStock - Win32 Debug"
 
 # Begin Custom Build
-InputDir=\source\tcstock\001\source\stockinfo
+InputDir=\source\TCStock\002\source\stockinfo
 InputPath=..\source\stockinfo\tcmarketinfodlg.h
 
 "$(InputDir)/moc_tcmarketinfodlg.cpp" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
@@ -378,7 +378,7 @@ SOURCE=..\source\stockinfo\tcmarketlistdlg.h
 !ELSEIF  "$(CFG)" == "TCStock - Win32 Debug"
 
 # Begin Custom Build
-InputDir=\source\tcstock\001\source\stockinfo
+InputDir=\source\TCStock\002\source\stockinfo
 InputPath=..\source\stockinfo\tcmarketlistdlg.h
 
 "$(InputDir)/moc_tcmarketlistdlg.cpp" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
@@ -398,7 +398,7 @@ SOURCE=..\source\stockinfo\tcmarketmgr.h
 !ELSEIF  "$(CFG)" == "TCStock - Win32 Debug"
 
 # Begin Custom Build
-InputDir=\source\tcstock\001\source\stockinfo
+InputDir=\source\TCStock\002\source\stockinfo
 InputPath=..\source\stockinfo\tcmarketmgr.h
 
 "$(InputDir)/moc_tcmarketmgr.cpp" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
@@ -418,11 +418,31 @@ SOURCE=..\source\stockinfo\tcmarketselectdlg.h
 !ELSEIF  "$(CFG)" == "TCStock - Win32 Debug"
 
 # Begin Custom Build
-InputDir=\source\tcstock\001\source\stockinfo
+InputDir=\source\TCStock\002\source\stockinfo
 InputPath=..\source\stockinfo\tcmarketselectdlg.h
 
 "$(InputDir)/moc_tcmarketselectdlg.cpp" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
 	moc -i $(InputDir)/tcmarketselectdlg.h -o $(InputDir)/moc_tcmarketselectdlg.cpp
+
+# End Custom Build
+
+!ENDIF 
+
+# End Source File
+# Begin Source File
+
+SOURCE=..\source\stockinfo\tcnullstock.h
+
+!IF  "$(CFG)" == "TCStock - Win32 Release"
+
+!ELSEIF  "$(CFG)" == "TCStock - Win32 Debug"
+
+# Begin Custom Build
+InputDir=\source\TCStock\002\source\stockinfo
+InputPath=..\source\stockinfo\tcnullstock.h
+
+"$(InputDir)/moc_tcnullstock.cpp" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
+	moc -i $(InputDir)/tcnullstock.h -o $(InputDir)/moc_tcnullstock.cpp
 
 # End Custom Build
 
@@ -438,7 +458,7 @@ SOURCE=..\source\stockinfo\tcstock.h
 !ELSEIF  "$(CFG)" == "TCStock - Win32 Debug"
 
 # Begin Custom Build
-InputDir=\source\tcstock\001\source\stockinfo
+InputDir=\source\TCStock\002\source\stockinfo
 InputPath=..\source\stockinfo\tcstock.h
 
 "$(InputDir)/moc_tcstock.cpp" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
@@ -458,7 +478,7 @@ SOURCE=..\source\stockinfo\tcstockdata.h
 !ELSEIF  "$(CFG)" == "TCStock - Win32 Debug"
 
 # Begin Custom Build
-InputDir=\source\tcstock\001\source\stockinfo
+InputDir=\source\TCStock\002\source\stockinfo
 InputPath=..\source\stockinfo\tcstockdata.h
 
 "$(InputDir)/moc_tcstockdata.cpp" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
@@ -478,7 +498,7 @@ SOURCE=..\source\stockinfo\tcstockdatacache.h
 !ELSEIF  "$(CFG)" == "TCStock - Win32 Debug"
 
 # Begin Custom Build
-InputDir=\source\tcstock\001\source\stockinfo
+InputDir=\source\TCStock\002\source\stockinfo
 InputPath=..\source\stockinfo\tcstockdatacache.h
 
 "$(InputDir)/moc_tcstockdatacache.cpp" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
@@ -498,7 +518,7 @@ SOURCE=..\source\stockinfo\tcstockdatainfodlg.h
 !ELSEIF  "$(CFG)" == "TCStock - Win32 Debug"
 
 # Begin Custom Build
-InputDir=\source\tcstock\001\source\stockinfo
+InputDir=\source\TCStock\002\source\stockinfo
 InputPath=..\source\stockinfo\tcstockdatainfodlg.h
 
 "$(InputDir)/moc_tcstockdatainfodlg.cpp" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
@@ -518,7 +538,7 @@ SOURCE=..\source\stockinfo\tcstockdataitemdlt.h
 !ELSEIF  "$(CFG)" == "TCStock - Win32 Debug"
 
 # Begin Custom Build
-InputDir=\source\tcstock\001\source\stockinfo
+InputDir=\source\TCStock\002\source\stockinfo
 InputPath=..\source\stockinfo\tcstockdataitemdlt.h
 
 "$(InputDir)/moc_tcstockdataitemdlt.cpp" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
@@ -538,7 +558,7 @@ SOURCE=..\source\stockinfo\tcstockdataitemmdl.h
 !ELSEIF  "$(CFG)" == "TCStock - Win32 Debug"
 
 # Begin Custom Build
-InputDir=\source\tcstock\001\source\stockinfo
+InputDir=\source\TCStock\002\source\stockinfo
 InputPath=..\source\stockinfo\tcstockdataitemmdl.h
 
 "$(InputDir)/moc_tcstockdataitemmdl.cpp" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
@@ -558,7 +578,7 @@ SOURCE=..\source\stockinfo\tcstockinfo.h
 !ELSEIF  "$(CFG)" == "TCStock - Win32 Debug"
 
 # Begin Custom Build
-InputDir=\source\tcstock\001\source\stockinfo
+InputDir=\source\TCStock\002\source\stockinfo
 InputPath=..\source\stockinfo\tcstockinfo.h
 
 "$(InputDir)/moc_tcstockinfo.cpp" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
@@ -578,7 +598,7 @@ SOURCE=..\source\stockinfo\tcstockinfodlg.h
 !ELSEIF  "$(CFG)" == "TCStock - Win32 Debug"
 
 # Begin Custom Build
-InputDir=\source\tcstock\001\source\stockinfo
+InputDir=\source\TCStock\002\source\stockinfo
 InputPath=..\source\stockinfo\tcstockinfodlg.h
 
 "$(InputDir)/moc_tcstockinfodlg.cpp" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
@@ -598,7 +618,7 @@ SOURCE=..\source\stockinfo\tcstockinfolst.h
 !ELSEIF  "$(CFG)" == "TCStock - Win32 Debug"
 
 # Begin Custom Build
-InputDir=\source\tcstock\001\source\stockinfo
+InputDir=\source\TCStock\002\source\stockinfo
 InputPath=..\source\stockinfo\tcstockinfolst.h
 
 "$(InputDir)/moc_tcstockinfolst.cpp" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
@@ -622,7 +642,7 @@ SOURCE=..\source\stockinfo\tcstockmgr.h
 !ELSEIF  "$(CFG)" == "TCStock - Win32 Debug"
 
 # Begin Custom Build
-InputDir=\source\tcstock\001\source\stockinfo
+InputDir=\source\TCStock\002\source\stockinfo
 InputPath=..\source\stockinfo\tcstockmgr.h
 
 "$(InputDir)/moc_tcstockmgr.cpp" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
@@ -642,7 +662,7 @@ SOURCE=..\source\stockinfo\tcstockselectdlg.h
 !ELSEIF  "$(CFG)" == "TCStock - Win32 Debug"
 
 # Begin Custom Build
-InputDir=\source\tcstock\001\source\stockinfo
+InputDir=\source\TCStock\002\source\stockinfo
 InputPath=..\source\stockinfo\tcstockselectdlg.h
 
 "$(InputDir)/moc_tcstockselectdlg.cpp" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
@@ -700,6 +720,10 @@ SOURCE=..\source\stockinfo\tcmarketmgr.cpp
 # Begin Source File
 
 SOURCE=..\source\stockinfo\tcmarketselectdlg.cpp
+# End Source File
+# Begin Source File
+
+SOURCE=..\source\stockinfo\tcnullstock.cpp
 # End Source File
 # Begin Source File
 
@@ -762,7 +786,7 @@ SOURCE=..\source\service\tccfgsvc.h
 !ELSEIF  "$(CFG)" == "TCStock - Win32 Debug"
 
 # Begin Custom Build
-InputDir=\source\tcstock\001\source\service
+InputDir=\source\TCStock\002\source\service
 InputPath=..\source\service\tccfgsvc.h
 
 "$(InputDir)/moc_tccfgsvc.cpp" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
@@ -782,7 +806,7 @@ SOURCE=..\source\service\tclogsvc.h
 !ELSEIF  "$(CFG)" == "TCStock - Win32 Debug"
 
 # Begin Custom Build
-InputDir=\source\tcstock\001\source\service
+InputDir=\source\TCStock\002\source\service
 InputPath=..\source\service\tclogsvc.h
 
 "$(InputDir)/moc_tclogsvc.cpp" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
@@ -802,7 +826,7 @@ SOURCE=..\source\service\tcobjsvc.h
 !ELSEIF  "$(CFG)" == "TCStock - Win32 Debug"
 
 # Begin Custom Build
-InputDir=\source\tcstock\001\source\service
+InputDir=\source\TCStock\002\source\service
 InputPath=..\source\service\tcobjsvc.h
 
 "$(InputDir)/moc_tcobjsvc.cpp" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
@@ -831,7 +855,7 @@ SOURCE=..\source\service\tclogsvc.cpp
 # End Source File
 # Begin Source File
 
-SOURCE=..\source\service\tcobjvc.cpp
+SOURCE=..\source\service\tcobjsvc.cpp
 # End Source File
 # End Group
 # End Group
@@ -850,7 +874,7 @@ SOURCE=..\source\stockview\tcstockscene.h
 !ELSEIF  "$(CFG)" == "TCStock - Win32 Debug"
 
 # Begin Custom Build
-InputDir=\source\tcstock\001\source\stockview
+InputDir=\source\TCStock\002\source\stockview
 InputPath=..\source\stockview\tcstockscene.h
 
 "$(InputDir)/moc_tcstockscene.cpp" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
@@ -870,7 +894,7 @@ SOURCE=..\source\stockview\tcstockview.h
 !ELSEIF  "$(CFG)" == "TCStock - Win32 Debug"
 
 # Begin Custom Build
-InputDir=\source\tcstock\001\source\stockview
+InputDir=\source\TCStock\002\source\stockview
 InputPath=..\source\stockview\tcstockview.h
 
 "$(InputDir)/moc_tcstockview.cpp" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
@@ -898,7 +922,7 @@ SOURCE=..\source\stockview\tcviewentity.h
 !ELSEIF  "$(CFG)" == "TCStock - Win32 Debug"
 
 # Begin Custom Build
-InputDir=\source\tcstock\001\source\stockview
+InputDir=\source\TCStock\002\source\stockview
 InputPath=..\source\stockview\tcviewentity.h
 
 "$(InputDir)/moc_tcviewentity.cpp" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
@@ -918,7 +942,7 @@ SOURCE=..\source\stockview\tcviewentitygroup.h
 !ELSEIF  "$(CFG)" == "TCStock - Win32 Debug"
 
 # Begin Custom Build
-InputDir=\source\tcstock\001\source\stockview
+InputDir=\source\TCStock\002\source\stockview
 InputPath=..\source\stockview\tcviewentitygroup.h
 
 "$(InputDir)/moc_tcviewentitygroup.cpp" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
@@ -938,7 +962,7 @@ SOURCE=..\source\stockview\tcviewquantity.h
 !ELSEIF  "$(CFG)" == "TCStock - Win32 Debug"
 
 # Begin Custom Build
-InputDir=\source\tcstock\001\source\stockview
+InputDir=\source\TCStock\002\source\stockview
 InputPath=..\source\stockview\tcviewquantity.h
 
 "$(InputDir)/moc_tcviewquantity.cpp" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
@@ -958,7 +982,7 @@ SOURCE=..\source\stockview\tcviewquantitygroup.h
 !ELSEIF  "$(CFG)" == "TCStock - Win32 Debug"
 
 # Begin Custom Build
-InputDir=\source\tcstock\001\source\stockview
+InputDir=\source\TCStock\002\source\stockview
 InputPath=..\source\stockview\tcviewquantitygroup.h
 
 "$(InputDir)/moc_tcviewquantitygroup.cpp" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
@@ -978,7 +1002,7 @@ SOURCE=..\source\stockview\tcviewstockgroup.h
 !ELSEIF  "$(CFG)" == "TCStock - Win32 Debug"
 
 # Begin Custom Build
-InputDir=\source\tcstock\001\source\stockview
+InputDir=\source\TCStock\002\source\stockview
 InputPath=..\source\stockview\tcviewstockgroup.h
 
 "$(InputDir)/moc_tcviewstockgroup.cpp" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
@@ -1038,7 +1062,7 @@ SOURCE=..\source\viewmodel\tcdailyviewmodel.h
 !ELSEIF  "$(CFG)" == "TCStock - Win32 Debug"
 
 # Begin Custom Build
-InputDir=\source\tcstock\001\source\viewmodel
+InputDir=\source\TCStock\002\source\viewmodel
 InputPath=..\source\viewmodel\tcdailyviewmodel.h
 
 "$(InputDir)/moc_tcdailyviewmodel.cpp" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
@@ -1058,7 +1082,7 @@ SOURCE=..\source\viewmodel\tcmonthlyviewmodel.h
 !ELSEIF  "$(CFG)" == "TCStock - Win32 Debug"
 
 # Begin Custom Build
-InputDir=\source\tcstock\001\source\viewmodel
+InputDir=\source\TCStock\002\source\viewmodel
 InputPath=..\source\viewmodel\tcmonthlyviewmodel.h
 
 "$(InputDir)/moc_tcmonthlyviewmodel.cpp" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
@@ -1078,7 +1102,7 @@ SOURCE=..\source\viewmodel\tcviewmodel.h
 !ELSEIF  "$(CFG)" == "TCStock - Win32 Debug"
 
 # Begin Custom Build
-InputDir=\source\tcstock\001\source\viewmodel
+InputDir=\source\TCStock\002\source\viewmodel
 InputPath=..\source\viewmodel\tcviewmodel.h
 
 "$(InputDir)/moc_tcviewmodel.cpp" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
@@ -1102,7 +1126,7 @@ SOURCE=..\source\viewmodel\tcweekly2viewmodel.h
 !ELSEIF  "$(CFG)" == "TCStock - Win32 Debug"
 
 # Begin Custom Build
-InputDir=\source\tcstock\001\source\viewmodel
+InputDir=\source\TCStock\002\source\viewmodel
 InputPath=..\source\viewmodel\tcweekly2viewmodel.h
 
 "$(InputDir)/moc_tcweekly2viewmodel.cpp" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
@@ -1122,7 +1146,7 @@ SOURCE=..\source\viewmodel\tcweeklyviewmodel.h
 !ELSEIF  "$(CFG)" == "TCStock - Win32 Debug"
 
 # Begin Custom Build
-InputDir=\source\tcstock\001\source\viewmodel
+InputDir=\source\TCStock\002\source\viewmodel
 InputPath=..\source\viewmodel\tcweeklyviewmodel.h
 
 "$(InputDir)/moc_tcweeklyviewmodel.cpp" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
@@ -1178,31 +1202,11 @@ SOURCE=..\source\importer\tcqianlongimpt.h
 !ELSEIF  "$(CFG)" == "TCStock - Win32 Debug"
 
 # Begin Custom Build
-InputDir=\source\tcstock\001\source\importer
+InputDir=\source\TCStock\002\source\importer
 InputPath=..\source\importer\tcqianlongimpt.h
 
 "$(InputDir)/moc_tcqianlongimpt.cpp" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
 	moc -i $(InputDir)/tcqianlongimpt.h -o $(InputDir)/moc_tcqianlongimpt.cpp
-
-# End Custom Build
-
-!ENDIF 
-
-# End Source File
-# Begin Source File
-
-SOURCE=..\source\importer\tcsinastockdataimpt.h
-
-!IF  "$(CFG)" == "TCStock - Win32 Release"
-
-!ELSEIF  "$(CFG)" == "TCStock - Win32 Debug"
-
-# Begin Custom Build
-InputDir=\source\tcstock\001\source\importer
-InputPath=..\source\importer\tcsinastockdataimpt.h
-
-"$(InputDir)/moc_tcsinastockdataimpt.cpp" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
-	moc -i $(InputDir)/tcsinastockdataimpt.h -o $(InputDir)/moc_tcsinastockdataimpt.cpp
 
 # End Custom Build
 
@@ -1216,10 +1220,6 @@ InputPath=..\source\importer\tcsinastockdataimpt.h
 # Begin Source File
 
 SOURCE=..\source\importer\tcqianlongimpt.cpp
-# End Source File
-# Begin Source File
-
-SOURCE=..\source\importer\tcsinastockdataimpt.cpp
 # End Source File
 # End Group
 # End Group
@@ -1238,7 +1238,7 @@ SOURCE=..\source\toolpad\tcstocklistwgt.h
 !ELSEIF  "$(CFG)" == "TCStock - Win32 Debug"
 
 # Begin Custom Build
-InputDir=\source\tcstock\001\source\toolpad
+InputDir=\source\TCStock\002\source\toolpad
 InputPath=..\source\toolpad\tcstocklistwgt.h
 
 "$(InputDir)/moc_tcstocklistwgt.cpp" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
@@ -1262,7 +1262,7 @@ SOURCE=..\source\toolpad\tctoolpadwgt.h
 !ELSEIF  "$(CFG)" == "TCStock - Win32 Debug"
 
 # Begin Custom Build
-InputDir=\source\tcstock\001\source\toolpad
+InputDir=\source\TCStock\002\source\toolpad
 InputPath=..\source\toolpad\tctoolpadwgt.h
 
 "$(InputDir)/moc_tctoolpadwgt.cpp" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
@@ -1302,7 +1302,7 @@ SOURCE=..\source\dataimpt\tcdataimpt.h
 !ELSEIF  "$(CFG)" == "TCStock - Win32 Debug"
 
 # Begin Custom Build
-InputDir=\source\tcstock\001\source\dataimpt
+InputDir=\source\TCStock\002\source\dataimpt
 InputPath=..\source\dataimpt\tcdataimpt.h
 
 "$(InputDir)/moc_tcdataimpt.cpp" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
@@ -1326,7 +1326,7 @@ SOURCE=..\source\dataimpt\tcdataimptsetupdlg.h
 !ELSEIF  "$(CFG)" == "TCStock - Win32 Debug"
 
 # Begin Custom Build
-InputDir=\source\tcstock\001\source\dataimpt
+InputDir=\source\TCStock\002\source\dataimpt
 InputPath=..\source\dataimpt\tcdataimptsetupdlg.h
 
 "$(InputDir)/moc_tcdataimptsetupdlg.cpp" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
@@ -1346,7 +1346,7 @@ SOURCE=..\source\dataimpt\tcimptprogressdlg.h
 !ELSEIF  "$(CFG)" == "TCStock - Win32 Debug"
 
 # Begin Custom Build
-InputDir=\source\tcstock\001\source\dataimpt
+InputDir=\source\TCStock\002\source\dataimpt
 InputPath=..\source\dataimpt\tcimptprogressdlg.h
 
 "$(InputDir)/moc_tcimptprogressdlg.cpp" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
@@ -1366,7 +1366,7 @@ SOURCE=..\source\dataimpt\tcimptsource.h
 !ELSEIF  "$(CFG)" == "TCStock - Win32 Debug"
 
 # Begin Custom Build
-InputDir=\source\tcstock\001\source\dataimpt
+InputDir=\source\TCStock\002\source\dataimpt
 InputPath=..\source\dataimpt\tcimptsource.h
 
 "$(InputDir)/moc_tcimptsource.cpp" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
@@ -1386,7 +1386,7 @@ SOURCE=..\source\dataimpt\tcsinawebimptsource.h
 !ELSEIF  "$(CFG)" == "TCStock - Win32 Debug"
 
 # Begin Custom Build
-InputDir=\source\tcstock\001\source\dataimpt
+InputDir=\source\TCStock\002\source\dataimpt
 InputPath=..\source\dataimpt\tcsinawebimptsource.h
 
 "$(InputDir)/moc_tcsinawebimptsource.cpp" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
@@ -1406,7 +1406,7 @@ SOURCE=..\source\dataimpt\tctestimptsource.h
 !ELSEIF  "$(CFG)" == "TCStock - Win32 Debug"
 
 # Begin Custom Build
-InputDir=\source\tcstock\001\source\dataimpt
+InputDir=\source\TCStock\002\source\dataimpt
 InputPath=..\source\dataimpt\tctestimptsource.h
 
 "$(InputDir)/moc_tctestimptsource.cpp" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"

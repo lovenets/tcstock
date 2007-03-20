@@ -56,4 +56,8 @@ void tcStock::SetDescription(const QString &pDescription)
 	mDescription = pDescription;
 }
 
+tcStock::tcStock()
+{
+}
+
 #include "moc_tcstock.cpp"

@@ -32,7 +32,7 @@ public:
 
 	void LoadStockData(const QDate &pDate);
 
-	tcStockDailyData* ReadData(int pRow);
+	const tcStockDailyData* ReadData(int pRow);
 
 	bool WriteData(int pRow, tcStockDailyData* pStockDailyData);
 

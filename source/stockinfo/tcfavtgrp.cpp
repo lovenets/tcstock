@@ -100,7 +100,7 @@ bool tcFavouriteGroup::GetStockInfoListFilter(tcStockInfoList &pStockInfoList, c
 		if (pStockCodeFilter.length() > 0 && stockinfo.GetStockCode().indexOf(pStockCodeFilter) < 0) {
 			continue;
 		}
-		if (pStockNameFilter.length() > 0 && stockinfo.GetStockName().indexOf(pStockNameFilter) < 0) {
+		if (pStockNameFilter.length() > 0 && stockinfo->GetStockName().indexOf(pStockNameFilter) < 0) {
 			continue;
 		}
 		pStockInfoList.append(stockinfo);

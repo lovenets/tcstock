@@ -33,7 +33,7 @@ void tcFavouriteInfoModel::LoadFavouriteInfoList(int pFavouriteGroupIndex)
 		int row = rowCount();
 		insertRow(row);
 		setItem(row, 0, new QStandardItem(stockinfo.GetStockCode()));
-		setItem(row, 1, new QStandardItem(stockinfo.GetStockName()));
+		setItem(row, 1, new QStandardItem(stockinfo->GetStockName()));
 		setItem(row, 2, new QStandardItem("*****"));
 	}
 }
@@ -54,7 +54,7 @@ bool tcFavouriteInfoModel::AppendFavouriteInfo(QWidget *pParent, int pFavouriteG
 		int row = this->rowCount();
 		this->insertRow(row);
 		this->setItem(row, 0, new QStandardItem(stockinfo.GetStockCode()));
-		this->setItem(row, 1, new QStandardItem(stockinfo.GetStockName()));
+		this->setItem(row, 1, new QStandardItem(stockinfo->GetStockName()));
 		this->setItem(row, 2, new QStandardItem("*****"));
 	}
 	return true;

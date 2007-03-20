@@ -21,10 +21,7 @@ class tcViewStockGroup : public QObject, public QGraphicsItemGroup
 	Q_OBJECT
 
 public:
-	tcViewStockGroup(QObject *pParent, tcStock *pStock, tcViewModel *pViewModel);
-
-private:
-	tcStock *mStock;
+	tcViewStockGroup(QObject *pParent, const tcStockInfo pStockInfo, tcViewModel *pViewModel);
 
 };
 
