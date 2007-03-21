@@ -27,8 +27,11 @@ tcFavouriteInfoDialog::tcFavouriteInfoDialog(QWidget *pParent, int pGroupIndex)
 	tbl1->setItemDelegate(mDataDelegate);
 
 	LoadFavouriteGroupList();
-	if (pGroupIndex >= 0) {
+	if (pGroupIndex >= 0 && pGroupIndex < cbo1->count()) {
 		cbo1->setCurrentIndex(pGroupIndex);
+	}
+	else {
+		cbo1->setCurrentIndex(0);
 	}
 }
 

@@ -186,7 +186,7 @@
 <context>
     <name>tcFavouriteManager</name>
     <message>
-        <location filename="../source/stockinfo/tcfavtmgr.cpp" line="179"/>
+        <location filename="../source/stockinfo/tcfavtmgr.cpp" line="184"/>
         <source>Are you sure to remove this favourite group?</source>
         <translation>你确实希望删除该自选组吗?</translation>
     </message>
@@ -196,7 +196,7 @@
     <message>
         <location filename="../source/dataimpt/ui_imptprogressdlg.h" line="73"/>
         <source>Import Progress...</source>
-        <translation type="unfinished">导入进度...</translation>
+        <translation>导入进度...</translation>
     </message>
 </context>
 <context>
@@ -381,7 +381,7 @@
 <context>
     <name>tcMarketManager</name>
     <message>
-        <location filename="../source/stockinfo/tcmarketmgr.cpp" line="192"/>
+        <location filename="../source/stockinfo/tcmarketmgr.cpp" line="195"/>
         <source>Are you sure to remove this market?</source>
         <translation>你确实希望删除该股市吗?</translation>
     </message>
@@ -450,49 +450,72 @@
 <context>
     <name>tcSinaWebImportSource</name>
     <message>
-        <location filename="../source/dataimpt/tcsinawebimptsource.cpp" line="63"/>
+        <location filename="../source/dataimpt/tcsinawebimptsource.cpp" line="79"/>
         <source>All done.</source>
-        <translation type="unfinished">完成.</translation>
+        <translation>完成.</translation>
+    </message>
+    <message>
+        <location filename="../source/dataimpt/tcsinawebimptsource.cpp" line="113"/>
+        <source>Begin import from page: %1.</source>
+        <translation>开始从页面 %1 导入.</translation>
+    </message>
+    <message>
+        <location filename="../source/dataimpt/tcsinawebimptsource.cpp" line="209"/>
+        <source>Processing stock %1 ...</source>
+        <translation>正在处理股票 %1 ...</translation>
+    </message>
+    <message>
+        <location filename="../source/dataimpt/tcsinawebimptsource.cpp" line="220"/>
+        <source>The stock not exists.</source>
+        <translation>股票不存在.</translation>
+    </message>
+    <message>
+        <location filename="../source/dataimpt/tcsinawebimptsource.cpp" line="248"/>
+        <source>Error when get daily data of stock.</source>
+        <translation>取得股票每日数据时发生错误.</translation>
+    </message>
+    <message>
+        <location filename="../source/dataimpt/tcsinawebimptsource.cpp" line="258"/>
+        <source>Error when set daily data of stock.</source>
+        <translation>设置股票每日数据时发生错误.</translation>
+    </message>
+    <message>
+        <location filename="../source/dataimpt/tcsinawebimptsource.cpp" line="272"/>
+        <source>Received successful.</source>
+        <translation>成功接收数据.</translation>
+    </message>
+    <message>
+        <location filename="../source/dataimpt/tcsinawebimptsource.cpp" line="212"/>
+        <source>Error when extract data of stock.</source>
+        <translation>解析股票数据时发生错误.</translation>
+    </message>
+    <message>
+        <location filename="../source/dataimpt/tcsinawebimptsource.cpp" line="18"/>
+        <source>sina stock (http://stock.sina.com.cn)</source>
+        <translation>新浪股票 (http://stock.sina.com.cn)</translation>
     </message>
     <message>
         <location filename="../source/dataimpt/tcsinawebimptsource.cpp" line="69"/>
-        <source>Begin import from page: %1.</source>
-        <translation type="unfinished">开始从页面 %1 导入.</translation>
+        <source>Import procedure canceled by user.</source>
+        <translation>导入处理被用户终止.</translation>
+    </message>
+</context>
+<context>
+    <name>tcSinaWebImportSourceDialog</name>
+    <message>
+        <location filename="../source/dataimpt/ui_sinawebimptsourcedlg.h" line="82"/>
+        <source>Sina Web Import Source Setting...</source>
+        <translation>新浪股票源设置...</translation>
     </message>
     <message>
-        <location filename="../source/dataimpt/tcsinawebimptsource.cpp" line="162"/>
-        <source>Processing stock %1 ...</source>
-        <translation type="unfinished">正在处理股票 %1 ...</translation>
+        <location filename="../source/dataimpt/ui_sinawebimptsourcedlg.h" line="83"/>
+        <source>Setting:</source>
+        <translation>设置:</translation>
     </message>
     <message>
-        <location filename="../source/dataimpt/tcsinawebimptsource.cpp" line="173"/>
-        <source>The stock not exists.</source>
-        <translation type="unfinished">股票不存在.</translation>
-    </message>
-    <message>
-        <location filename="../source/dataimpt/tcsinawebimptsource.cpp" line="201"/>
-        <source>Error when get daily data of stock.</source>
-        <translation type="unfinished">取得股票每日数据时发生错误.</translation>
-    </message>
-    <message>
-        <location filename="../source/dataimpt/tcsinawebimptsource.cpp" line="211"/>
-        <source>Error when set daily data of stock.</source>
-        <translation type="unfinished">设置股票每日数据时发生错误.</translation>
-    </message>
-    <message>
-        <location filename="../source/dataimpt/tcsinawebimptsource.cpp" line="225"/>
-        <source>Received successful.</source>
-        <translation type="unfinished">成功接收数据.</translation>
-    </message>
-    <message>
-        <location filename="../source/dataimpt/tcsinawebimptsource.cpp" line="165"/>
-        <source>Error when extract data of stock.</source>
-        <translation type="unfinished">解析股票数据时发生错误.</translation>
-    </message>
-    <message>
-        <location filename="../source/dataimpt/tcsinawebimptsource.cpp" line="17"/>
-        <source>sina stock (http://stock.sina.com.cn)</source>
-        <translation type="unfinished">新浪股票 (http://stock.sina.com.cn)</translation>
+        <location filename="../source/dataimpt/ui_sinawebimptsourcedlg.h" line="84"/>
+        <source>Thanks http://stock.sina.com.cn for it&apos;s stock data.</source>
+        <translation>感谢新浪网 http://stock.sina.com.cn 提供的股票数据.</translation>
     </message>
 </context>
 <context>
@@ -668,7 +691,7 @@
         <translation>股票名称</translation>
     </message>
     <message>
-        <location filename="../source/stockinfo/tcstockselectdlg.cpp" line="117"/>
+        <location filename="../source/stockinfo/tcstockselectdlg.cpp" line="115"/>
         <source>You must select some stock from the list.</source>
         <translation>必须从列表中选择一种股票.</translation>
     </message>
@@ -833,6 +856,87 @@
         <location filename="../source/tcweeklyviewwgt.cpp" line="22"/>
         <source>Nothing View</source>
         <translation>无</translation>
+    </message>
+</context>
+<context>
+    <name>tcYahooWebImportSource</name>
+    <message>
+        <location filename="../source/dataimpt/tcyahoowebimptsource.cpp" line="18"/>
+        <source>yahoo stock (http://cn.biz.yahoo.com)</source>
+        <translation>雅虎财经 (http;//cn.biz.yahoo.com)</translation>
+    </message>
+    <message>
+        <location filename="../source/dataimpt/tcyahoowebimptsource.cpp" line="69"/>
+        <source>Import procedure canceled by user.</source>
+        <translation>导入处理被用户终止.</translation>
+    </message>
+    <message>
+        <location filename="../source/dataimpt/tcyahoowebimptsource.cpp" line="79"/>
+        <source>All done.</source>
+        <translation>完成.</translation>
+    </message>
+    <message>
+        <location filename="../source/dataimpt/tcyahoowebimptsource.cpp" line="113"/>
+        <source>Begin import from page: %1.</source>
+        <translation>开始从页面 %1 导入.</translation>
+    </message>
+    <message>
+        <location filename="../source/dataimpt/tcyahoowebimptsource.cpp" line="140"/>
+        <source>Can not extract the date from this page.</source>
+        <translation>无法从该页解析日期时间.</translation>
+    </message>
+    <message>
+        <location filename="../source/dataimpt/tcyahoowebimptsource.cpp" line="143"/>
+        <source>The date time is: %1</source>
+        <translation>日期时间为： %1</translation>
+    </message>
+    <message>
+        <location filename="../source/dataimpt/tcyahoowebimptsource.cpp" line="221"/>
+        <source>Processing stock %1 ...</source>
+        <translation>正在处理股票 %1 ...</translation>
+    </message>
+    <message>
+        <location filename="../source/dataimpt/tcyahoowebimptsource.cpp" line="224"/>
+        <source>Error when extract data of stock.</source>
+        <translation>解析股票数据时发生错误.</translation>
+    </message>
+    <message>
+        <location filename="../source/dataimpt/tcyahoowebimptsource.cpp" line="232"/>
+        <source>The stock not exists.</source>
+        <translation>股票不存在.</translation>
+    </message>
+    <message>
+        <location filename="../source/dataimpt/tcyahoowebimptsource.cpp" line="259"/>
+        <source>Error when get daily data of stock.</source>
+        <translation>取得股票每日数据时发生错误.</translation>
+    </message>
+    <message>
+        <location filename="../source/dataimpt/tcyahoowebimptsource.cpp" line="269"/>
+        <source>Error when set daily data of stock.</source>
+        <translation>设置股票每日数据时发生错误.</translation>
+    </message>
+    <message>
+        <location filename="../source/dataimpt/tcyahoowebimptsource.cpp" line="283"/>
+        <source>Received successful.</source>
+        <translation>成功接收数据.</translation>
+    </message>
+</context>
+<context>
+    <name>tcYahooWebImportSourceDialog</name>
+    <message>
+        <location filename="../source/dataimpt/ui_yahoowebimptsourcedlg.h" line="82"/>
+        <source>Yahoo Web Import Source Setting...</source>
+        <translation>雅虎股票源设置...</translation>
+    </message>
+    <message>
+        <location filename="../source/dataimpt/ui_yahoowebimptsourcedlg.h" line="83"/>
+        <source>Setting:</source>
+        <translation>设置:</translation>
+    </message>
+    <message>
+        <location filename="../source/dataimpt/ui_yahoowebimptsourcedlg.h" line="84"/>
+        <source>Thanks http://cn.biz.yahoo.com for it&apos;s stock data.</source>
+        <translation>感谢雅虎网 http://cn.biz.yahoo.com 提供的股票数据.</translation>
     </message>
 </context>
 </TS>

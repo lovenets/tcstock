@@ -58,6 +58,7 @@ bool tcFavouriteManager::LoadFromFile()
 			delete group;
 			return false;
 		}
+		connect(group, SIGNAL(OnStocksModified()), this, SLOT(DoStocksModified()));
 		mFavouriteGroupList.append(group);
 		element = element.nextSiblingElement();
 	}
@@ -123,8 +124,10 @@ tcFavouriteGroup* tcFavouriteManager::AppendFavouriteGroup(const QString &pName)
 {
 	tcFavouriteGroup *group = new tcFavouriteGroup();
 	group->SetName(pName);
+	connect(group, SIGNAL(OnStocksModified()), this, SLOT(DoStocksModified()));
 	mFavouriteGroupList.append(group);
 	mModified = true;
+	emit OnFavouriteGroupModified();
 	return group;
 }
 
@@ -144,6 +147,7 @@ tcFavouriteGroup* tcFavouriteManager::AppendFavouriteGroup(QWidget *pParent)
 		return NULL;
 	}
 	mModified = true;
+	emit OnFavouriteGroupModified();
 	return group;
 }
 
@@ -167,6 +171,7 @@ tcFavouriteGroup* tcFavouriteManager::ModifyFavouriteGroup(QWidget *pParent, int
 		return NULL;
 	}
 	mModified = true;
+	emit OnFavouriteGroupModified();
 	return group;
 }
 
@@ -181,6 +186,7 @@ bool tcFavouriteManager::RemoveFavouriteGroup(QWidget *pParent, int pGroupIndex)
 	}
 	mFavouriteGroupList.removeAt(pGroupIndex);
 	mModified = true;
+	emit OnFavouriteGroupModified();
 	return true;
 }
 
@@ -219,6 +225,11 @@ void tcFavouriteManager::ClearAllFavouriteGroups()
 	}
 	mFavouriteGroupList.clear();
 	mModified = true;
+}
+
+void tcFavouriteManager::DoStocksModified()
+{
+	emit OnStocksModified((tcFavouriteGroup*)sender());
 }
 
 #include "moc_tcfavtmgr.cpp"

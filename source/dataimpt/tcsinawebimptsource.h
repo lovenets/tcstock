@@ -23,15 +23,21 @@ class tcSinaWebImportSource : public tcImportSource
 public:
 	tcSinaWebImportSource();
 
-	QString GetDescription();
+	virtual QString GetDescription();
 
-	bool HaveSettingDialog();
+	virtual bool HaveSettingDialog();
 
-	void ShowSettingDialog(QWidget *pParent);
-
-	bool Import();
+	virtual void ShowSettingDialog(QWidget *pParent);
 
 protected:
+	virtual bool ImportProcess();
+
+	virtual void CancelImportProcess();
+
+	void GetImportUrlList(QStringList &pUrlList);
+
+	void SetImportUrlList(const QStringList &pUrlList);
+
 	bool ProcessForOnePage(const QString &pPageUrl);
 
 	void ProcessForOneStock(const QString &pText);
@@ -43,6 +49,8 @@ private:
 	QHttp *mHttp;
 
 	bool mIsReceiving;
+
+	bool mIsCanceling;
 
 	QString mReceivedData;
 

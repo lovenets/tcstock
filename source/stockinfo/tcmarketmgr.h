@@ -63,7 +63,7 @@ protected slots:
 	/*!
 		notified by tcMarket.
 	*/
-	void DoStockModified();
+	void DoStocksModified();
 
 private:
 	QDir mPath;
@@ -71,9 +71,9 @@ private:
 	tcMarketList mMarketList;
 
 signals:
-	void OnMarketModified();
+	void OnMarketsModified();
 
-	void OnStockModified(tcMarket *pMarket);
+	void OnStocksModified(tcMarket *pMarket);
 
 };
 

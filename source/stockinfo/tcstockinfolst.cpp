@@ -1,11 +1,19 @@
 #include "tcstockinfolst.h"
 
 #include "../service/tcsvcpack.h"
-#include "../stockinfo/tcstockinfopack.h"
+#include "tcmarket.h"
+#include "tcmarketmgr.h"
+#include "tcfavtmgr.h"
 
 tcStockInfoList::tcStockInfoList()
 	: QList<tcStockInfo>()
 {
+	tcMarketManager *marketmanager = tcObjService::GetMarketManager();
+	connect(marketmanager, SIGNAL(OnMarketsModified()), this, SLOT(DoMarketManagerMarketsModified()));
+	connect(marketmanager, SIGNAL(OnStocksModified(tcMarket *)), this, SLOT(DoMarketManagerStocksModified(tcMarket *)));
+	tcFavouriteManager *favouritemanager = tcObjService::GetFavouriteManager();
+	connect(favouritemanager, SIGNAL(OnFavouriteGroupModified()), this, SLOT(DoFavouriteManagerFavouriteGroupModified()));
+	connect(favouritemanager, SIGNAL(OnStocksModified(tcFavouriteGroup *)), this, SLOT(DoFavouriteManagerStocksModified(tcFavouriteGroup *)));
 }
 
 tcStockInfoList::tcStockInfoList(const tcStockInfoList &pStockInfoList)
@@ -114,6 +122,26 @@ tcStockInfoList& tcStockInfoList::operator=(const tcStockInfoList &pStockInfoLis
 		this->append(stockinfo);
 	}
 	return *this;
+}
+
+void tcStockInfoList::DoMarketManagerMarketsModified()
+{
+	emit OnGroupListNeedReload();
+}
+
+void tcStockInfoList::DoMarketManagerStocksModified(tcMarket *pMarket)
+{
+	emit OnStockListNeedReload();
+}
+
+void tcStockInfoList::DoFavouriteManagerFavouriteGroupModified()
+{
+	emit OnGroupListNeedReload();
+}
+
+void tcStockInfoList::DoFavouriteManagerStocksModified(tcFavouriteGroup *pFavouriteGroup)
+{
+	emit OnStockListNeedReload();
 }
 
 #include "moc_tcstockinfolst.cpp"

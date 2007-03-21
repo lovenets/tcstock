@@ -48,6 +48,7 @@ bool tcMarket::AppendStock(const QString &pStockCode, const QString &pStockName,
 	tcStockInfo stockinfo(stock->GetStockCode());
 	mStockInfoList.append(stockinfo);
 	pStockInfo = stockinfo;
+	emit OnStocksModified();
 	return true;
 }
 
@@ -61,6 +62,7 @@ bool tcMarket::AppendStock(QWidget *pParent, tcStockInfo &pStockInfo)
 	tcStockInfo stockinfo(stock->GetStockCode());
 	mStockInfoList.append(stockinfo);
 	pStockInfo = stockinfo;
+	emit OnStocksModified();
 	return true;
 }
 
@@ -77,6 +79,7 @@ bool tcMarket::ModifyStock(QWidget *pParent, int pStockIndex, tcStockInfo &pStoc
 		return false;
 	}
 	pStockInfo = stockinfo;
+	emit OnStocksModified();
 	return true;
 }
 
@@ -97,6 +100,7 @@ bool tcMarket::RemoveStock(QWidget *pParent, int pStockIndex)
 		tcLogService::CreateLog(this, "Not found the stock in the stock manager, but still remove it from this market.");
 	}
 	mStockInfoList.removeAt(pStockIndex);
+	emit OnStocksModified();
 	return true;
 }
 
@@ -109,6 +113,7 @@ void tcMarket::RemoveAllStocks()
 		}
 	}
 	mStockInfoList.clear();
+	emit OnStocksModified();
 }
 
 bool tcMarket::ImportFromCSV(const QString &pFileName, int &pSuccCount, int &pFailCount)

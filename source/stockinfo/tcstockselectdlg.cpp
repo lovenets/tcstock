@@ -22,16 +22,14 @@ tcStockSelectDialog::tcStockSelectDialog(QWidget *pParent)
     tbl1->setSelectionBehavior(QAbstractItemView::SelectRows);
 	tbl1->setEditTriggers(QAbstractItemView::NoEditTriggers);
 
-	tcMarketManager *marketmanager = tcObjService::GetMarketManager();
-	connect(marketmanager, SIGNAL(OnMarketModified()), this, SLOT(DoMarketModified()));
-	connect(marketmanager, SIGNAL(OnStockModified()), this, SLOT(DoStockModified()));
 	connect(cbo1, SIGNAL(currentIndexChanged(int)), this, SLOT(DoMarketIndexChanged(int)));
 	connect(edt1, SIGNAL(textChanged(const QString &)), this, SLOT(DoFilterTextChanged(const QString &)));
 	connect(edt2, SIGNAL(textChanged(const QString &)), this, SLOT(DoFilterTextChanged(const QString &)));
 	disconnect(buttonBox, SIGNAL(accepted()), this, SLOT(accept()));
 	connect(buttonBox, SIGNAL(accepted()), this, SLOT(DoOk()));
+	connect(&mViewStockInfoList, SIGNAL(OnStockListNeedReload()), this, SLOT(DoStockListNeedReload()));
 
-	DoMarketModified();
+	LoadMarketList();
 }
 
 bool tcStockSelectDialog::GetSelectedStockInfoList(tcStockInfoList &pStockInfoList)
@@ -48,7 +46,7 @@ bool tcStockSelectDialog::GetSelectedStockInfoList(tcStockInfoList &pStockInfoLi
 	return true;
 }
 
-void tcStockSelectDialog::DoMarketModified()
+void tcStockSelectDialog::LoadMarketList()
 {
 	QString marketname = cbo1->currentText();
 	cbo1->clear();
@@ -66,7 +64,7 @@ void tcStockSelectDialog::DoMarketModified()
 	}
 }
 
-void tcStockSelectDialog::DoStockModified()
+void tcStockSelectDialog::LoadStockList()
 {
 	//get the filted stock list
 	mViewStockInfoList.clear();
@@ -92,12 +90,12 @@ void tcStockSelectDialog::DoStockModified()
 
 void tcStockSelectDialog::DoMarketIndexChanged(int pIndex)
 {
-	DoStockModified();
+	LoadStockList();
 }
 
 void tcStockSelectDialog::DoFilterTextChanged(const QString &pText)
 {
-	DoStockModified();
+	LoadStockList();
 }
 
 void tcStockSelectDialog::DoOk()
@@ -119,6 +117,11 @@ void tcStockSelectDialog::DoOk()
 	}
 
 	accept();
+}
+
+void tcStockSelectDialog::DoStockListNeedReload()
+{
+	LoadStockList();
 }
 
 #include "moc_tcstockselectdlg.cpp"

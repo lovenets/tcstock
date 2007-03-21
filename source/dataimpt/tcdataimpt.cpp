@@ -4,9 +4,8 @@
 #include "../service/tcsvcpack.h"
 #include "tcdataimptsetupdlg.h"
 #include "tcsinawebimptsource.h"
+#include "tcyahoowebimptsource.h"
 #include "tcimptprogressdlg.h"
-
-#include "tctestimptsource.h"
 
 tcDataImporter::tcDataImporter()
 {
@@ -35,11 +34,11 @@ bool tcDataImporter::Import(QWidget *pParent)
 	if (! source->Import()) {
 		tcLogService::CreateLog(this, "Error when import.");
 	}
-	delete source;
-
 	while (dlg.isVisible()) {
 		qApp->processEvents();
 	}
+	delete source;
+
 	return true;
 }
 
@@ -50,7 +49,7 @@ tcImportSource* tcDataImporter::CreateImportSource(int pIndex)
 		return new tcSinaWebImportSource();
 		break;
 	case 1:
-		return new tcTestImportSource();
+		return new tcYahooWebImportSource();
 		break;
 	default:
 		tcLogService::CreateLog(this, "The index of import source not correct.");

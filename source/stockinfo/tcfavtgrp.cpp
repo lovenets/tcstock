@@ -42,6 +42,7 @@ bool tcFavouriteGroup::AppendFavourite(const QString &pStockCode, tcStockInfo &p
 	}
 	mStockInfoList.append(stockinfo);
 	pStockInfo = stockinfo;
+	emit OnStocksModified();
 	return true;
 }
 
@@ -59,12 +60,14 @@ bool tcFavouriteGroup::AppendFavourite(QWidget *pParent, tcStockInfoList &pStock
 		mStockInfoList.append(info);
 		pStockInfoList.append(info);
 	}
+	emit OnStocksModified();
 	return true;
 }
 
 bool tcFavouriteGroup::ModifyFavourite(QWidget *pParent, int pFavouriteIndex, tcStockInfo &pStockInfo)
 {
 	//TODO: implement this
+	emit OnStocksModified();
 	return false;
 }
 
@@ -75,6 +78,7 @@ bool tcFavouriteGroup::RemoveFavourite(QWidget *pParent, int pFavouriteIndex)
 		return false;
 	}
 	mStockInfoList.removeAt(pFavouriteIndex);
+	emit OnStocksModified();
 	return true;
 }
 

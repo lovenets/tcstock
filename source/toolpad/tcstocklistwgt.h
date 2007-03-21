@@ -45,6 +45,17 @@ protected slots:
 
 	void DoStockSelectionChanged();
 
+protected slots:
+	/*!
+		notified by tcStockInfoList when it's group may be changed.
+	*/
+	void DoGroupListNeedReload();
+
+	/*!
+		notified by tcStockInfoList when it's included stock may be changed.
+	*/
+	void DoStockListNeedReload();
+
 private:
 	tcStockInfoList mViewStockInfoList;
 

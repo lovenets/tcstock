@@ -58,6 +58,9 @@ private:
 
 	QString mDescription;
 
+signals:
+	void OnStocksModified();
+
 };
 
 #endif //tcfavtgrp_h

@@ -10,6 +10,9 @@
 
 #include "tcstockinfo.h"
 
+class tcMarket;
+class tcFavouriteGroup;
+
 /*! \brief tcStockInfoList
  	\author tony (http://www.tonixsoft.com)
  	\version 0.02
@@ -36,6 +39,32 @@ public:
 	bool ReloadFromGroupFilter(int pGroupIndex, const QString &pStockCodeFilter, const QString &pStockNameFilter);
 
 	tcStockInfoList& operator=(const tcStockInfoList &pStockInfoList);
+
+protected slots:
+	/*!
+		be notified by tcMarketManager::OnMarketsModified.
+	*/
+	void DoMarketManagerMarketsModified();
+
+	/*!
+		be notified by tcMarketManager::OnStocksModified.
+	*/
+	void DoMarketManagerStocksModified(tcMarket *pMarket);
+
+	/*!
+		be notified by tcFavouriteManager::OnFavouriteGroupModified.
+	*/
+	void DoFavouriteManagerFavouriteGroupModified();
+
+	/*!
+		be notified by tcFavouriteManager::OnStocksModified.
+	*/
+	void DoFavouriteManagerStocksModified(tcFavouriteGroup *pFavouriteGroup);
+
+signals:
+	void OnGroupListNeedReload();
+
+	void OnStockListNeedReload();
 
 };
 

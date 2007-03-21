@@ -61,6 +61,7 @@ bool tcMarketManager::LoadFromFile()
 			delete market;
 			return false;
 		}
+		connect(market, SIGNAL(OnStocksModified()), this, SLOT(DoStocksModified()));
 		mMarketList.append(market);
 		element = element.nextSiblingElement();
 	}
@@ -138,8 +139,9 @@ tcMarket* tcMarketManager::AppendMarket(const QString &pName)
 {
 	tcMarket *market = new tcMarket();
 	market->SetName(pName);
+	connect(market, SIGNAL(OnStocksModified()), this, SLOT(DoStocksModified()));
 	mMarketList.append(market);
-	emit OnMarketModified();
+	emit OnMarketsModified();
 	return market;
 }
 
@@ -155,8 +157,9 @@ tcMarket* tcMarketManager::AppendMarket(QWidget *pParent)
 		tcLogService::CreateLog(this, "Error when save market info.");
 		return NULL;
 	}
+	connect(market, SIGNAL(OnStocksModified()), this, SLOT(DoStocksModified()));
 	mMarketList.append(market);
-	emit OnMarketModified();
+	emit OnMarketsModified();
 	return market;
 }
 
@@ -179,7 +182,7 @@ tcMarket* tcMarketManager::ModifyMarket(QWidget *pParent, int pIndex)
 		tcLogService::CreateLog(this, "Error when save market info.");
 		return NULL;
 	}
-	emit OnMarketModified();
+	emit OnMarketsModified();
 	return market;
 }
 
@@ -194,7 +197,7 @@ bool tcMarketManager::RemoveMarket(QWidget *pParent, int pMarketIndex)
 	}
 	tcMarket *market = mMarketList[pMarketIndex];
 	mMarketList.removeAt(pMarketIndex);
-	emit OnMarketModified();
+	emit OnMarketsModified();
 	return true;
 }
 
@@ -263,9 +266,9 @@ void tcMarketManager::ClearAllMarkets()
 	mMarketList.clear();
 }
 
-void tcMarketManager::DoStockModified()
+void tcMarketManager::DoStocksModified()
 {
-	emit OnStockModified((tcMarket*)sender());
+	emit OnStocksModified((tcMarket*)sender());
 }
 
 #include "moc_tcmarketmgr.cpp"

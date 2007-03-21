@@ -22,10 +22,20 @@ public:
 
 	~tcImportProgressDialog();
 
+protected:
+	virtual void closeEvent(QCloseEvent *pEvent);
+
 protected slots:
 	void DoUpdateProgress(int pProgress);
 
 	void DoAppendMessage(const QString &pMessage, bool pSuccess);
+
+	void DoImportFinished();
+
+	void DoCancelImport();
+
+private:
+	tcImportSource *mImportSource;
 
 };
 

@@ -64,12 +64,7 @@ private:
 	QString mDescription;
 
 signals:
-	/*!
-		notify the tcStockInfo when the market's index changed, so the tcStockInfo can still point to the same tcMarket.
-	*/
-	void OnIndexModified(int pNewIndex);
-
-	void OnStockModified();
+	void OnStocksModified();
 
 };
 

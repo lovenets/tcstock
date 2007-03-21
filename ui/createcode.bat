@@ -12,5 +12,7 @@ uic ui_favouritegroupinfodlg.ui -o ui_favouritegroupinfodlg.h
 uic ui_stockselectdlg.ui -o ui_stockselectdlg.h
 uic ui_dataimptsetupdlg.ui -o ui_dataimptsetupdlg.h
 uic ui_imptprogressdlg.ui -o ui_imptprogressdlg.h
+uic ui_sinawebimptsourcedlg.ui -o ui_sinawebimptsourcedlg.h
+uic ui_yahoowebimptsourcedlg.ui -o ui_yahoowebimptsourcedlg.h
 
 pause

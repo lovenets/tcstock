@@ -1,11 +1,11 @@
 #include "tcsinawebimptsource.h"
 
-#include <QtCore/QUrl>
-
 #include <QtGui/QApplication>
+#include <QtCore/QUrl>
 
 #include "../service/tcsvcpack.h"
 #include "../stockinfo/tcstockinfopack.h"
+#include "tcsinawebimptsourcedlg.h"
 
 tcSinaWebImportSource::tcSinaWebImportSource()
 {
@@ -24,10 +24,27 @@ bool tcSinaWebImportSource::HaveSettingDialog()
 
 void tcSinaWebImportSource::ShowSettingDialog(QWidget *pParent)
 {
+	QStringList urllist;
+	GetImportUrlList(urllist);
+
+	tcSinaWebImportSourceDialog dlg(pParent);
+	if (! dlg.SetSettings(urllist)) {
+		tcLogService::CreateLog(this, "Error when set dialog settings.");
+		return;
+	}
+	if (dlg.exec() != QDialog::Accepted) {
+		return;
+	}
+	if (! dlg.GetSettings(urllist)) {
+		tcLogService::CreateLog(this, "Error when get dialog settings.");
+		return;
+	}
+	SetImportUrlList(urllist);
 }
 
-bool tcSinaWebImportSource::Import()
+bool tcSinaWebImportSource::ImportProcess()
 {
+	mIsCanceling = false;
 	mHttp = new QHttp();
 	connect(mHttp, SIGNAL(done(bool)), this, SLOT(DoHttpDone(bool)));
 
@@ -37,31 +54,57 @@ bool tcSinaWebImportSource::Import()
 		QString proxyport = tcCfgService::GetGlobalAttribute("ProxyPort", "80");
 		QString proxyusername = tcCfgService::GetGlobalAttribute("ProxyUserName", "");
 		QString proxypassword = tcCfgService::GetGlobalAttribute("ProxyPassword", "");
-		/*
-		QString proxyserver = "192.168.6.1";
-		QString proxyport = "6437";
-		QString proxyusername = "guxiaodong";
-		QString proxypassword = "omron99";
-		*/
 		mHttp->setProxy(proxyserver, proxyport.toInt(), proxyusername, proxypassword);
 	}
 
-	QString urltemplate = tcCfgService::GetAttribute(this, "UrlTemplate", "http://stock.sina.com.cn/stock/quote/sha%1.html");
-	int startpage = tcCfgService::GetAttribute(this, "StartPage", "0").toInt();
-	int endpage = tcCfgService::GetAttribute(this, "EndPage", "16").toInt();
+	QStringList urllist;
+	GetImportUrlList(urllist);
 	int i;
-	for (i=startpage; i<=endpage; i++) {
-		if (! ProcessForOnePage(urltemplate.arg(i))) {
-			return false;
+	for (i=0; i<urllist.count(); i++) {
+		if (! ProcessForOnePage(urllist[i])) {
+			break;
 		}
-		emit OnUpdateProgress(i*100 / (endpage-startpage));
+		if (mIsCanceling) {
+			emit OnAppendMessage(tr("Import procedure canceled by user."), false);
+			break;
+		}
+		emit OnUpdateProgress(i*100 / urllist.count());
 	}
-	
+	emit OnUpdateProgress(100);
+
 	delete mHttp;
 	mHttp = NULL;
 
 	OnAppendMessage(tr("All done."), true);
 	return true;
+}
+
+void tcSinaWebImportSource::CancelImportProcess()
+{
+	mIsCanceling = true;
+}
+
+void tcSinaWebImportSource::GetImportUrlList(QStringList &pUrlList)
+{
+	pUrlList.clear();
+	int urlcount = tcCfgService::GetAttribute(this, "UrlCount", "0").toInt();
+	int i;
+	QString urlkey = "Url_%1";
+	for (i=0; i<urlcount; i++) {
+		QString url = tcCfgService::GetAttribute(this, urlkey.arg(i), "");
+		pUrlList.append(url);
+	};
+}
+
+void tcSinaWebImportSource::SetImportUrlList(const QStringList &pUrlList)
+{
+	QString urlcount = "%1";
+	tcCfgService::SetAttribute(this, "UrlCount", urlcount.arg(pUrlList.count()));
+	int i;
+	QString urlkey = "Url_%1";
+	for (i=0; i<pUrlList.count(); i++) {
+		tcCfgService::SetAttribute(this, urlkey.arg(i), pUrlList[i]);
+	}
 }
 
 bool tcSinaWebImportSource::ProcessForOnePage(const QString &pPageUrl)
@@ -75,10 +118,13 @@ bool tcSinaWebImportSource::ProcessForOnePage(const QString &pPageUrl)
 	}
 	
 	mIsReceiving = true;
-	mHttp->get(url.path());
+	mHttp->get(pPageUrl);
 
 	while (mIsReceiving) {
 		qApp->processEvents();
+		if (mIsCanceling) {
+			return true;
+		}
 	}
 	if (mReceivedData.isEmpty()) {
 		return false;

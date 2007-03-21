@@ -3,11 +3,71 @@
         <item key="UseProxy" value="false" />
     </tcCfgService>
     <tcDataImporter>
-        <item key="ImportSourceIndex" value="1" />
+        <item key="ImportSourceIndex" value="0" />
     </tcDataImporter>
     <tcSinaWebImportSource>
-        <item key="UrlTemplate" value="http://stock.sina.com.cn/stock/quote/sha%1.html" />
-        <item key="StartPage" value="0" />
-        <item key="EndPage" value="16" />
+        <item key="UrlCount" value="31" />
+        <item key="Url_0" value="http://stock.sina.com.cn/stock/quote/sha0.html" />
+        <item key="Url_1" value="http://stock.sina.com.cn/stock/quote/sha1.html" />
+        <item key="Url_2" value="http://stock.sina.com.cn/stock/quote/sha2.html" />
+        <item key="Url_3" value="http://stock.sina.com.cn/stock/quote/sha3.html" />
+        <item key="Url_4" value="http://stock.sina.com.cn/stock/quote/sha4.html" />
+        <item key="Url_5" value="http://stock.sina.com.cn/stock/quote/sha5.html" />
+        <item key="Url_6" value="http://stock.sina.com.cn/stock/quote/sha6.html" />
+        <item key="Url_7" value="http://stock.sina.com.cn/stock/quote/sha7.html" />
+        <item key="Url_8" value="http://stock.sina.com.cn/stock/quote/sha8.html" />
+        <item key="Url_9" value="http://stock.sina.com.cn/stock/quote/sha9.html" />
+        <item key="Url_10" value="http://stock.sina.com.cn/stock/quote/sha10.html" />
+        <item key="Url_11" value="http://stock.sina.com.cn/stock/quote/sha11.html" />
+        <item key="Url_12" value="http://stock.sina.com.cn/stock/quote/sha12.html" />
+        <item key="Url_13" value="http://stock.sina.com.cn/stock/quote/sha13.html" />
+        <item key="Url_14" value="http://stock.sina.com.cn/stock/quote/sha14.html" />
+        <item key="Url_15" value="http://stock.sina.com.cn/stock/quote/sha15.html" />
+        <item key="Url_16" value="http://stock.sina.com.cn/stock/quote/sha16.html" />
+        <item key="Url_17" value="http://stock.sina.com.cn/stock/quote/shb.html" />
+        <item key="Url_18" value="http://stock.sina.com.cn/stock/quote/sza0.html" />
+        <item key="Url_19" value="http://stock.sina.com.cn/stock/quote/sza1.html" />
+        <item key="Url_20" value="http://stock.sina.com.cn/stock/quote/sza2.html" />
+        <item key="Url_21" value="http://stock.sina.com.cn/stock/quote/sza3.html" />
+        <item key="Url_22" value="http://stock.sina.com.cn/stock/quote/sza4.html" />
+        <item key="Url_23" value="http://stock.sina.com.cn/stock/quote/sza5.html" />
+        <item key="Url_24" value="http://stock.sina.com.cn/stock/quote/sza6.html" />
+        <item key="Url_25" value="http://stock.sina.com.cn/stock/quote/sza7.html" />
+        <item key="Url_26" value="http://stock.sina.com.cn/stock/quote/sza8.html" />
+        <item key="Url_27" value="http://stock.sina.com.cn/stock/quote/sza9.html" />
+        <item key="Url_28" value="http://stock.sina.com.cn/stock/quote/sza10.html" />
+        <item key="Url_29" value="http://stock.sina.com.cn/stock/quote/szb.html" />
+        <item key="Url_30" value="http://stock.finance.sina.com.cn/stock/quote/zxbk.html" />
     </tcSinaWebImportSource>
+    <tcYahooWebImportSource>
+        <item key="UrlCount" value="28" />
+        <item key="Url_0" value="http://cn.biz.yahoo.com/zhph/shamakeup/index.html?pagenum=1" />
+        <item key="Url_1" value="http://cn.biz.yahoo.com/zhph/shamakeup/index.html?pagenum=2" />
+        <item key="Url_2" value="http://cn.biz.yahoo.com/zhph/shamakeup/index.html?pagenum=3" />
+        <item key="Url_3" value="http://cn.biz.yahoo.com/zhph/shamakeup/index.html?pagenum=4" />
+        <item key="Url_4" value="http://cn.biz.yahoo.com/zhph/shamakeup/index.html?pagenum=5" />
+        <item key="Url_5" value="http://cn.biz.yahoo.com/zhph/shamakeup/index.html?pagenum=6" />
+        <item key="Url_6" value="http://cn.biz.yahoo.com/zhph/shamakeup/index.html?pagenum=7" />
+        <item key="Url_7" value="http://cn.biz.yahoo.com/zhph/shamakeup/index.html?pagenum=8" />
+        <item key="Url_8" value="http://cn.biz.yahoo.com/zhph/shamakeup/index.html?pagenum=9" />
+        <item key="Url_9" value="http://cn.biz.yahoo.com/zhph/shamakeup/index.html?pagenum=10" />
+        <item key="Url_10" value="http://cn.biz.yahoo.com/zhph/shamakeup/index.html?pagenum=11" />
+        <item key="Url_11" value="http://cn.biz.yahoo.com/zhph/shamakeup/index.html?pagenum=12" />
+        <item key="Url_12" value="http://cn.biz.yahoo.com/zhph/shamakeup/index.html?pagenum=13" />
+        <item key="Url_13" value="http://cn.biz.yahoo.com/zhph/shamakeup/index.html?pagenum=14" />
+        <item key="Url_14" value="http://cn.biz.yahoo.com/zhph/shamakeup/index.html?pagenum=15" />
+        <item key="Url_15" value="http://cn.biz.yahoo.com/zhph/shamakeup/index.html?pagenum=16" />
+        <item key="Url_16" value="http://cn.biz.yahoo.com/zhph/shamakeup/index.html?pagenum=17" />
+        <item key="Url_17" value="http://cn.biz.yahoo.com/zhph/shamakeup/index.html?pagenum=18" />
+        <item key="Url_18" value="http://cn.biz.yahoo.com/zhph/shamakeup/index.html?pagenum=19" />
+        <item key="Url_19" value="http://cn.biz.yahoo.com/zhph/shamakeup/index.html?pagenum=20" />
+        <item key="Url_20" value="http://cn.biz.yahoo.com/zhph/shamakeup/index.html?pagenum=21" />
+        <item key="Url_21" value="http://cn.biz.yahoo.com/zhph/shamakeup/index.html?pagenum=22" />
+        <item key="Url_22" value="http://cn.biz.yahoo.com/zhph/shamakeup/index.html?pagenum=23" />
+        <item key="Url_23" value="http://cn.biz.yahoo.com/zhph/shamakeup/index.html?pagenum=24" />
+        <item key="Url_24" value="http://cn.biz.yahoo.com/zhph/shamakeup/index.html?pagenum=25" />
+        <item key="Url_25" value="http://cn.biz.yahoo.com/zhph/shamakeup/index.html?pagenum=26" />
+        <item key="Url_26" value="http://cn.biz.yahoo.com/zhph/shamakeup/index.html?pagenum=27" />
+        <item key="Url_27" value="http://cn.biz.yahoo.com/zhph/shamakeup/index.html?pagenum=28" />
+    </tcYahooWebImportSource>
 </TCStock>

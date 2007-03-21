@@ -25,16 +25,19 @@ public:
 
 	bool GetSelectedStockInfoList(tcStockInfoList &pStockInfoList);
 
+protected:
+	void LoadMarketList();
+
+	void LoadStockList();
+
 protected slots:
-	void DoMarketModified();
-
-	void DoStockModified();
-
 	void DoMarketIndexChanged(int pIndex);
 
 	void DoFilterTextChanged(const QString &pText);
 
 	void DoOk();
+
+	void DoStockListNeedReload();
 
 private:
 	tcStockInfoList mViewStockInfoList;

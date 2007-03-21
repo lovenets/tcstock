@@ -27,12 +27,29 @@ public:
 
 	virtual void ShowSettingDialog(QWidget *pParent);
 
-	virtual bool Import();
+	bool Import();
+
+	/*!
+		this function called by tcImportProgressDialog when user press the "Abort" button.
+	*/
+	void CancelImport();
+
+	bool IsImporting() { return mIsImporting; }
+
+protected:
+	virtual bool ImportProcess();
+
+	virtual void CancelImportProcess();
+
+protected:
+	bool mIsImporting;
 
 signals:
 	void OnUpdateProgress(int pProgress);
 
 	void OnAppendMessage(const QString &pMessage, bool pSuccess);
+
+	void OnImportFinished();
 
 };
 

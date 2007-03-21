@@ -49,12 +49,23 @@ public:
 
 	void ClearAllFavouriteGroups();
 
+protected slots:
+	/*!
+		notified by tcFavouriteGroup
+	*/
+	void DoStocksModified();
+
 private:
 	QDir mPath;
 
 	tcFavouriteGroupList mFavouriteGroupList;
 
 	bool mModified;
+
+signals:
+	void OnFavouriteGroupModified();
+
+	void OnStocksModified(tcFavouriteGroup *pFavouriteGroup);
 
 };
 

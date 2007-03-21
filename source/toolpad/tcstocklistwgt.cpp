@@ -20,14 +20,13 @@ tcStockListWidget::tcStockListWidget(QWidget *pParent)
 	tbl1->setSelectionBehavior(QAbstractItemView::SelectRows);
 	tbl1->setEditTriggers(QAbstractItemView::NoEditTriggers);
 
-	tcMarketManager *marketmanager = tcObjService::GetMarketManager();
-	connect(marketmanager, SIGNAL(OnMarketModified()), this, SLOT(DoMarketModified()));
-	connect(marketmanager, SIGNAL(OnStockModified(tcMarket *)), this, SLOT(DoStockModified(tcMarket *)));
 	connect(cbo1, SIGNAL(currentIndexChanged(int)), this, SLOT(DoMarketIndexChanged(int)));
 	connect(btn1, SIGNAL(clicked()), this, SLOT(DoEditFavourite()));
 	connect(edt1, SIGNAL(textChanged(const QString &)), this, SLOT(DoFilterTextChanged(const QString &)));
 	connect(edt2, SIGNAL(textChanged(const QString &)), this, SLOT(DoFilterTextChanged(const QString &)));
 	connect(tbl1, SIGNAL(itemSelectionChanged()), this, SLOT(DoStockSelectionChanged()));
+	connect(&mViewStockInfoList, SIGNAL(OnGroupListNeedReload()), this, SLOT(DoGroupListNeedReload()));
+	connect(&mViewStockInfoList, SIGNAL(OnStockListNeedReload()), this, SLOT(DoStockListNeedReload()));
 
 	DoMarketModified();
 }
@@ -86,6 +85,11 @@ void tcStockListWidget::DoFilterTextChanged(const QString &pText)
 	DoMarketIndexChanged(cbo1->currentIndex());
 }
 
+void tcStockListWidget::DoGroupListNeedReload()
+{
+	DoMarketModified();
+}
+
 void tcStockListWidget::DoStockSelectionChanged()
 {
 	tcStockInfoList list;
@@ -96,6 +100,11 @@ void tcStockListWidget::DoStockSelectionChanged()
 		break;
 	}
 	emit OnStockSelected(&list);
+}
+
+void tcStockListWidget::DoStockListNeedReload()
+{
+	DoMarketIndexChanged(cbo1->currentIndex());
 }
 
 #include "moc_tcstocklistwgt.cpp"
