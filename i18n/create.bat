@@ -1,7 +1,5 @@
-cd ../source
-qmake -project
-cd ../i18n
-lupdate ../source/source.pro -ts tcstock.ts -noobsolete
+qmake -project ../source -o tcstock.pro
+lupdate tcstock.pro -ts tcstock.ts -noobsolete
 lrelease tcstock.ts -qm tcstock.qm
 copy tcstock.qm ..\bin\tcstock.qm
 

@@ -450,52 +450,52 @@
 <context>
     <name>tcSinaWebImportSource</name>
     <message>
-        <location filename="../source/dataimpt/tcsinawebimptsource.cpp" line="79"/>
+        <location filename="../source/dataimpt/tcsinawebimptsource.cpp" line="78"/>
         <source>All done.</source>
         <translation>完成.</translation>
     </message>
     <message>
-        <location filename="../source/dataimpt/tcsinawebimptsource.cpp" line="113"/>
+        <location filename="../source/dataimpt/tcsinawebimptsource.cpp" line="112"/>
         <source>Begin import from page: %1.</source>
         <translation>开始从页面 %1 导入.</translation>
     </message>
     <message>
-        <location filename="../source/dataimpt/tcsinawebimptsource.cpp" line="209"/>
+        <location filename="../source/dataimpt/tcsinawebimptsource.cpp" line="208"/>
         <source>Processing stock %1 ...</source>
         <translation>正在处理股票 %1 ...</translation>
     </message>
     <message>
-        <location filename="../source/dataimpt/tcsinawebimptsource.cpp" line="220"/>
+        <location filename="../source/dataimpt/tcsinawebimptsource.cpp" line="219"/>
         <source>The stock not exists.</source>
         <translation>股票不存在.</translation>
     </message>
     <message>
-        <location filename="../source/dataimpt/tcsinawebimptsource.cpp" line="248"/>
+        <location filename="../source/dataimpt/tcsinawebimptsource.cpp" line="247"/>
         <source>Error when get daily data of stock.</source>
         <translation>取得股票每日数据时发生错误.</translation>
     </message>
     <message>
-        <location filename="../source/dataimpt/tcsinawebimptsource.cpp" line="258"/>
+        <location filename="../source/dataimpt/tcsinawebimptsource.cpp" line="257"/>
         <source>Error when set daily data of stock.</source>
         <translation>设置股票每日数据时发生错误.</translation>
     </message>
     <message>
-        <location filename="../source/dataimpt/tcsinawebimptsource.cpp" line="272"/>
+        <location filename="../source/dataimpt/tcsinawebimptsource.cpp" line="271"/>
         <source>Received successful.</source>
         <translation>成功接收数据.</translation>
     </message>
     <message>
-        <location filename="../source/dataimpt/tcsinawebimptsource.cpp" line="212"/>
+        <location filename="../source/dataimpt/tcsinawebimptsource.cpp" line="211"/>
         <source>Error when extract data of stock.</source>
         <translation>解析股票数据时发生错误.</translation>
     </message>
     <message>
-        <location filename="../source/dataimpt/tcsinawebimptsource.cpp" line="18"/>
+        <location filename="../source/dataimpt/tcsinawebimptsource.cpp" line="17"/>
         <source>sina stock (http://stock.sina.com.cn)</source>
         <translation>新浪股票 (http://stock.sina.com.cn)</translation>
     </message>
     <message>
-        <location filename="../source/dataimpt/tcsinawebimptsource.cpp" line="69"/>
+        <location filename="../source/dataimpt/tcsinawebimptsource.cpp" line="68"/>
         <source>Import procedure canceled by user.</source>
         <translation>导入处理被用户终止.</translation>
     </message>
@@ -861,64 +861,64 @@
 <context>
     <name>tcYahooWebImportSource</name>
     <message>
-        <location filename="../source/dataimpt/tcyahoowebimptsource.cpp" line="18"/>
+        <location filename="../source/dataimpt/tcyahoowebimptsource.cpp" line="17"/>
         <source>yahoo stock (http://cn.biz.yahoo.com)</source>
         <translation>雅虎财经 (http;//cn.biz.yahoo.com)</translation>
     </message>
     <message>
-        <location filename="../source/dataimpt/tcyahoowebimptsource.cpp" line="69"/>
+        <location filename="../source/dataimpt/tcyahoowebimptsource.cpp" line="68"/>
         <source>Import procedure canceled by user.</source>
         <translation>导入处理被用户终止.</translation>
     </message>
     <message>
-        <location filename="../source/dataimpt/tcyahoowebimptsource.cpp" line="79"/>
+        <location filename="../source/dataimpt/tcyahoowebimptsource.cpp" line="78"/>
         <source>All done.</source>
         <translation>完成.</translation>
     </message>
     <message>
-        <location filename="../source/dataimpt/tcyahoowebimptsource.cpp" line="113"/>
+        <location filename="../source/dataimpt/tcyahoowebimptsource.cpp" line="112"/>
         <source>Begin import from page: %1.</source>
         <translation>开始从页面 %1 导入.</translation>
     </message>
     <message>
-        <location filename="../source/dataimpt/tcyahoowebimptsource.cpp" line="140"/>
+        <location filename="../source/dataimpt/tcyahoowebimptsource.cpp" line="139"/>
         <source>Can not extract the date from this page.</source>
         <translation>无法从该页解析日期时间.</translation>
     </message>
     <message>
-        <location filename="../source/dataimpt/tcyahoowebimptsource.cpp" line="143"/>
-        <source>The date time is: %1</source>
-        <translation>日期时间为： %1</translation>
-    </message>
-    <message>
-        <location filename="../source/dataimpt/tcyahoowebimptsource.cpp" line="221"/>
+        <location filename="../source/dataimpt/tcyahoowebimptsource.cpp" line="220"/>
         <source>Processing stock %1 ...</source>
         <translation>正在处理股票 %1 ...</translation>
     </message>
     <message>
-        <location filename="../source/dataimpt/tcyahoowebimptsource.cpp" line="224"/>
+        <location filename="../source/dataimpt/tcyahoowebimptsource.cpp" line="223"/>
         <source>Error when extract data of stock.</source>
         <translation>解析股票数据时发生错误.</translation>
     </message>
     <message>
-        <location filename="../source/dataimpt/tcyahoowebimptsource.cpp" line="232"/>
+        <location filename="../source/dataimpt/tcyahoowebimptsource.cpp" line="231"/>
         <source>The stock not exists.</source>
         <translation>股票不存在.</translation>
     </message>
     <message>
-        <location filename="../source/dataimpt/tcyahoowebimptsource.cpp" line="259"/>
+        <location filename="../source/dataimpt/tcyahoowebimptsource.cpp" line="258"/>
         <source>Error when get daily data of stock.</source>
         <translation>取得股票每日数据时发生错误.</translation>
     </message>
     <message>
-        <location filename="../source/dataimpt/tcyahoowebimptsource.cpp" line="269"/>
+        <location filename="../source/dataimpt/tcyahoowebimptsource.cpp" line="268"/>
         <source>Error when set daily data of stock.</source>
         <translation>设置股票每日数据时发生错误.</translation>
     </message>
     <message>
-        <location filename="../source/dataimpt/tcyahoowebimptsource.cpp" line="283"/>
+        <location filename="../source/dataimpt/tcyahoowebimptsource.cpp" line="282"/>
         <source>Received successful.</source>
         <translation>成功接收数据.</translation>
+    </message>
+    <message>
+        <location filename="../source/dataimpt/tcyahoowebimptsource.cpp" line="142"/>
+        <source>The date is: %1</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
