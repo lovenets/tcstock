@@ -10,7 +10,7 @@
 #include "stockview/tcstockviewpack.h"
 
 /*! \brief tcWeeklyViewWidget
- 	\author tony (http://www.tonixsoft.com)
+ 	\author tony (tonixinot@gmail.com)
  	\version 0.01
  	\date 2006.12.28
  	

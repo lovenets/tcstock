@@ -11,7 +11,7 @@
 #include "tcstockdatacache.h"
 
 /*! \brief tcStock
- 	\author tony (http://www.tonixsoft.com)
+ 	\author tony (tonixinot@gmail.com)
  	\version 0.01
  	\date 2006.12.02
  	
@@ -40,17 +40,17 @@ public:
 
 	virtual bool WriteData(const QDate &pDate, tcStockDailyData *pStockDailyData);
 
-	QString GetStockCode();
+	QString GetStockCode() { return mStockCode; }
 
-	void SetStockCode(const QString &pStockCode);
+	void SetStockCode(const QString &pStockCode) { mStockCode = pStockCode; }
 
-	virtual QString GetStockName();
+	virtual QString GetStockName() { return mStockName; }
 
-	void SetStockName(const QString &pStockName);
+	void SetStockName(const QString &pStockName) { mStockName = pStockName; }
 
-	virtual QString GetDescription();
+	virtual QString GetDescription() { return mDescription; }
 
-	void SetDescription(const QString &pDescription);
+	void SetDescription(const QString &pDescription) { mDescription = pDescription; }
 
 protected:
 	tcStock();

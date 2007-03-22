@@ -3,8 +3,13 @@
         <item key="UseProxy" value="false" />
     </tcCfgService>
     <tcDataImporter>
-        <item key="ImportSourceIndex" value="0" />
+        <item key="ImportSourceIndex" value="2" />
     </tcDataImporter>
+    <tcFxjFileImportSource>
+        <item key="DownloadZipFile" value="true" />
+        <item key="ZipFileUrl" value="http://down.fxj.net.cn/sjdownload/day/%1.zip" />
+        <item key="DataFilePath" value="" />
+    </tcFxjFileImportSource>
     <tcSinaWebImportSource>
         <item key="UrlCount" value="31" />
         <item key="Url_0" value="http://stock.sina.com.cn/stock/quote/sha0.html" />

@@ -5,7 +5,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>548</width>
+    <width>574</width>
     <height>326</height>
    </rect>
   </property>
@@ -40,7 +40,16 @@
          <number>6</number>
         </property>
         <item>
-         <widget class="QTableWidget" name="tbl1_1" />
+         <widget class="QTableWidget" name="tbl1_1" >
+          <property name="sizePolicy" >
+           <sizepolicy>
+            <hsizetype>1</hsizetype>
+            <vsizetype>7</vsizetype>
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+         </widget>
         </item>
         <item>
          <layout class="QHBoxLayout" >
@@ -97,7 +106,7 @@
         <item>
          <widget class="QRadioButton" name="rdo2_1" >
           <property name="text" >
-           <string>Do not Auto Import.</string>
+           <string>Do not Auto Import</string>
           </property>
           <property name="checked" >
            <bool>true</bool>
@@ -107,7 +116,7 @@
         <item>
          <widget class="QRadioButton" name="rdo2_2" >
           <property name="text" >
-           <string>Auto Import every day.</string>
+           <string>Auto Import</string>
           </property>
          </widget>
         </item>
@@ -120,22 +129,16 @@
            <number>6</number>
           </property>
           <item>
-           <spacer>
-            <property name="orientation" >
-             <enum>Qt::Horizontal</enum>
-            </property>
-            <property name="sizeHint" >
-             <size>
-              <width>40</width>
-              <height>20</height>
-             </size>
-            </property>
-           </spacer>
-          </item>
-          <item>
            <widget class="QLabel" name="lbl2_1" >
             <property name="text" >
-             <string>At Time:</string>
+             <string/>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="lbl2_2" >
+            <property name="text" >
+             <string>Interval (minutes):</string>
             </property>
            </widget>
           </item>

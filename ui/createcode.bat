@@ -14,5 +14,6 @@ uic ui_dataimptsetupdlg.ui -o ui_dataimptsetupdlg.h
 uic ui_imptprogressdlg.ui -o ui_imptprogressdlg.h
 uic ui_sinawebimptsourcedlg.ui -o ui_sinawebimptsourcedlg.h
 uic ui_yahoowebimptsourcedlg.ui -o ui_yahoowebimptsourcedlg.h
+uic ui_fxjfileimptsourcedlg.ui -o ui_fxjfileimptsourcedlg.h
 
 pause

@@ -11,7 +11,7 @@
 #include "tcstockmgr.h"
 
 /*! \brief tcStockInfo
- 	\author tony (http://www.tonixsoft.com)
+ 	\author tony (tonixinot@gmail.com)
  	\version 0.01
  	\date 2006.12.26
  	
@@ -36,6 +36,8 @@ public:
 
 	bool operator==(const tcStockInfo &pInfo);
 
+	bool IsAvailable();
+
 	tcStock* operator->() const;
 
 protected slots:
@@ -45,11 +47,17 @@ protected:
 
 };
 
+inline bool tcStockInfo::IsAvailable()
+{
+	tcStockManager *stockmanager = tcObjService::GetStockManager();
+	return (stockmanager->GetStockByCode(mStockCode) != NULL);
+}
+
 inline tcStock* tcStockInfo::operator->() const
 {
 	tcStockManager *stockmanager = tcObjService::GetStockManager();
 	tcStock *stock = stockmanager->GetStockByCode(mStockCode);
-	if (stock == NULL) {
+	if (stock == NULL) {	//if the stock not exists, return the tcNullStock object, it will provide an empty stock.
 		stock = &tcNullStock::NullStock;
 	}
 	return stock;

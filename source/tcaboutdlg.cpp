@@ -21,7 +21,7 @@ void tcAboutDialog::SetAboutText()
 	slist += "Platform: LINUX";
 #endif
 	slist += "QT Version: " + QString(QT_VERSION_STR);
-	slist += "Author: tony (http://www.tonixsoft.com)";
+	slist += "Author: tony (tonixinot@gmail.com)";
 	slist += "";
 
 	txt1_1->setHtml(slist.join("<br>"));

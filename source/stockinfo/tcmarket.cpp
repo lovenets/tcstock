@@ -178,24 +178,4 @@ bool tcMarket::GetStockInfoListFilter(tcStockInfoList &pStockInfoList, const QSt
 	return true;
 }
 
-QString tcMarket::GetName()
-{
-	return mName;
-}
-
-void tcMarket::SetName(const QString pName)
-{
-	mName = pName;
-}
-
-QString tcMarket::GetDescription()
-{
-	return mDescription;
-}
-
-void tcMarket::SetDescription(const QString &pDescription)
-{
-	mDescription = pDescription;
-}
-
 #include "moc_tcmarket.cpp"

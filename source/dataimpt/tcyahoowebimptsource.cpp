@@ -225,9 +225,8 @@ void tcYahooWebImportSource::ProcessForOneStock(const QDate &pDate, const QStrin
 	}
 
 	//get the stock object
-	tcStockManager *stockmanager = tcObjService::GetStockManager();
-	tcStock *stock = stockmanager->GetStockByCode(stockcode);
-	if (stock == NULL) {
+	tcStockInfo stockinfo(stockcode);
+	if (! stockinfo.IsAvailable()) {
 		emit OnAppendMessage(tr("The stock not exists."), false);
 		return;
 	}
@@ -242,19 +241,19 @@ void tcYahooWebImportSource::ProcessForOneStock(const QDate &pDate, const QStrin
 	}
 
 	tcStockDailyData dailydata;
-	if (! stock->ReadData(date, &dailydata)) {
+	if (! stockinfo->ReadData(date, &dailydata)) {
 		emit OnAppendMessage(tr("Error when get daily data of stock."), false);
 		return;
 	}
 	dailydata.ClosePrice = long(closeprice.toFloat() * 100);
-	if (! stock->WriteData(date, &dailydata)) {
+	if (! stockinfo->WriteData(date, &dailydata)) {
 		emit OnAppendMessage(tr("Error when set daily data of stock."), false);
 		return;
 	}
 
 	//set the data of today
 	date = pDate;
-	if (! stock->ReadData(date, &dailydata)) {
+	if (! stockinfo->ReadData(date, &dailydata)) {
 		emit OnAppendMessage(tr("Error when get daily data of stock."), false);
 		return;
 	}
@@ -264,7 +263,7 @@ void tcYahooWebImportSource::ProcessForOneStock(const QDate &pDate, const QStrin
 	dailydata.MinPrice = long(minprice.toFloat() * 100);
 	dailydata.TotalPrice = long(totalprice.toFloat());
 	dailydata.Quantity = long(quantity.toFloat());
-	if (! stock->WriteData(date, &dailydata)) {
+	if (! stockinfo->WriteData(date, &dailydata)) {
 		emit OnAppendMessage(tr("Error when set daily data of stock."), false);
 		return;
 	}

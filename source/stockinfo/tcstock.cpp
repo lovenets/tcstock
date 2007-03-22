@@ -26,36 +26,6 @@ bool tcStock::SaveToXml(QDomDocument &pDoc, QDomElement &pElement)
 	return true;
 }
 
-QString tcStock::GetStockCode()
-{
-	return mStockCode;
-}
-
-void tcStock::SetStockCode(const QString &pStockCode)
-{
-	mStockCode = pStockCode;
-}
-
-QString tcStock::GetStockName()
-{
-	return mStockName;
-}
-
-void tcStock::SetStockName(const QString &pStockName)
-{
-	mStockName = pStockName;
-}
-
-QString tcStock::GetDescription()
-{
-	return mDescription;
-}
-
-void tcStock::SetDescription(const QString &pDescription)
-{
-	mDescription = pDescription;
-}
-
 tcStock::tcStock()
 {
 }

@@ -64,44 +64,44 @@
 <context>
     <name>tcDataImporterSetupDialog</name>
     <message>
-        <location filename="../source/dataimpt/ui_dataimptsetupdlg.h" line="173"/>
-        <source>Data Import Setup...</source>
-        <translation type="unfinished">导入股票数据设置...</translation>
-    </message>
-    <message>
-        <location filename="../source/dataimpt/ui_dataimptsetupdlg.h" line="174"/>
-        <source>Source List:</source>
-        <translation type="unfinished">导入源列表:</translation>
-    </message>
-    <message>
-        <location filename="../source/dataimpt/ui_dataimptsetupdlg.h" line="175"/>
-        <source>Setting...</source>
-        <translation type="unfinished">设置...</translation>
-    </message>
-    <message>
-        <location filename="../source/dataimpt/ui_dataimptsetupdlg.h" line="176"/>
-        <source>Import Now</source>
-        <translation type="unfinished">立即导入</translation>
-    </message>
-    <message>
-        <location filename="../source/dataimpt/ui_dataimptsetupdlg.h" line="177"/>
-        <source>Setup:</source>
-        <translation type="unfinished">设置:</translation>
-    </message>
-    <message>
-        <location filename="../source/dataimpt/ui_dataimptsetupdlg.h" line="178"/>
-        <source>Do not Auto Import.</source>
-        <translation type="unfinished">不使用自动导入.</translation>
-    </message>
-    <message>
         <location filename="../source/dataimpt/ui_dataimptsetupdlg.h" line="179"/>
-        <source>Auto Import every day.</source>
-        <translation type="unfinished">每天自动导入.</translation>
+        <source>Data Import Setup...</source>
+        <translation>导入股票数据设置...</translation>
     </message>
     <message>
         <location filename="../source/dataimpt/ui_dataimptsetupdlg.h" line="180"/>
-        <source>At Time:</source>
-        <translation type="unfinished">导入时间:</translation>
+        <source>Source List:</source>
+        <translation>导入源列表:</translation>
+    </message>
+    <message>
+        <location filename="../source/dataimpt/ui_dataimptsetupdlg.h" line="181"/>
+        <source>Setting...</source>
+        <translation>设置...</translation>
+    </message>
+    <message>
+        <location filename="../source/dataimpt/ui_dataimptsetupdlg.h" line="182"/>
+        <source>Import Now</source>
+        <translation>立即导入</translation>
+    </message>
+    <message>
+        <location filename="../source/dataimpt/ui_dataimptsetupdlg.h" line="183"/>
+        <source>Setup:</source>
+        <translation>设置:</translation>
+    </message>
+    <message>
+        <location filename="../source/dataimpt/ui_dataimptsetupdlg.h" line="184"/>
+        <source>Do not Auto Import</source>
+        <translation>不使用自动导入功能</translation>
+    </message>
+    <message>
+        <location filename="../source/dataimpt/ui_dataimptsetupdlg.h" line="185"/>
+        <source>Auto Import</source>
+        <translation>自动导入</translation>
+    </message>
+    <message>
+        <location filename="../source/dataimpt/ui_dataimptsetupdlg.h" line="187"/>
+        <source>Interval (minutes):</source>
+        <translation>时间间隔（分钟）:</translation>
     </message>
 </context>
 <context>
@@ -189,6 +189,112 @@
         <location filename="../source/stockinfo/tcfavtmgr.cpp" line="184"/>
         <source>Are you sure to remove this favourite group?</source>
         <translation>你确实希望删除该自选组吗?</translation>
+    </message>
+</context>
+<context>
+    <name>tcFxjFileImportSource</name>
+    <message>
+        <location filename="../source/dataimpt/tcfxjfileimptsource.cpp" line="36"/>
+        <source>DAD file of fxj (http://www.fxj.net.cn)</source>
+        <translation>分析家 - 每日数据文件（DAD文件） (http://www.fxj.net.cn)</translation>
+    </message>
+    <message>
+        <location filename="../source/dataimpt/tcfxjfileimptsource.cpp" line="83"/>
+        <source>Import procedure canceled by user.</source>
+        <translation>导入处理被用户终止.</translation>
+    </message>
+    <message>
+        <location filename="../source/dataimpt/tcfxjfileimptsource.cpp" line="93"/>
+        <source>All done.</source>
+        <translation>完成.</translation>
+    </message>
+    <message>
+        <location filename="../source/dataimpt/tcfxjfileimptsource.cpp" line="122"/>
+        <source>Error when open data file.</source>
+        <translation>打开数据文件时发生错误.</translation>
+    </message>
+    <message>
+        <location filename="../source/dataimpt/tcfxjfileimptsource.cpp" line="127"/>
+        <source>Error when read file header.</source>
+        <translation>读取数据文件头时发生错误.</translation>
+    </message>
+    <message>
+        <location filename="../source/dataimpt/tcfxjfileimptsource.cpp" line="144"/>
+        <source>Error when read data.</source>
+        <translation>读取数据时发生错误.</translation>
+    </message>
+    <message>
+        <location filename="../source/dataimpt/tcfxjfileimptsource.cpp" line="148"/>
+        <source>Processing stock %1 ...</source>
+        <translation>正在处理股票 %1 ...</translation>
+    </message>
+    <message>
+        <location filename="../source/dataimpt/tcfxjfileimptsource.cpp" line="152"/>
+        <source>The stock not exists.</source>
+        <translation>股票不存在.</translation>
+    </message>
+    <message>
+        <location filename="../source/dataimpt/tcfxjfileimptsource.cpp" line="157"/>
+        <source>Error when get daily data of stock.</source>
+        <translation>取得股票每日数据时发生错误.</translation>
+    </message>
+    <message>
+        <location filename="../source/dataimpt/tcfxjfileimptsource.cpp" line="167"/>
+        <source>Error when set daily data of stock.</source>
+        <translation>设置股票每日数据时发生错误.</translation>
+    </message>
+    <message>
+        <location filename="../source/dataimpt/tcfxjfileimptsource.cpp" line="71"/>
+        <source>This function not implemented yet.</source>
+        <translation>该功能还未实现.</translation>
+    </message>
+    <message>
+        <location filename="../source/dataimpt/tcfxjfileimptsource.cpp" line="118"/>
+        <source>Processing file: %1.</source>
+        <translation>正在处理文件：%1.</translation>
+    </message>
+    <message>
+        <location filename="../source/dataimpt/tcfxjfileimptsource.cpp" line="131"/>
+        <source>Wrong DAD file format.</source>
+        <translation>DAD 文件格式错误.</translation>
+    </message>
+</context>
+<context>
+    <name>tcFxjFileImportSourceDialog</name>
+    <message>
+        <location filename="../source/dataimpt/ui_fxjfileimptsourcedlg.h" line="150"/>
+        <source>Fxj File Import Source Setting...</source>
+        <translation>分析家文件数据源设置...</translation>
+    </message>
+    <message>
+        <location filename="../source/dataimpt/ui_fxjfileimptsourcedlg.h" line="151"/>
+        <source>Setup:</source>
+        <translation>设置:</translation>
+    </message>
+    <message>
+        <location filename="../source/dataimpt/ui_fxjfileimptsourcedlg.h" line="152"/>
+        <source>Auto download ZIP file from http://www.fxj.net.cn</source>
+        <translation>从 http://www.fxj.net.cn 上自动下载 ZIP 文件</translation>
+    </message>
+    <message>
+        <location filename="../source/dataimpt/ui_fxjfileimptsourcedlg.h" line="154"/>
+        <source>URL:</source>
+        <translation>URL地址:</translation>
+    </message>
+    <message>
+        <location filename="../source/dataimpt/ui_fxjfileimptsourcedlg.h" line="155"/>
+        <source>Use the DAD files on local system</source>
+        <translation>使用本地系统中的 DAD 文件</translation>
+    </message>
+    <message>
+        <location filename="../source/dataimpt/ui_fxjfileimptsourcedlg.h" line="157"/>
+        <source>Path:</source>
+        <translation>目录:</translation>
+    </message>
+    <message>
+        <location filename="../source/dataimpt/ui_fxjfileimptsourcedlg.h" line="158"/>
+        <source>...</source>
+        <translation>...</translation>
     </message>
 </context>
 <context>
@@ -448,6 +554,14 @@
     </message>
 </context>
 <context>
+    <name>tcQianLongFileImportSource</name>
+    <message>
+        <location filename="../source/dataimpt/tcqianlongfileimptsource.cpp" line="9"/>
+        <source>QianLong data</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>tcSinaWebImportSource</name>
     <message>
         <location filename="../source/dataimpt/tcsinawebimptsource.cpp" line="78"/>
@@ -465,22 +579,22 @@
         <translation>正在处理股票 %1 ...</translation>
     </message>
     <message>
-        <location filename="../source/dataimpt/tcsinawebimptsource.cpp" line="219"/>
+        <location filename="../source/dataimpt/tcsinawebimptsource.cpp" line="218"/>
         <source>The stock not exists.</source>
         <translation>股票不存在.</translation>
     </message>
     <message>
-        <location filename="../source/dataimpt/tcsinawebimptsource.cpp" line="247"/>
+        <location filename="../source/dataimpt/tcsinawebimptsource.cpp" line="246"/>
         <source>Error when get daily data of stock.</source>
         <translation>取得股票每日数据时发生错误.</translation>
     </message>
     <message>
-        <location filename="../source/dataimpt/tcsinawebimptsource.cpp" line="257"/>
+        <location filename="../source/dataimpt/tcsinawebimptsource.cpp" line="256"/>
         <source>Error when set daily data of stock.</source>
         <translation>设置股票每日数据时发生错误.</translation>
     </message>
     <message>
-        <location filename="../source/dataimpt/tcsinawebimptsource.cpp" line="271"/>
+        <location filename="../source/dataimpt/tcsinawebimptsource.cpp" line="270"/>
         <source>Received successful.</source>
         <translation>成功接收数据.</translation>
     </message>
@@ -896,29 +1010,29 @@
         <translation>解析股票数据时发生错误.</translation>
     </message>
     <message>
-        <location filename="../source/dataimpt/tcyahoowebimptsource.cpp" line="231"/>
+        <location filename="../source/dataimpt/tcyahoowebimptsource.cpp" line="230"/>
         <source>The stock not exists.</source>
         <translation>股票不存在.</translation>
     </message>
     <message>
-        <location filename="../source/dataimpt/tcyahoowebimptsource.cpp" line="258"/>
+        <location filename="../source/dataimpt/tcyahoowebimptsource.cpp" line="257"/>
         <source>Error when get daily data of stock.</source>
         <translation>取得股票每日数据时发生错误.</translation>
     </message>
     <message>
-        <location filename="../source/dataimpt/tcyahoowebimptsource.cpp" line="268"/>
+        <location filename="../source/dataimpt/tcyahoowebimptsource.cpp" line="267"/>
         <source>Error when set daily data of stock.</source>
         <translation>设置股票每日数据时发生错误.</translation>
     </message>
     <message>
-        <location filename="../source/dataimpt/tcyahoowebimptsource.cpp" line="282"/>
+        <location filename="../source/dataimpt/tcyahoowebimptsource.cpp" line="281"/>
         <source>Received successful.</source>
         <translation>成功接收数据.</translation>
     </message>
     <message>
         <location filename="../source/dataimpt/tcyahoowebimptsource.cpp" line="142"/>
         <source>The date is: %1</source>
-        <translation type="unfinished"></translation>
+        <translation>日期为： %1</translation>
     </message>
 </context>
 <context>

@@ -18,7 +18,7 @@ typedef struct {
 } tcViewModelStockData;
 
 /*! \brief tcViewModel
- 	\author tony (http://www.tonixsoft.com)
+ 	\author tony (tonixinot@gmail.com)
  	\version 0.01
  	\date 2006.12.09
  	

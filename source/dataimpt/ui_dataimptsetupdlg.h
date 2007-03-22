@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading ui file 'ui_dataimptsetupdlg.ui'
 **
-** Created: Sun Mar 18 15:12:25 2007
+** Created: Thu Mar 22 15:32:57 2007
 **      by: Qt User Interface Compiler version 4.2.1
 **
 ** WARNING! All changes made in this file will be lost when recompiling ui file!
@@ -43,10 +43,10 @@ public:
     QRadioButton *rdo2_1;
     QRadioButton *rdo2_2;
     QHBoxLayout *hboxLayout2;
-    QSpacerItem *spacerItem1;
     QLabel *lbl2_1;
+    QLabel *lbl2_2;
     QLineEdit *edt2_1;
-    QSpacerItem *spacerItem2;
+    QSpacerItem *spacerItem1;
     QDialogButtonBox *buttonBox;
 
     void setupUi(QDialog *tcDataImporterSetupDialog)
@@ -68,6 +68,11 @@ public:
     vboxLayout1->setObjectName(QString::fromUtf8("vboxLayout1"));
     tbl1_1 = new QTableWidget(gbx1);
     tbl1_1->setObjectName(QString::fromUtf8("tbl1_1"));
+    QSizePolicy sizePolicy(static_cast<QSizePolicy::Policy>(1), static_cast<QSizePolicy::Policy>(7));
+    sizePolicy.setHorizontalStretch(0);
+    sizePolicy.setVerticalStretch(0);
+    sizePolicy.setHeightForWidth(tbl1_1->sizePolicy().hasHeightForWidth());
+    tbl1_1->setSizePolicy(sizePolicy);
 
     vboxLayout1->addWidget(tbl1_1);
 
@@ -116,31 +121,32 @@ public:
     hboxLayout2->setSpacing(6);
     hboxLayout2->setMargin(0);
     hboxLayout2->setObjectName(QString::fromUtf8("hboxLayout2"));
-    spacerItem1 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
-
-    hboxLayout2->addItem(spacerItem1);
-
     lbl2_1 = new QLabel(gbx2);
     lbl2_1->setObjectName(QString::fromUtf8("lbl2_1"));
 
     hboxLayout2->addWidget(lbl2_1);
 
+    lbl2_2 = new QLabel(gbx2);
+    lbl2_2->setObjectName(QString::fromUtf8("lbl2_2"));
+
+    hboxLayout2->addWidget(lbl2_2);
+
     edt2_1 = new QLineEdit(gbx2);
     edt2_1->setObjectName(QString::fromUtf8("edt2_1"));
-    QSizePolicy sizePolicy(static_cast<QSizePolicy::Policy>(1), static_cast<QSizePolicy::Policy>(0));
-    sizePolicy.setHorizontalStretch(0);
-    sizePolicy.setVerticalStretch(0);
-    sizePolicy.setHeightForWidth(edt2_1->sizePolicy().hasHeightForWidth());
-    edt2_1->setSizePolicy(sizePolicy);
+    QSizePolicy sizePolicy1(static_cast<QSizePolicy::Policy>(1), static_cast<QSizePolicy::Policy>(0));
+    sizePolicy1.setHorizontalStretch(0);
+    sizePolicy1.setVerticalStretch(0);
+    sizePolicy1.setHeightForWidth(edt2_1->sizePolicy().hasHeightForWidth());
+    edt2_1->setSizePolicy(sizePolicy1);
 
     hboxLayout2->addWidget(edt2_1);
 
 
     vboxLayout2->addLayout(hboxLayout2);
 
-    spacerItem2 = new QSpacerItem(20, 40, QSizePolicy::Minimum, QSizePolicy::Expanding);
+    spacerItem1 = new QSpacerItem(20, 40, QSizePolicy::Minimum, QSizePolicy::Expanding);
 
-    vboxLayout2->addItem(spacerItem2);
+    vboxLayout2->addItem(spacerItem1);
 
 
     hboxLayout->addWidget(gbx2);
@@ -158,7 +164,7 @@ public:
 
     retranslateUi(tcDataImporterSetupDialog);
 
-    QSize size(548, 326);
+    QSize size(574, 326);
     size = size.expandedTo(tcDataImporterSetupDialog->minimumSizeHint());
     tcDataImporterSetupDialog->resize(size);
 
@@ -175,9 +181,10 @@ public:
     btn1_1->setText(QApplication::translate("tcDataImporterSetupDialog", "Setting...", 0, QApplication::UnicodeUTF8));
     btn1_2->setText(QApplication::translate("tcDataImporterSetupDialog", "Import Now", 0, QApplication::UnicodeUTF8));
     gbx2->setTitle(QApplication::translate("tcDataImporterSetupDialog", "Setup:", 0, QApplication::UnicodeUTF8));
-    rdo2_1->setText(QApplication::translate("tcDataImporterSetupDialog", "Do not Auto Import.", 0, QApplication::UnicodeUTF8));
-    rdo2_2->setText(QApplication::translate("tcDataImporterSetupDialog", "Auto Import every day.", 0, QApplication::UnicodeUTF8));
-    lbl2_1->setText(QApplication::translate("tcDataImporterSetupDialog", "At Time:", 0, QApplication::UnicodeUTF8));
+    rdo2_1->setText(QApplication::translate("tcDataImporterSetupDialog", "Do not Auto Import", 0, QApplication::UnicodeUTF8));
+    rdo2_2->setText(QApplication::translate("tcDataImporterSetupDialog", "Auto Import", 0, QApplication::UnicodeUTF8));
+    lbl2_1->setText(QString());
+    lbl2_2->setText(QApplication::translate("tcDataImporterSetupDialog", "Interval (minutes):", 0, QApplication::UnicodeUTF8));
     Q_UNUSED(tcDataImporterSetupDialog);
     } // retranslateUi
 

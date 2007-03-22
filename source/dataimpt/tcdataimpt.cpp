@@ -3,9 +3,11 @@
 #include <QtXml/QDomElement>
 #include "../service/tcsvcpack.h"
 #include "tcdataimptsetupdlg.h"
+#include "tcimptprogressdlg.h"
 #include "tcsinawebimptsource.h"
 #include "tcyahoowebimptsource.h"
-#include "tcimptprogressdlg.h"
+#include "tcfxjfileimptsource.h"
+#include "tcqianlongfileimptsource.h"
 
 tcDataImporter::tcDataImporter()
 {
@@ -51,6 +53,12 @@ tcImportSource* tcDataImporter::CreateImportSource(int pIndex)
 	case 1:
 		return new tcYahooWebImportSource();
 		break;
+	case 2:
+		return new tcFxjFileImportSource();
+		break;
+	//case 3:
+	//	return new tcQianLongFileImportSource();
+	//	break;
 	default:
 		tcLogService::CreateLog(this, "The index of import source not correct.");
 		return NULL;

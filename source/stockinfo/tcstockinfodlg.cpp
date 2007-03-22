@@ -4,7 +4,7 @@
 
 #include "../tcdefine.h"
 #include "../service/tcsvcpack.h"
-#include "tcstockmgr.h"
+#include "tcstockinfo.h"
 
 tcStockInfoDialog::tcStockInfoDialog(QWidget *pParent, bool pAppendMode)
 	: QDialog(pParent)
@@ -43,8 +43,8 @@ void tcStockInfoDialog::DoOk()
 			edt1->setFocus();
 			return;
 		}
-		tcStockManager *stockmanager = tcObjService::GetStockManager();
-		if (stockmanager->GetStockByCode(edt1->text()) != NULL) {
+		tcStockInfo stockinfo(edt1->text());
+		if (stockinfo.IsAvailable()) {
 			QMessageBox::warning(this, SYSTEM_NAME, tr("The stock with a same stock code already exists, change another stock code please."));
 			edt1->setFocus();
 			return;

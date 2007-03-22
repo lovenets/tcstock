@@ -8,7 +8,7 @@
 #include "tcstock.h"
 
 /*! \brief tcNullStock
- 	\author tony (http://www.tonixsoft.com)
+ 	\author tony (tonixinot@gmail.com)
  	\version 0.01
  	\date 2007.03.20
  	

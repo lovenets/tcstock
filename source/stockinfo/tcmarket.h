@@ -11,7 +11,7 @@
 #include "tcstockinfolst.h"
 
 /*! \brief tcMarket
- 	\author tony (http://www.tonixsoft.com)
+ 	\author tony (tonixinot@gmail.com)
  	\version 0.01
  	\date 2006.12.02
  	
@@ -48,13 +48,13 @@ public:
 
 	bool GetStockInfoListFilter(tcStockInfoList &pStockInfoList, const QString &pStockCodeFilter, const QString &pStockNameFilter);
 
-	QString GetName();
+	QString GetName() { return mName; }
 
-	void SetName(const QString pName);
+	void SetName(const QString pName) { mName = pName; }
 
-	QString GetDescription();
+	QString GetDescription() { return mDescription; }
 
-	void SetDescription(const QString &pDescription);
+	void SetDescription(const QString &pDescription) { mDescription = pDescription; }
 
 private:
 	tcStockInfoList mStockInfoList;

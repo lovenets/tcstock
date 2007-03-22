@@ -11,7 +11,7 @@
 #include "tcstockinfolst.h"
 
 /*! \brief tcFavouriteGroup
- 	\author tony (http://www.tonixsoft.com)
+ 	\author tony (tonixinot@gmail.com)
  	\version 0.02
  	\date 2007.03.16
  	

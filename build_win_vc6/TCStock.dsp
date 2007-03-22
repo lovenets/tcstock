@@ -1339,6 +1339,46 @@ InputPath=..\source\dataimpt\tcdataimptsetupdlg.h
 # End Source File
 # Begin Source File
 
+SOURCE=..\source\dataimpt\tcfxjfileimptsource.h
+
+!IF  "$(CFG)" == "TCStock - Win32 Release"
+
+!ELSEIF  "$(CFG)" == "TCStock - Win32 Debug"
+
+# Begin Custom Build
+InputDir=\source\tcstock\002\source\dataimpt
+InputPath=..\source\dataimpt\tcfxjfileimptsource.h
+
+"$(InputDir)/moc_tcfxjfileimptsource.cpp" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
+	moc -i $(InputDir)/tcfxjfileimptsource.h -o $(InputDir)/moc_tcfxjfileimptsource.cpp
+
+# End Custom Build
+
+!ENDIF 
+
+# End Source File
+# Begin Source File
+
+SOURCE=..\source\dataimpt\tcfxjfileimptsourcedlg.h
+
+!IF  "$(CFG)" == "TCStock - Win32 Release"
+
+!ELSEIF  "$(CFG)" == "TCStock - Win32 Debug"
+
+# Begin Custom Build
+InputDir=\source\tcstock\002\source\dataimpt
+InputPath=..\source\dataimpt\tcfxjfileimptsourcedlg.h
+
+"$(InputDir)/moc_tcfxjfileimptsourcedlg.cpp" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
+	moc -i $(InputDir)/tcfxjfileimptsourcedlg.h -o $(InputDir)/moc_tcfxjfileimptsourcedlg.cpp
+
+# End Custom Build
+
+!ENDIF 
+
+# End Source File
+# Begin Source File
+
 SOURCE=..\source\dataimpt\tcimptprogressdlg.h
 
 !IF  "$(CFG)" == "TCStock - Win32 Release"
@@ -1371,6 +1411,26 @@ InputPath=..\source\dataimpt\tcimptsource.h
 
 "$(InputDir)/moc_tcimptsource.cpp" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
 	moc -i $(InputDir)/tcimptsource.h -o $(InputDir)/moc_tcimptsource.cpp
+
+# End Custom Build
+
+!ENDIF 
+
+# End Source File
+# Begin Source File
+
+SOURCE=..\source\dataimpt\tcqianlongfileimptsource.h
+
+!IF  "$(CFG)" == "TCStock - Win32 Release"
+
+!ELSEIF  "$(CFG)" == "TCStock - Win32 Debug"
+
+# Begin Custom Build
+InputDir=\source\tcstock\002\source\dataimpt
+InputPath=..\source\dataimpt\tcqianlongfileimptsource.h
+
+"$(InputDir)/moc_tcqianlongfileimptsource.cpp" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
+	moc -i $(InputDir)/tcqianlongfileimptsource.h -o $(InputDir)/moc_tcqianlongfileimptsource.cpp
 
 # End Custom Build
 
@@ -1471,11 +1531,23 @@ SOURCE=..\source\dataimpt\tcdataimptsetupdlg.cpp
 # End Source File
 # Begin Source File
 
+SOURCE=..\source\dataimpt\tcfxjfileimptsource.cpp
+# End Source File
+# Begin Source File
+
+SOURCE=..\source\dataimpt\tcfxjfileimptsourcedlg.cpp
+# End Source File
+# Begin Source File
+
 SOURCE=..\source\dataimpt\tcimptprogressdlg.cpp
 # End Source File
 # Begin Source File
 
 SOURCE=..\source\dataimpt\tcimptsource.cpp
+# End Source File
+# Begin Source File
+
+SOURCE=..\source\dataimpt\tcqianlongfileimptsource.cpp
 # End Source File
 # Begin Source File
 
