@@ -9,6 +9,7 @@
         <item key="DownloadZipFile" value="true" />
         <item key="ZipFileUrl" value="http://down.fxj.net.cn/sjdownload/day/%1.zip" />
         <item key="DataFilePath" value="" />
+        <item key="LastSuccessDate" value="" />
     </tcFxjFileImportSource>
     <tcSinaWebImportSource>
         <item key="UrlCount" value="31" />

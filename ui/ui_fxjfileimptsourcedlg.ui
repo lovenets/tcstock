@@ -34,7 +34,7 @@
       <item>
        <widget class="QRadioButton" name="rdo1" >
         <property name="text" >
-         <string>Auto download ZIP file from http://www.fxj.net.cn</string>
+         <string>Auto download daily file (ZIP format) from http://www.fxj.net.cn</string>
         </property>
         <property name="checked" >
          <bool>true</bool>
@@ -71,7 +71,7 @@
       <item>
        <widget class="QRadioButton" name="rdo2" >
         <property name="text" >
-         <string>Use the DAD files on local system</string>
+         <string>Use the daily files (ZIP or DAD format) on local system</string>
         </property>
        </widget>
       </item>

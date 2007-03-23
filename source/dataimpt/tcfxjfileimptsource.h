@@ -4,6 +4,7 @@
 
 #include <QtCore/QVariant>
 #include <QtCore/QObject>
+#include <QtNetwork/QHttp>
 
 #include "tcimptsource.h"
 
@@ -11,6 +12,7 @@ typedef struct {
 	bool DownloadZipFile;
 	QString ZipFileUrl;
 	QString DataFilePath;
+	QString LastSuccessDate;
 } tcFxjFileImportSourceOption;
 
 /*! \brief tcFxjFileImportSource
@@ -42,10 +44,28 @@ protected:
 
 	void SetOptions(const tcFxjFileImportSourceOption &pOption);
 
-	bool ProcessOneFile(const QDate &pDate, const QString &pFileName);
+	bool ProcessForOnePage(const QDate &pDate, const QString &pPageUrl);
+
+	bool ProcessForOneFile(const QString &pFileName);
+
+	bool ProcessForOneZipFile(const QDate &pDate, const QString &pFileName);
+
+	bool ProcessForOneDadFile(const QDate &pDate, const QString &pFileName);
+
+	bool ProcessForOneDadStream(const QDate &pDate, const QByteArray &pData);
+
+protected slots:
+	void DoHttpDone(bool pError);
 
 private:
+	QHttp *mHttp;
+
+	bool mIsReceiving;
+
 	bool mIsCanceling;
+
+	QByteArray mReceivedData;
+
 };
 
 #endif //tcfxjfileimptsource_h

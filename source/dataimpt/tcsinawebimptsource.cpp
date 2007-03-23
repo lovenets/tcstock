@@ -61,9 +61,7 @@ bool tcSinaWebImportSource::ImportProcess()
 	GetImportUrlList(urllist);
 	int i;
 	for (i=0; i<urllist.count(); i++) {
-		if (! ProcessForOnePage(urllist[i])) {
-			break;
-		}
+		ProcessForOnePage(urllist[i]);
 		if (mIsCanceling) {
 			emit OnAppendMessage(tr("Import procedure canceled by user."), false);
 			break;
@@ -123,7 +121,7 @@ bool tcSinaWebImportSource::ProcessForOnePage(const QString &pPageUrl)
 	while (mIsReceiving) {
 		qApp->processEvents();
 		if (mIsCanceling) {
-			return true;
+			return false;
 		}
 	}
 	if (mReceivedData.isEmpty()) {
@@ -262,7 +260,7 @@ void tcSinaWebImportSource::DoHttpDone(bool pError)
 {
 	if (pError) {
 		tcLogService::CreateLog(this, "Done Error: " + mHttp->errorString());
-		emit OnAppendMessage("Error: " + mHttp->errorString(), false);
+		emit OnAppendMessage(tr("Error: %1").arg(mHttp->errorString()), false);
 	}
 	else {
 		Q_ASSERT(mHttp);

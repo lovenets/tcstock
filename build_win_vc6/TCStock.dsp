@@ -1567,6 +1567,86 @@ SOURCE=..\source\dataimpt\tcyahoowebimptsourcedlg.cpp
 # End Source File
 # End Group
 # End Group
+# Begin Group "thirdparty"
+
+# PROP Default_Filter ""
+# Begin Group "quazip"
+
+# PROP Default_Filter ""
+# Begin Source File
+
+SOURCE=..\source\thirdparty\quazip\crypt.h
+# End Source File
+# Begin Source File
+
+SOURCE=..\source\thirdparty\quazip\ioapi.c
+# End Source File
+# Begin Source File
+
+SOURCE=..\source\thirdparty\quazip\ioapi.h
+# End Source File
+# Begin Source File
+
+SOURCE=..\source\thirdparty\quazip\quazip.cpp
+# End Source File
+# Begin Source File
+
+SOURCE=..\source\thirdparty\quazip\quazip.h
+# End Source File
+# Begin Source File
+
+SOURCE=..\source\thirdparty\quazip\quazipfile.cpp
+# End Source File
+# Begin Source File
+
+SOURCE=..\source\thirdparty\quazip\quazipfile.h
+
+!IF  "$(CFG)" == "TCStock - Win32 Release"
+
+!ELSEIF  "$(CFG)" == "TCStock - Win32 Debug"
+
+# Begin Custom Build
+InputDir=\source\tcstock\002\source\thirdparty\quazip
+InputPath=..\source\thirdparty\quazip\quazipfile.h
+
+"$(InputDir)/moc_quazipfile.cpp" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
+	moc -i $(InputDir)/quazipfile.h -o $(InputDir)/moc_quazipfile.cpp
+
+# End Custom Build
+
+!ENDIF 
+
+# End Source File
+# Begin Source File
+
+SOURCE=..\source\thirdparty\quazip\quazipfileinfo.h
+# End Source File
+# Begin Source File
+
+SOURCE=..\source\thirdparty\quazip\quazipnewinfo.cpp
+# End Source File
+# Begin Source File
+
+SOURCE=..\source\thirdparty\quazip\quazipnewinfo.h
+# End Source File
+# Begin Source File
+
+SOURCE=..\source\thirdparty\quazip\unzip.c
+# End Source File
+# Begin Source File
+
+SOURCE=..\source\thirdparty\quazip\unzip.h
+# End Source File
+# Begin Source File
+
+SOURCE=..\source\thirdparty\quazip\zip.c
+# End Source File
+# Begin Source File
+
+SOURCE=..\source\thirdparty\quazip\zip.h
+# End Source File
+# End Group
+# End Group
 # Begin Source File
 
 SOURCE=.\Question.ico

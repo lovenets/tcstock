@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading ui file 'ui_fxjfileimptsourcedlg.ui'
 **
-** Created: Thu Mar 22 15:43:43 2007
+** Created: Fri Mar 23 12:19:27 2007
 **      by: Qt User Interface Compiler version 4.2.1
 **
 ** WARNING! All changes made in this file will be lost when recompiling ui file!
@@ -149,10 +149,10 @@ public:
     {
     tcFxjFileImportSourceDialog->setWindowTitle(QApplication::translate("tcFxjFileImportSourceDialog", "Fxj File Import Source Setting...", 0, QApplication::UnicodeUTF8));
     gbx1->setTitle(QApplication::translate("tcFxjFileImportSourceDialog", "Setup:", 0, QApplication::UnicodeUTF8));
-    rdo1->setText(QApplication::translate("tcFxjFileImportSourceDialog", "Auto download ZIP file from http://www.fxj.net.cn", 0, QApplication::UnicodeUTF8));
+    rdo1->setText(QApplication::translate("tcFxjFileImportSourceDialog", "Auto download daily file (ZIP format) from http://www.fxj.net.cn", 0, QApplication::UnicodeUTF8));
     lbl1->setText(QString());
     lbl2->setText(QApplication::translate("tcFxjFileImportSourceDialog", "URL:", 0, QApplication::UnicodeUTF8));
-    rdo2->setText(QApplication::translate("tcFxjFileImportSourceDialog", "Use the DAD files on local system", 0, QApplication::UnicodeUTF8));
+    rdo2->setText(QApplication::translate("tcFxjFileImportSourceDialog", "Use the daily files (ZIP or DAD format) on local system", 0, QApplication::UnicodeUTF8));
     lbl3->setText(QString());
     lbl4->setText(QApplication::translate("tcFxjFileImportSourceDialog", "Path:", 0, QApplication::UnicodeUTF8));
     btn1->setText(QApplication::translate("tcFxjFileImportSourceDialog", "...", 0, QApplication::UnicodeUTF8));
